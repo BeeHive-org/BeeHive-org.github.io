@@ -3,7 +3,7 @@ site_url: https://BeeHive-org.github.io/
 site_description: A flexible open hardware platform for behavioural experiments
 site_sub_description: Science <i>your</i> way
 repo_name: BeeHive-org/BeeHive-org.github.io/
-repo_url: https://github.com/BeeHive-org/BeeHive-org.github.io
+repo_url: https://github.com/BeeHive-org/
 
 # Theme
 theme:
