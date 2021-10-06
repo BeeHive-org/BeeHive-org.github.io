@@ -1,9 +1,9 @@
 site_name: BeeHive
-site_url: https://trackball.run/
+site_url: https://BeeHive-org.github.io/
 site_description: A flexible open hardware platform for behavioural experiments
 site_sub_description: Science <i>your</i> way
-repo_name: roaldarbol/beehive
-repo_url: https://github.com/roaldarbol/roaldarbol.github.io
+repo_name: BeeHive-org/BeeHive-org.github.io/
+repo_url: https://github.com/BeeHive-org/BeeHive-org.github.io
 
 # Theme
 theme:
