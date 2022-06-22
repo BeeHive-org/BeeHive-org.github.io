@@ -1,8 +1,11 @@
+# Site information
 site_name: BeeHive
-site_url: https://BeeHive-org.github.io/
+site_url: https://beehive-org.github.io/
 site_description: A flexible open hardware platform for behavioural experiments
 site_sub_description: Science <i>your</i> way
-repo_name: BeeHive-org/BeeHive-org.github.io/
+
+# Repository
+repo_name: BeeHive-org
 repo_url: https://github.com/BeeHive-org/
 
 # Theme
@@ -50,8 +53,18 @@ markdown_extensions:
 # Page tree
 nav:
     - Home: index.md
-    - Getting started:
-        - user-guide.md
+    - User guide:
+      - getting-started.md
+      - Preparations:
+        - Assembly guide:
+            - assembly-guide.md
+            - soldering.md
+            - Boards:
+              - board-hub.md
+        - Microcontrollers:
+            - micropython.md
+      - Usage:
+          - user-guide.md
     - Recipes: 
         - recipes/intro.md
         - Incubator: recipes/incubator.md
