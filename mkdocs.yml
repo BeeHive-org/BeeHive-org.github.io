@@ -2,7 +2,7 @@
 site_name: BeeHive
 site_url: https://beehive-org.github.io/
 site_description: A flexible open hardware platform for behavioural experiments
-site_sub_description: Science <i>your</i> way
+#site_sub_description: Science <i>your</i> way
 
 # Repository
 repo_name: BeeHive-org
@@ -41,9 +41,9 @@ extra_javascript:
 
 plugins:
   - search
-  - bibtex:
-      cite_style: 'plain'
-      bib_file: 'docs/bibliography.bib'
+  #- bibtex:
+  #    cite_style: 'plain'
+  #    bib_file: 'docs/bibliography.bib'
       #csl_file: 'docs/apa.csl'
 
 markdown_extensions:
@@ -67,6 +67,9 @@ nav:
           - user-guide.md
     - Recipes: 
         - recipes/intro.md
-        - Incubator: recipes/incubator.md
+        - LI850 multiplexer: recipes/LI850-multiplexer.md
+        - 5 choice serial reaction task: recipes/5-choice-serial-reaction-task.md
+        - 3 axis controller: 
+          - test: recipes/3-axis-controller/test.md
     - Ingredients:
         - ingredients/summary.md
