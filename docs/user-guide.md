@@ -12,7 +12,7 @@ Welcome to BeeHive! Here we provide an **Assembly guide** and a **User guide**.
 - Solder
 - Extractor fan
 - Flush cutters
-- Solering wick (for desoldering)
+- Soldering wick (for desoldering)
 
 ## Components
 ### Resistors
@@ -46,7 +46,7 @@ Welcome to BeeHive! Here we provide an **Assembly guide** and a **User guide**.
 ## Soldering
 
 ### The board
-Before we begin, we need to familiarize ourselves with the board. Have a good look at the component IDs and where they go on the board. In general, we will start soldering loose parts to the board first, beginning with the lowest.
+Before we begin, we need to familiarize ourselves with the board. Have a good look at the component IDs and where they go on the board. In general, we will start soldering loose parts to the board first, beginning with the lowest/shortest.
 
 ### Tips and tricks
 

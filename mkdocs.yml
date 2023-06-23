@@ -56,8 +56,9 @@ markdown_extensions:
 # Page tree
 nav:
     - Home: index.md
-    - User guide:
+    - Introduction: 
       - getting-started.md
+      - what-is-about.md
       - Preparations:
         - Assembly guide:
             - assembly-guide.md
