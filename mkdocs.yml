@@ -1,7 +1,7 @@
 # Site information
 site_name: BeeHive
 site_url: https://beehive-org.github.io/
-site_description: A flexible open hardware platform for behavioural experiments
+site_description: A flexible open hardware platform for equipment development
 #site_sub_description: Science <i>your</i> way
 
 # Repository
@@ -49,7 +49,10 @@ plugins:
 markdown_extensions:
   - footnotes
   - admonition
-
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 # Page tree
 nav:
     - Home: index.md
@@ -70,6 +73,6 @@ nav:
         - LI850 multiplexer: recipes/LI850-multiplexer.md
         - 5 choice serial reaction task: recipes/5-choice-serial-reaction-task.md
         - 3 axis controller: 
-          - test: recipes/3-axis-controller/test.md
+          - test: mkdosrecipes/3-axis-controller/test.md
     - Ingredients:
         - ingredients/summary.md
