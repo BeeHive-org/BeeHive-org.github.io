@@ -78,4 +78,4 @@ nav:
     - Ingredients:
         - ingredients/summary.md
     - Courses:
-        - Intro_to_electronics.md
+        - courses/intro_to_electronics.md
