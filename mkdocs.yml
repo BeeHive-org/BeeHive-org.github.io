@@ -77,3 +77,5 @@ nav:
           - test: mkdosrecipes/3-axis-controller/test.md
     - Ingredients:
         - ingredients/summary.md
+    - Courses:
+        - Intro to electronics and BeeHive
