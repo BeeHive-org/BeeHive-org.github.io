@@ -78,4 +78,4 @@ nav:
     - Ingredients:
         - ingredients/summary.md
     - Courses:
-        - Intro to electronics and BeeHive
+        - Intro_to_electronics.md
