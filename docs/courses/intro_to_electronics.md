@@ -52,19 +52,19 @@ memory (information gets lost if the system is off), peripherals, and support ci
 
 ![MCU](../assets/images/course/1_MCU.png)
 
-#### The Central Processing Unit
+### The Central Processing Unit
 
 The CPU performs arithmetic operations, manages data flow, and generates control signals in accordance with the sequence of instructions created by the programmer. The extremely complex circuitry required for CPU functionality is not visible to the user/person designing programs. In fact, thanks to [integrated development environments](https://www.allaboutcircuits.com/technical-articles/what-are-integrated-development-environments/) and [high-level languages such as C](https://www.allaboutcircuits.com/technical-articles/introduction-to-the-c-programming-language-for-embedded-applications/), writing code for microcontrollers is often a fairly straightforward task.
 
 
-#### Memory
+### Memory
 
 Nonvolatile memory is used to store the microcontroller’s program—i.e., the (often very long) list of [machine-language instructions](https://www.allaboutcircuits.com/technical-articles/how-to-write-assembly-basic-assembly-instructions-ARM-instruction-set/) that tell the CPU exactly what to do. You will typically see the word “Flash” (which refers to a specific form of nonvolatile data storage) instead of “nonvolatile memory.”
 
 Volatile memory (i.e., RAM) is used for temporary data storage. This data is lost when the microcontroller loses power. Internal registers also provide temporary data storage, but we don’t think of these as a separate functional block because they are integrated into the CPU.
 
 
-#### Peripherals
+### Peripherals
 
 We use the word “peripheral” to describe the hardware modules that help a microcontroller to interact with the external system. The following bullet points identify the various categories of peripherals and provide examples.
 
@@ -78,7 +78,7 @@ We use the word “peripheral” to describe the hardware modules that help a mi
 * Serial communication: [UART](https://www.allaboutcircuits.com/technical-articles/back-to-basics-the-universal-asynchronous-receiver-transmitter-uart/), [SPI](https://www.allaboutcircuits.com/technical-articles/spi-serial-peripheral-interface/), [I2C](https://www.allaboutcircuits.com/technical-articles/introduction-to-the-i2c-bus/), [USB](https://www.allaboutcircuits.com/projects/communicating-with-an-efm8-microcontroller-via-usb/)
 
 
-## **Where are they used for? Where can you find them? What are scientific applications?**
+## **What are they used for? Where can you find them? What are scientific applications?**
 
 Microcontrollers are used in multiple industries and applications, including in the home and enterprise, building automation, manufacturing, robotics, automotive, lighting, smart energy, industrial automation, communications and internet of things ([IoT](https://internetofthingsagenda.techtarget.com/definition/Internet-of-Things-IoT)) deployments.
 
@@ -88,7 +88,7 @@ More sophisticated microcontrollers perform critical functions in aircraft, spac
 
 <span style="text-decoration:underline;">In scientific instruments</span>, a microcontroller  can be responsible for actuating all the peripheral objects such as a Peltier element (to heat up samples), a fan, an LED strip and so on. In <span style="text-decoration:underline;">BeeHive</span>, as you will see, the microcontroller is used for sending commands to other boards which in turn accomplish a specific goal like actuation or reading sensor.
 
-**Part two - By Ohm’s Law**
+# **Part two - By Ohm’s Law**
 
 
 ## **What is circuitry and what is Ohm’s Law**
@@ -117,16 +117,13 @@ and
 $$ R = {V \over I} $$
 
 
-
-###  
-
 ![Ohm's Law](../assets/images/course/2_ohm_law.jpg)
 
 
 This might be an easier way of remembering Ohm's law.
 
 
-### Analyzing Simple Circuits with Ohm’s Law
+## Analyzing Simple Circuits with Ohm’s Law
 
 Let’s see how these equations might work to help us analyze simple circuits:
 
@@ -264,7 +261,7 @@ Registers are small memory elements in a Microcontroller where a specific value 
 
 
 
-## C**ommunication **protocols
+## **Communication protocols**
 
 Using the binary system, many different communication protocols have been created over the years, with their own advantages and disadvantages. Given the particularities of microcontrollers (limited number of IO ports, memory and processing speed), certain types of communication protocols are preferred. Below we show a couple of general characteristics present in different protocols:
 
@@ -676,7 +673,7 @@ What timers are in ESP32? (optional)
 # Wednesday
 
 
-### Data logging
+## Data logging
 
 One important thing we want to accomplish with our microcontrollers is to save the data they are collecting while performing a certain task, and given the constraints imposed by the nature of microcontrollers (memory space, communication speeds, time critical events, etc), it is a good idea to give this careful thought when designing experiments/systems.
 
@@ -732,10 +729,6 @@ Time to implement your task using the training board!
 
 
 * Using the training board, start writing actual code to implement your task. Preferably, it needs to be connected to your subject area and achieve a goal that you have set. One of the most time-effective ways to do that is to write small parts of the code and test often to see if the board and code are reacting the way you would expect them to react. But first, create a sketch-diagram showing how your code is supposed to work
-
-
-# 
-
 
 # Glossary
 
