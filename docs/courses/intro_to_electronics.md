@@ -510,10 +510,6 @@ The sum is 48
 ```
 
 
-
-## _____________________________________________
-
-
 ## Analog-to-digital converters
 
 [Analogue to Digital Converter (ADC) Basics (electronics-tutorials.ws)](https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html)
