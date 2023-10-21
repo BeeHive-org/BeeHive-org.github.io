@@ -112,7 +112,9 @@ In this algebraic expression, voltage (V) is equal to current (I) multiplied by 
 
 
 
-$ I = V \over R $  and $ R = V \over I $
+$$ I = {V \over R} $$  
+and 
+$$ R = {V \over I} $$
 
 
 
@@ -154,7 +156,7 @@ What is the amount of current (I) in this circuit?
 
  
 
-$ I = V \over R = 12 V \over 3 Ohm = 4 A $
+$$ I = {V \over R} = {12 V \over 3 \Omega} = 4 A $$
 
 
 
@@ -178,7 +180,7 @@ What is the amount of resistance (R) offered by the lamp?
 
 
 
-$ R = V \over I = 36 V \over 4 A = 9 Ohm $
+$$ R = {V \over I} = {36 V \over 4 A} = 9 \Omega $$
 
 
  
@@ -198,7 +200,7 @@ What is the amount of voltage provided by the battery?
 
 
 
-$ V = I R = (2 A )(7 Ohm) = 15 V $
+$$ V = I R = (2 A )(7 \Omega) = 15 V $$
 
 
 What is information? What does it consist of?
@@ -546,11 +548,11 @@ The ADC’s sampling rate, also known as sampling frequency, can be tied to the 
 
 One important equation on the sample rate is:
 
-$$ _fs = 1 \over T_ $$
+$$ fs = {1 \over T} $$
 
 Where,
 
-$$ fs = Sample Rate \over Frequency $$
+$$ fs = {Sample Rate \over Frequency} $$
 
 T = Period of the sample or the time it takes before sampling again
 
@@ -573,11 +575,11 @@ In this example, you can see where the sampling occurs in the analog input signa
 
 One rule of thumb when figuring out if aliasing will happen is using Nyquist Theorem. According to the theorem, the sampling rate/frequency needs to be at least twice as much as the highest frequency in the signal to recreate the original analog signal. The following equation is used to find the Nyquist frequency:
 
-fNyquist = 2fMax
+$$ fNyquist = 2fMax $$
 
 Where,
 
-fNyquist = Nyquist frequency
+$$ fNyquist = Nyquist frequency $$
 
 fMax = The max frequency that appears in the signal
 
@@ -658,20 +660,14 @@ The answer:
 
 
 
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image21.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image21.png "image_tooltip")
+$$ {64ticks/tock \over 16,000,000ticks/sec} * {1tock} = 4 \mu s $$
 
 
 Example: What is the period of 250 increments of the Timer 0 counter? Answer:
 
 
 
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image22.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image22.png "image_tooltip")
+$$ {64ticks/tock \over 16,000,000ticks/sec} * {250tocks} = 4 ms $$
 
 
 What timers are in ESP32? (optional)
