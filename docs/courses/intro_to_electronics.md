@@ -28,12 +28,12 @@
 -->
 
 
-# Part one - Multum in parvo - Monday
+## Part one - Multum in parvo - Monday
 
 A latin saying “Multum in parvo”, much in little, conveys the main idea of the following lectures. We are going to investigate what is a microcontroller, what it consist of, what is its applications, what are difficulties of using it, what is information, what is a signal, what is a program, how to program your microcontroller and how to put all of this together to make a project that will do what you want it to do. 
 
 
-## **What is a microcontroller?**
+### **What is a microcontroller?**
 
 Reference: [What Is a Microcontroller? The Defining Characteristics and Architecture of a Common Component - Technical Articles (allaboutcircuits.com)](https://www.allaboutcircuits.com/technical-articles/what-is-a-microcontroller-introduction-component-characteristics-component/) 
 
@@ -44,7 +44,7 @@ The most common way to refer to this category of integrated circuits is “micro
 “Microcontroller” is a well-chosen name because it emphasises defining characteristics of this product category. The prefix “micro” implies smallness and the term "controller" here implies an enhanced ability to perform control functions. As stated above, this functionality is the result of combining a digital processor and digital memory with additional hardware that is specifically designed to help the microcontroller interact with other components.
 
 
-## **What makes it special and why do we use it?**
+### **What makes it special and why do we use it?**
 
 A microcontroller consists of a central processing unit (CPU), nonvolatile memory (information is stored even if the system is off), volatile 
 
@@ -52,19 +52,19 @@ memory (information gets lost if the system is off), peripherals, and support ci
 
 ![MCU](../assets/images/course/1_MCU.png)
 
-### The Central Processing Unit
+#### The Central Processing Unit
 
 The CPU performs arithmetic operations, manages data flow, and generates control signals in accordance with the sequence of instructions created by the programmer. The extremely complex circuitry required for CPU functionality is not visible to the user/person designing programs. In fact, thanks to [integrated development environments](https://www.allaboutcircuits.com/technical-articles/what-are-integrated-development-environments/) and [high-level languages such as C](https://www.allaboutcircuits.com/technical-articles/introduction-to-the-c-programming-language-for-embedded-applications/), writing code for microcontrollers is often a fairly straightforward task.
 
 
-### Memory
+#### Memory
 
 Nonvolatile memory is used to store the microcontroller’s program—i.e., the (often very long) list of [machine-language instructions](https://www.allaboutcircuits.com/technical-articles/how-to-write-assembly-basic-assembly-instructions-ARM-instruction-set/) that tell the CPU exactly what to do. You will typically see the word “Flash” (which refers to a specific form of nonvolatile data storage) instead of “nonvolatile memory.”
 
 Volatile memory (i.e., RAM) is used for temporary data storage. This data is lost when the microcontroller loses power. Internal registers also provide temporary data storage, but we don’t think of these as a separate functional block because they are integrated into the CPU.
 
 
-### Peripherals
+#### Peripherals
 
 We use the word “peripheral” to describe the hardware modules that help a microcontroller to interact with the external system. The following bullet points identify the various categories of peripherals and provide examples.
 
@@ -78,7 +78,7 @@ We use the word “peripheral” to describe the hardware modules that help a mi
 * Serial communication: [UART](https://www.allaboutcircuits.com/technical-articles/back-to-basics-the-universal-asynchronous-receiver-transmitter-uart/), [SPI](https://www.allaboutcircuits.com/technical-articles/spi-serial-peripheral-interface/), [I2C](https://www.allaboutcircuits.com/technical-articles/introduction-to-the-i2c-bus/), [USB](https://www.allaboutcircuits.com/projects/communicating-with-an-efm8-microcontroller-via-usb/)
 
 
-## **What are they used for? Where can you find them? What are scientific applications?**
+### **What are they used for? Where can you find them? What are scientific applications?**
 
 Microcontrollers are used in multiple industries and applications, including in the home and enterprise, building automation, manufacturing, robotics, automotive, lighting, smart energy, industrial automation, communications and internet of things ([IoT](https://internetofthingsagenda.techtarget.com/definition/Internet-of-Things-IoT)) deployments.
 
@@ -88,10 +88,10 @@ More sophisticated microcontrollers perform critical functions in aircraft, spac
 
 <span style="text-decoration:underline;">In scientific instruments</span>, a microcontroller  can be responsible for actuating all the peripheral objects such as a Peltier element (to heat up samples), a fan, an LED strip and so on. In <span style="text-decoration:underline;">BeeHive</span>, as you will see, the microcontroller is used for sending commands to other boards which in turn accomplish a specific goal like actuation or reading sensor.
 
-# **Part two - By Ohm’s Law**
+## **Part two - By Ohm’s Law**
 
 
-## **What is circuitry and what is Ohm’s Law**
+### **What is circuitry and what is Ohm’s Law**
 
 [Ohm’s Law - How Voltage, Current, and Resistance Relate | Ohm's Law | Electronics Textbook (allaboutcircuits.com)](https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/)
 
@@ -123,7 +123,7 @@ $$ R = {V \over I} $$
 This might be an easier way of remembering Ohm's law.
 
 
-## Analyzing Simple Circuits with Ohm’s Law
+### Analyzing Simple Circuits with Ohm’s Law
 
 Let’s see how these equations might work to help us analyze simple circuits:
 
@@ -207,12 +207,12 @@ What is information? What does it consist of?
 What happens is that voltage and current are not just values that are used to represent electric parameters, they can also be a source of information. For example, if we were to have a lamp and turn  it on/off constantly, it would be nothing but a signal that transmits a very simple message. This signal might be just an indicator that something works or not (lights ON - it works, lights OFF - it is turned off) or it might be something more complicated as the Morse code. To think of it, the Morse code is a structured sequence of ON/OFF signals with different time frames which, in fact, is closely correlated with the next topic of Logic levels.
 
 
-## **What is a Logic Level?**
+### **What is a Logic Level?**
 
 Deriving from the lamp example above, computers and microcontrollers use a communication system with only 2 states to perform all sorts of operations. In real life, this is represented as different voltage levels. We often refer to the two states in a digital circuit to be ON or OFF. Represented in binary, an ON translates to a binary 1, and an OFF translates to a binary 0. In microcontrollers, we call these signals HIGH or LOW, respectively. Using these two, digital electronic systems are able to store, process, and transmit data or information. The strength of a signal is typically described by its voltage level. How is a logic 0 (LOW) or a logic 1 (HIGH) defined? Manufacturers of chips generally define these in their spec sheets. The most common standard is TTL or Transistor-Transistor Logic, and within TTL systems, the majority of them implements LOW as 0V and HIGH as either 3.3V or 5V. 
 
 
-## **Active-Low and Active-High**
+### **Active-Low and Active-High**
 
 When working with ICs and microcontrollers, you'll likely encounter pins that are active-low and pins that are active-high. Simply put, this just describes how the pin is activated. If it's an active-low pin, you must "pull" that pin LOW by connecting it to ground. For an active high pin, you connect it to your HIGH voltage (usually 3.3V/5V - more details on different HIGH levels below).
 
@@ -240,7 +240,7 @@ Likewise, the maximum output LOW voltage (VOL) is 0.4 V. This means that a devic
 What happens if you have a voltage that is between 0.8 V and 2 V? Well, your guess is as good as mine. Honestly, this range of voltages is undefined and results in an invalid state, often referred to as floating. If an output pin on your device is “floating” in this range, there is no certainty with what the signal will result in. It may bounce arbitrarily between HIGH and LOW.
 
 
-## Bits, bytes, words
+### Bits, bytes, words
 
 As mentioned before, using a binary system, computers and microcontrollers can communicate, store information and perform many other tasks. In this section we will explore a little on how this communication happens and how the “binary language” is organised:
 
@@ -261,7 +261,7 @@ Registers are small memory elements in a Microcontroller where a specific value 
 
 
 
-## **Communication protocols**
+### **Communication protocols**
 
 Using the binary system, many different communication protocols have been created over the years, with their own advantages and disadvantages. Given the particularities of microcontrollers (limited number of IO ports, memory and processing speed), certain types of communication protocols are preferred. Below we show a couple of general characteristics present in different protocols:
 
@@ -285,7 +285,7 @@ The clock signal ensures that reception of correct data bits.
 For the rest of the course, serial will now refer to asynchronous data transmission used by UART devices found in Arduino and PIC microcontrollers. For the current course we won’t go into details about synchronous data transmission protocols and we refer these articles with more information about them: [SPI](https://www.teachmemicro.com/spi-primer/), [I2C](https://www.teachmemicro.com/i2c-primer/).
 
 
-## The Serial Protocol
+### The Serial Protocol
 
 Serial communication follows a simple protocol (rules to follow) to ensure correct transmission. A serial data consists of
 
@@ -328,10 +328,10 @@ If you connect a serial output pin which sends a “A” (ascii 41 or 01000001 i
 
 
 
-# Part three - Python and MicroPython
+## Part three - Python and MicroPython
 
 
-## History of Python programming
+### History of Python programming
 
 [History of Python Programming (tutorialspoint.com)](https://www.tutorialspoint.com/history-of-python-programming)
 
@@ -390,7 +390,7 @@ MicroPython’s comprehensive and flexible re-implementation of Python 3 raises 
 In the next section we will start showing some examples on how certain structures in programming works and how we can take advantage of them to perform complex tasks  
 
 
-## If-else statement and its Python implementation
+### If-else statement and its Python implementation
 
 [Python if, if...else, if...elif...else and Nested if Statement (programiz.com)](https://www.programiz.com/python-programming/if-elif-else)
 
@@ -457,12 +457,12 @@ If the variable `num` is equal to -1, test expression is false and statements in
 The `print()` statement falls outside of the `if` block (unindented). Hence, it is executed regardless of the test expression.
 
 
-## Loop implementation
+### Loop implementation
 
 [Python for Loop (programiz.com)](https://www.programiz.com/python-programming/for-loop)
 
 
-## The for loop in Python is used to iterate over a sequence (list, tuple, string) or other iterable objects. Iterating over a sequence is called traversal.
+### The for loop in Python is used to iterate over a sequence (list, tuple, string) or other iterable objects. Iterating over a sequence is called traversal.
 
 
 ```
@@ -510,7 +510,7 @@ The sum is 48
 ```
 
 
-## Analog-to-digital converters
+### Analog-to-digital converters
 
 [Analogue to Digital Converter (ADC) Basics (electronics-tutorials.ws)](https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html)
 
@@ -519,7 +519,7 @@ The sum is 48
 Analog-to-digital converters (ADCs) are an important component when it comes to dealing with digital systems communicating with real-time signals. With IoT developing quickly to be applied in everyday life, real-world/time signals have to be read by these digital systems to accurately provide vital information. We’ll take a dive into how ADCs work and the theory behind them.
 
 
-## How ADCs Work
+### How ADCs Work
 
 In the real world, analog signals are signals that have a continuous sequence with continuous values (there are some cases where it can be finite). These types of signals can come from sound, light, temperature and motion. Digital signals are represented by a sequence of discrete values where the signal is broken down into sequences that depend on the time series or sampling rate (more on this later). The easiest way to explain this is through a visual! The Figure below shows a great example of what analog and digital signals look like.
 
@@ -535,7 +535,7 @@ Figure: A continuous signal (analog) turning into a digital signal. (Source: Waq
 ADCs follow a sequence when converting analog signals to digital. They first sample the signal, then quantify it to determine the resolution of the signal, and finally set binary values and send it to the system to read the digital signal. Two important aspects of the ADC are its sampling rate and resolution.
 
 
-## **Sampling Rate/Frequency**
+### **Sampling Rate/Frequency**
 
 The ADC’s sampling rate, also known as sampling frequency, can be tied to the ADC’s speed. The sampling rate is measured by using “samples per second”, where the units are in SPS or S/s (or if you’re using sampling frequency, it would be in Hz). This simply means how many samples or data points it takes within a second. The more samples the ADC takes, the higher frequencies it can handle.
 
@@ -581,7 +581,7 @@ For example, if the signal that you input into the digital system has a max freq
 It is also good to note that there are cases where outside noise can introduce unexpected high frequency into the analog signal, which can disrupt the signal because the sample rate couldn’t handle the added noise frequency. It is always a good idea to add an anti-aliasing filter ([low-pass filter](https://www.arrow.com/en/categories/amplifiers/active-filters)) before the ADC and sampling begins, as it can prevent unexpected high frequencies to make it to the system.
 
 
-## **Resolution of ADC**
+### **Resolution of ADC**
 
 The ADC’s resolution can be tied to the precision of the ADC. The resolution of the ADC can be determined by its bit length. A quick example on how it helps the digital signal output a more accurate signal is shown in Figure 3. Here you can see that the 1-bit only has two “levels”. As you increase the bit length, the levels increase making the signal more closely represent the original analog signal.
 
@@ -636,10 +636,10 @@ Analog to digital and digital to analog:
 [https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters](https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters)
 
 
-# Part Four - Tuesday
+## Part Four - Tuesday
 
 
-## What is timer and what is counter?
+### What is timer and what is counter?
 
 [timers.dvi (ou.edu)](https://www.cs.ou.edu/~fagg/classes/es_general/timers.pdf)
 
@@ -666,10 +666,10 @@ $$ {64ticks/tock \over 16,000,000ticks/sec} * {250tocks} = 4 ms $$
 What timers are in ESP32? (optional)
 
 
-# Wednesday
+## Wednesday
 
 
-## Data logging
+### Data logging
 
 One important thing we want to accomplish with our microcontrollers is to save the data they are collecting while performing a certain task, and given the constraints imposed by the nature of microcontrollers (memory space, communication speeds, time critical events, etc), it is a good idea to give this careful thought when designing experiments/systems.
 
@@ -684,12 +684,12 @@ Once the data is prepared to be transmitted out of the microcontroller, we need 
 	
 
 
-## Wednesday second part
+### Wednesday second part
 
 Now we take a small break from doing and working with code, to answer possible questions you might have that have not been covered during the course.
 
 
-# Thursday
+## Thursday
 
 BeeHive
 
@@ -704,7 +704,7 @@ Putting boards together to do your own tasks
 Show that BeeHive can be combined with Grove system through connectors and Grove modules can be used to achieve objectives that otherwise can not be completed with the current version of BeeHive. Also, point out that Beehive is an open source project so if anybody wishes, they can propose, develop and add their own stuff on top of what is already there.
 
 
-# Friday
+## Friday
 
 Time to sketch your own protocols! Our suggestion is to start with a mockup of your project/need, in other words, think about in general terms of steps needed to be taken for your software/project to be up and running. Example for the reaction time task we created:
 
@@ -726,7 +726,7 @@ Time to implement your task using the training board!
 
 * Using the training board, start writing actual code to implement your task. Preferably, it needs to be connected to your subject area and achieve a goal that you have set. One of the most time-effective ways to do that is to write small parts of the code and test often to see if the board and code are reacting the way you would expect them to react. But first, create a sketch-diagram showing how your code is supposed to work
 
-# Glossary
+## Glossary
 
 **Microcontroller** - a small computer made on an integrated circuit
 
