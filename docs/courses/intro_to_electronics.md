@@ -28,7 +28,7 @@
 -->
 
 
-## Part one - Multum in parvo - Monday
+## **Part one - Multum in parvo - Monday**
 
 A latin saying “Multum in parvo”, much in little, conveys the main idea of the following lectures. We are going to investigate what is a microcontroller, what it consist of, what is its applications, what are difficulties of using it, what is information, what is a signal, what is a program, how to program your microcontroller and how to put all of this together to make a project that will do what you want it to do. 
 
@@ -328,7 +328,7 @@ If you connect a serial output pin which sends a “A” (ascii 41 or 01000001 i
 
 
 
-## Part three - Python and MicroPython
+## **Part three - Python and MicroPython**
 
 
 ### History of Python programming
@@ -636,7 +636,7 @@ Analog to digital and digital to analog:
 [https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters](https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters)
 
 
-## Part Four - Tuesday
+## **Part Four - Tuesday**
 
 
 ### What is timer and what is counter?
