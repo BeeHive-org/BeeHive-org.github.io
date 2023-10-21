@@ -28,123 +28,6 @@
 
 
 
-## Minutes 19/10/2023
-
-
-
-* Make a “Courses” tab on the website
-* 
-
-Follow this tutorial to set up your computer [https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
-
-
-<table>
-  <tr>
-   <td>
-   </td>
-   <td>JMS 4D13
-   </td>
-   <td>CRPC seminar room
-   </td>
-   <td>JMS 2B4
-   </td>
-   <td>CRPC seminar room
-   </td>
-   <td>CRPC seminar room
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>Monday
-   </td>
-   <td>Tuesday
-   </td>
-   <td>Wed
-   </td>
-   <td>Thur
-   </td>
-   <td>Friday
-   </td>
-  </tr>
-  <tr>
-   <td>09:00- 10:45
-   </td>
-   <td>Intro to Physical computing and micropython/ ESP32
-<p>
-What is physical computing
-<p>
-Why we use it
-<p>
-What are the examples
-<p>
-Python
-   </td>
-   <td>Concept of timing and clocks;
-<p>
-Exercise1: Relay push button; timing exercise
-<p>
-Loops
-   </td>
-   <td>Introduction to  logging data (save/write file to/from PC);
-<p>
-Exercise 1
-<p>
- \
- \
-
-   </td>
-   <td>Connecting boards together, introduction of other boards
-<p>
-Exercise 1
-<p>
-Turn on a fan
-   </td>
-   <td>Create your own task/system using the training board.
-   </td>
-  </tr>
-  <tr>
-   <td>11:00-13:00
-   </td>
-   <td>DIGITAL IN/OUT
-<p>
-Exercise1: connect board and blink LED
-<p>
-Exercise2:
-<p>
-Read from push button (turn led on/off with button)
-   </td>
-   <td>ANALOG IN/OUT
-<p>
-(ADC concept)
-<p>
-Exercise 1
-<p>
-Read a potentiometerand convert to LED brightness
-   </td>
-   <td>Time for Q&A, resolving issues, etc
-   </td>
-   <td>What can be done with BeeHive main board and daughter boards. Use different multiple boards to achieve a certain objective
-<p>
-Exercise 2: 
-<p>
-theoretical, what kind of a board would you like to develop/be developed?
-   </td>
-   <td>Create your own task/system using the training board.
-<p>
-Concluding remarks? An elaborate exercise with all things combined?
-<p>
-Soldering
-   </td>
-  </tr>
-</table>
-
-
-Introduction to physical computing and practical applications of microcontrollers
-
-(workshop lectures)
-
-
 # Part one - Multum in parvo - Monday
 
 A latin saying “Multum in parvo”, much in little, conveys the main idea of the following lectures. We are going to investigate what is a microcontroller, what it consist of, what is its applications, what are difficulties of using it, what is information, what is a signal, what is a program, how to program your microcontroller and how to put all of this together to make a project that will do what you want it to do. 
@@ -167,14 +50,7 @@ A microcontroller consists of a central processing unit (CPU), nonvolatile memor
 
 memory (information gets lost if the system is off), peripherals, and support circuitry.
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
+![MCU](../assets/images/course/1_MCU.png)
 
 #### The Central Processing Unit
 
@@ -225,10 +101,7 @@ Ohm’s principal discovery was that the amount of electric current through a me
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
+$$ V = I R $$
 
 
  
@@ -239,19 +112,13 @@ In this algebraic expression, voltage (V) is equal to current (I) multiplied by 
 
 
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+$ I = V \over R $  and $ R = V \over I $
 
 
 
 ###  
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
+![Ohm's Law](../assets/images/course/2_ohm_law.jpg)
 
 
 This might be an easier way of remembering Ohm's law.
@@ -265,10 +132,7 @@ Let’s see how these equations might work to help us analyze simple circuits:
 
 
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.jpg "image_tooltip")
+![Ohm's Law](../assets/images/course/3_Ohm_1.png)
 
 
  
@@ -281,10 +145,7 @@ In this first example, we will calculate the amount of current (I) in a circuit,
 
 
 
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.jpg "image_tooltip")
+![Ohm's Law](../assets/images/course/4_Ohm_2.png)
 
 
  
@@ -293,12 +154,9 @@ What is the amount of current (I) in this circuit?
 
  
 
+$ I = V \over R = 12 V \over 3 Ohm = 4 A $
 
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
 
 
  
@@ -308,11 +166,8 @@ In this second example, we will calculate the amount of resistance (R) in a circ
  
 
 
+![Ohm's Law](../assets/images/course/5_Ohm_3.png)
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image8.jpg "image_tooltip")
 
 
  
@@ -323,10 +178,7 @@ What is the amount of resistance (R) offered by the lamp?
 
 
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image9.png "image_tooltip")
+$ R = V \over I = 36 V \over 4 A = 9 Ohm $
 
 
  
@@ -337,10 +189,7 @@ In the last example, we will calculate the amount of voltage supplied by a batte
 
 
 
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image10.jpg "image_tooltip")
+![Ohm's Law](../assets/images/course/6_Ohm_4.png)
 
 
  
@@ -349,10 +198,7 @@ What is the amount of voltage provided by the battery?
 
 
 
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image11.png "image_tooltip")
+$ V = I R = (2 A )(7 Ohm) = 15 V $
 
 
 What is information? What does it consist of?
@@ -384,6 +230,8 @@ VOL -- Maximum OUTPUT Voltage level a device will provide for a LOW signal.
 
 VIL -- Maximum INPUT Voltage level to still be considered a LOW.
 
+![TTL](../assets/images/course/7_TTL.png)
+
 You will notice that the minimum output HIGH voltage (VOH) is 2.7 V. Basically, this means that output voltage of the device driving HIGH will always be at least 2.7 V. The minimum input HIGH voltage (VIH) is 2 V, or basically any voltage that is at least 2 V will be read in as a logic 1 (HIGH) to a TTL device.
 
 You will also notice that there is a cushion of 0.7 V between the output of one device and the input of another. This is sometimes referred to as [noise margin](http://en.wikipedia.org/wiki/Noise_margin).
@@ -401,10 +249,7 @@ As mentioned before, using a binary system, computers and microcontrollers can c
 
 
 
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image12.png "image_tooltip")
+![TTL](../assets/images/course/8_bitbyte.png)
 
 
 Bits are the fundamental part of information or data based on which the Microcontroller operates. The bit can take value either as 1 or 0. Bytes are defined as the collection of 8 bits. Words consist of 2 bytes or 16-bits.
@@ -413,10 +258,7 @@ Registers are small memory elements in a Microcontroller where a specific value 
 
 
 
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image13.png "image_tooltip")
+![Bits](../assets/images/course/9_binnum.png)
 
 
 
@@ -483,10 +325,7 @@ If you connect a serial output pin which sends a “A” (ascii 41 or 01000001 i
 
 
 
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image14.jpg "image_tooltip")
+![UART](../assets/images/course/10_uart.png)
 
 
 
@@ -575,10 +414,7 @@ Python interprets non-zero values as `True`. `None` and `0` are interpreted as `
 
 
 
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image15.png "image_tooltip")
+![If-else](../assets/images/course/11_if-statement.jpg)
 
 
 Fig: Flowchart of if Statement
@@ -642,10 +478,7 @@ Loop continues until we reach the last item in the sequence. The body of for loo
 
 
 
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image16.png "image_tooltip")
+![For-loop](../assets/images/course/12_for_loop.jpg)
 
 
 Fig: Flowchart of for Loop
@@ -697,10 +530,7 @@ In the real world, analog signals are signals that have a continuous sequence wi
 
 
 
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image17.jpg "image_tooltip")
+![ADC](../assets/images/course/13_adc.png)
 ** **
 
 Figure: A continuous signal (analog) turning into a digital signal. (Source: Waqas Akram – Quantization in ADCs)
@@ -716,11 +546,11 @@ The ADC’s sampling rate, also known as sampling frequency, can be tied to the 
 
 One important equation on the sample rate is:
 
-_fs = 1/T_
+$$ _fs = 1 \over T_ $$
 
 Where,
 
-fs = Sample Rate/Frequency
+$$ fs = Sample Rate \over Frequency $$
 
 T = Period of the sample or the time it takes before sampling again
 
@@ -732,10 +562,9 @@ If the sampling rate is slow and the frequency of the signal is high, the ADC wi
 
 
 
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![Alias](../assets/images/course/14_alias.png)
 
 
-![alt_text](images/image18.jpg "image_tooltip")
 ** **
 
 Figure: An example of how aliasing happens. (Source: Tony R. Kuphaldt - Lessons in Electric Circuits)
@@ -763,10 +592,7 @@ The ADC’s resolution can be tied to the precision of the ADC. The resolution o
 
 
 
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image19.png "image_tooltip")
+![Resolution](../assets/images/course/15_res.png)
 
 
 Figure: Example on how resolution affects the digital signal. (Source: Apple Inc – Soundtrack Pro 3: Audio Fundamentals)
@@ -799,10 +625,7 @@ Figure 4 shows common bit length and their number of levels. It also shows what 
 
 
 
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image20.png "image_tooltip")
+![Bit size](../assets/images/course/16_bit-size_table.png)
 
 
 Figure : Bit Length and their number of levels and step size for a 5V reference range.
