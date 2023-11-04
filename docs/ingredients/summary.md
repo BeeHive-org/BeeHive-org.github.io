@@ -12,10 +12,10 @@
 [Switch array](https://github.com/BeeHive-org/BeeHive/wiki/Switch-array) | Actuator | ![dc-driver](../assets/icons/led.svg) | Low power LEDs driver | ![switch](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/8_switch_array/8_switch_array_3D.png?raw=true)
 [High power switch array](https://github.com/BeeHive-org/BeeHive/wiki/High-power-switch-array) | Actuator | ![dc-driver](../assets/icons/led.svg) | High power LEDs driver | ![hp-switch](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/hp_led_switch/hp_led_switch_3D.png?raw=true)
 [Humidity and temperature sensor](https://github.com/BeeHive-org/BeeHive/wiki/Humidity-and-temperature-sensor) | Sensor | ![dc-driver](../assets/icons/thermometer.svg) | Humidity and temperature sensor | ![hum-temp-sensor](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/hum_temp_sensor/hum_temp_sensor_3d.png?raw=true)
-[IR sensor array](https://github.com/BeeHive-org/BeeHive/wiki/IR-sensor-array) | Actuator/Sensor | ![dc-driver](../assets/icons/led.svg) | IR emitter and sensor | ![ir-sensor](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/ir_sensor/ir_sensor_PCB.PNG?raw=true)
+[IR sensor array](https://github.com/BeeHive-org/BeeHive/wiki/IR-sensor-array) | Actuator/Sensor | ![dc-driver](../assets/icons/led.svg) | IR emitter and sensor | <! -- ![ir-sensor](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/ir_sensor/ir_sensor_PCB.PNG?raw=true) --> 
 [Level shifter](https://github.com/BeeHive-org/BeeHive/wiki/Level-shifter) | Control | ![dc-driver](../assets/icons/chip3.svg) | Bi-directional logic level shifter | ![level-shifter](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/level_shifter/level_shifter_3D.png?raw=true)
-[Solenoid control board](https://github.com/BeeHive-org/BeeHive/wiki/Solenoid-control-board) | Actuator | ![dc-driver](../assets/icons/valve.svg) | Solenoid | ![stepper](../assets/icons/pump.svg)
-[Spike&Hold board](https://github.com/BeeHive-org/BeeHive/wiki/Spike&Hold-board) | Actuator | ![dc-driver](../assets/icons/chip2.svg) | Solenoid | ![stepper](../assets/icons/pump.svg)
+[Solenoid control board](https://github.com/BeeHive-org/BeeHive/wiki/Solenoid-control-board) | Actuator | ![dc-driver](../assets/icons/valve.svg) | Solenoid | <! --  ![stepper](../assets/icons/pump.svg) --> 
+[Spike&Hold board](https://github.com/BeeHive-org/BeeHive/wiki/Spike&Hold-board) | Actuator | ![dc-driver](../assets/icons/chip2.svg) | Solenoid | <! -- ![stepper](../assets/icons/pump.svg) --> 
 
 !!! tip
     Something useful.
