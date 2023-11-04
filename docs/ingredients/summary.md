@@ -3,7 +3,7 @@
 
 | Hardware | Type || Function ||
  ----- | ---- | - | ----- | - |
-[Main hub](https://github.com/BeeHive-org/BeeHive/wiki/Main-hub) | Control | ![dc-driver](../assets/icons/chip1.svg) | Control | ![hub](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/central_hub/central_hub_3D.png?raw=true)
+[Main hub](https://github.com/BeeHive-org/BeeHive/wiki/Main-hub) | Control | ![dc-driver](../assets/icons/chip.svg) | Control | ![hub](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/central_hub/central_hub_3D.png?raw=true)
 [12V5A breakout](https://github.com/BeeHive-org/BeeHive/wiki/12V5A-breakout) | Power management | ![dc-driver](../assets/icons/chip2.svg) | 12V breakout | ![12V5A](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/12V5A_breakout/12V5A_breakout_3D.png?raw=true)
 [5V3A breakout](https://github.com/BeeHive-org/BeeHive/wiki/5V3A-breakout) | Power management | ![dc-driver](../assets/icons/chip2.svg) | 5V breakout | ![5V3A](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/power_supply/power_supply_3D.png?raw=true)
 [12V/24V boost converter](https://github.com/BeeHive-org/BeeHive/wiki/Boost-converter-12V-to-24V) | Power management | ![dc-driver](../assets/icons/chip2.svg) | 12V to 24V converter | ![12V-to-24V](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/12_24_boost_converter/12_24_boost_converter_3D.png?raw=true)
