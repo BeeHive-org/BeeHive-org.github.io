@@ -3,11 +3,14 @@ title: What we need
 description: 
 ---
 
+## Knowledge base
+To fully assemble the BeeHive system, it is important to go through the basics of soldering and the required tools to do so. [A handy sparkfun tutorial](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering/all) is a very good place to start although the particular tools and consumables are left to user's discretion.
 
 ## Tools
+Links, that are provided below, are for reference. You are free to buy whatever brand and product suits you, and, generally speaking, you will require the following:
 - Soldering iron
-- Soldering station
-- Solder
+- [Soldering station](https://www.amazon.co.uk/Soldering-Station%EF%BC%8CSoldering-Adjustable-Function-Switching/dp/B0B5GM885M/ref=sr_1_16?c=ts&keywords=Soldering+Stations&qid=1701894116&s=diy&sr=1-16&ts_id=1939419031)
+- [Solder](https://uk.rs-online.com/web/p/solder/2441549)
 - Extractor fan
 - Flush cutters
 - Solering wick (for desoldering)
