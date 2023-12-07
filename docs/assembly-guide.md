@@ -8,6 +8,7 @@ To fully assemble the BeeHive system, it is important to go through the basics o
 
 ## Tools
 Links, that are provided below, are for reference. You are free to buy whatever brand and product suits you, and, generally speaking, you will require the following:
+
 - Soldering iron
 - [Soldering station](https://www.amazon.co.uk/Soldering-Station%EF%BC%8CSoldering-Adjustable-Function-Switching/dp/B0B5GM885M/ref=sr_1_16?c=ts&keywords=Soldering+Stations&qid=1701894116&s=diy&sr=1-16&ts_id=1939419031)
 - [Solder](https://uk.rs-online.com/web/p/solder/2441549)
