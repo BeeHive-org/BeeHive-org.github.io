@@ -1,0 +1,1934 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A flexible open hardware platform for equipment development">
+      
+      
+      
+        <link rel="canonical" href="https://beehive-org.github.io/courses/intro_to_electronics/">
+      
+      
+        <link rel="prev" href="../../ingredients/summary/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Intro to electronics - BeeHive</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-one-multum-in-parvo-monday" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BeeHive" class="md-header__button md-logo" aria-label="BeeHive" data-md-component="logo">
+      
+  <img src="../../assets/images/beehive.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BeeHive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to electronics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/BeeHive-org/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BeeHive-org
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  Introduction
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recipes/intro/" class="md-tabs__link">
+          
+  
+  Recipes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ingredients/summary/" class="md-tabs__link">
+          
+  
+  Ingredients
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Courses
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BeeHive" class="md-nav__button md-logo" aria-label="BeeHive" data-md-component="logo">
+      
+  <img src="../../assets/images/beehive.png" alt="logo">
+
+    </a>
+    BeeHive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/BeeHive-org/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BeeHive-org
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../what-is-about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is this about?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Preparations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Preparations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assembly guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Assembly guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assembly-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What we need
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../soldering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Soldering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1_3" id="__nav_2_3_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Boards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Boards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../board-hub.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Microcontrollers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Microcontrollers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../micropython/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Micropython
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Recipes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Recipes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/LI850-multiplexer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LI850 multiplexer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/5-choice-serial-reaction-task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 choice serial reaction task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    3 axis controller
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 axis controller
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdosrecipes/3-axis-controller/test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Ingredients
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ingredients
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ingredients/summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary of hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro to electronics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intro to electronics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-one-multum-in-parvo-monday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part one - Multum in parvo - Monday
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part one - Multum in parvo - Monday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a microcontroller?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-it-special-and-why-do-we-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What makes it special and why do we use it?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What makes it special and why do we use it?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-central-processing-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Central Processing Unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peripherals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripherals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-they-used-for-where-can-you-find-them-what-are-scientific-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are they used for? Where can you find them? What are scientific applications?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-two-by-ohms-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part two - By Ohm’s Law
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part two - By Ohm’s Law">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-circuitry-and-what-is-ohms-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is circuitry and what is Ohm’s Law
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyzing-simple-circuits-with-ohms-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyzing Simple Circuits with Ohm’s Law
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-logic-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Logic Level?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-low-and-active-high" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active-Low and Active-High
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ttl-logic-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL Logic Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bits-bytes-words" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bits, bytes, words
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-serial-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Serial Protocol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-three-python-and-micropython" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part three - Python and MicroPython
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part three - Python and MicroPython">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history-of-python-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of Python programming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-else-statement-and-its-python-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      If-else statement and its Python implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-for-loop-in-python-is-used-to-iterate-over-a-sequence-list-tuple-string-or-other-iterable-objects-iterating-over-a-sequence-is-called-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      The for loop in Python is used to iterate over a sequence (list, tuple, string) or other iterable objects. Iterating over a sequence is called traversal.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analog-to-digital-converters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analog-to-digital converters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-adcs-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How ADCs Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-ratefrequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Rate/Frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-of-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution of ADC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-four-tuesday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part Four - Tuesday
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part Four - Tuesday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-timer-and-what-is-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is timer and what is counter?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wednesday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wednesday-second-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday second part
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thursday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thursday
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Friday
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Intro to electronics</h1>
+
+<!-- <p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 22.</p>
+<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
+
+<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
+<a href="#gdcalert2">alert2</a>
+<a href="#gdcalert3">alert3</a>
+<a href="#gdcalert4">alert4</a>
+<a href="#gdcalert5">alert5</a>
+<a href="#gdcalert6">alert6</a>
+<a href="#gdcalert7">alert7</a>
+<a href="#gdcalert8">alert8</a>
+<a href="#gdcalert9">alert9</a>
+<a href="#gdcalert10">alert10</a>
+<a href="#gdcalert11">alert11</a>
+<a href="#gdcalert12">alert12</a>
+<a href="#gdcalert13">alert13</a>
+<a href="#gdcalert14">alert14</a>
+<a href="#gdcalert15">alert15</a>
+<a href="#gdcalert16">alert16</a>
+<a href="#gdcalert17">alert17</a>
+<a href="#gdcalert18">alert18</a>
+<a href="#gdcalert19">alert19</a>
+<a href="#gdcalert20">alert20</a>
+<a href="#gdcalert21">alert21</a>
+<a href="#gdcalert22">alert22</a>
+
+<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
+-->
+
+<h2 id="part-one-multum-in-parvo-monday"><strong>Part one - Multum in parvo - Monday</strong></h2>
+<p>A latin saying “Multum in parvo”, much in little, conveys the main idea of the following lectures. We are going to investigate what is a microcontroller, what it consist of, what is its applications, what are difficulties of using it, what is information, what is a signal, what is a program, how to program your microcontroller and how to put all of this together to make a project that will do what you want it to do. </p>
+<h3 id="what-is-a-microcontroller"><strong>What is a microcontroller?</strong></h3>
+<p>Reference: <a href="https://www.allaboutcircuits.com/technical-articles/what-is-a-microcontroller-introduction-component-characteristics-component/">What Is a Microcontroller? The Defining Characteristics and Architecture of a Common Component - Technical Articles (allaboutcircuits.com)</a> </p>
+<p>A microcontroller is an integrated circuit (IC) device used for controlling other portions of an electronic system, usually via a microprocessor unit (MPU), memory, and some peripherals. These devices are optimised for embedded applications that require both processing functionality and agile, responsive interaction with digital (digital display), analog (temperature sensors), or electromechanical components (push buttons, rotary encoders).</p>
+<p>The most common way to refer to this category of integrated circuits is “microcontroller" but the abbreviation “MCU” is used interchangeably as it stands for “microcontroller unit”. You may also occasionally see “µC” (where the Greek letter mu replaces “micro”).</p>
+<p>“Microcontroller” is a well-chosen name because it emphasises defining characteristics of this product category. The prefix “micro” implies smallness and the term "controller" here implies an enhanced ability to perform control functions. As stated above, this functionality is the result of combining a digital processor and digital memory with additional hardware that is specifically designed to help the microcontroller interact with other components.</p>
+<h3 id="what-makes-it-special-and-why-do-we-use-it"><strong>What makes it special and why do we use it?</strong></h3>
+<p>A microcontroller consists of a central processing unit (CPU), nonvolatile memory (information is stored even if the system is off), volatile </p>
+<p>memory (information gets lost if the system is off), peripherals, and support circuitry.</p>
+<p><img alt="MCU" src="../../assets/images/course/1_MCU.png" /></p>
+<h4 id="the-central-processing-unit">The Central Processing Unit</h4>
+<p>The CPU performs arithmetic operations, manages data flow, and generates control signals in accordance with the sequence of instructions created by the programmer. The extremely complex circuitry required for CPU functionality is not visible to the user/person designing programs. In fact, thanks to <a href="https://www.allaboutcircuits.com/technical-articles/what-are-integrated-development-environments/">integrated development environments</a> and <a href="https://www.allaboutcircuits.com/technical-articles/introduction-to-the-c-programming-language-for-embedded-applications/">high-level languages such as C</a>, writing code for microcontrollers is often a fairly straightforward task.</p>
+<h4 id="memory">Memory</h4>
+<p>Nonvolatile memory is used to store the microcontroller’s program—i.e., the (often very long) list of <a href="https://www.allaboutcircuits.com/technical-articles/how-to-write-assembly-basic-assembly-instructions-ARM-instruction-set/">machine-language instructions</a> that tell the CPU exactly what to do. You will typically see the word “Flash” (which refers to a specific form of nonvolatile data storage) instead of “nonvolatile memory.”</p>
+<p>Volatile memory (i.e., RAM) is used for temporary data storage. This data is lost when the microcontroller loses power. Internal registers also provide temporary data storage, but we don’t think of these as a separate functional block because they are integrated into the CPU.</p>
+<h4 id="peripherals">Peripherals</h4>
+<p>We use the word “peripheral” to describe the hardware modules that help a microcontroller to interact with the external system. The following bullet points identify the various categories of peripherals and provide examples.</p>
+<ul>
+<li>Data converters: analog-to-digital converter, digital-to-analog converter, reference-voltage generator</li>
+<li>Clock generation: <a href="https://www.allaboutcircuits.com/technical-articles/choosing-the-right-oscillator-for-your-microcontroller/">internal oscillator</a>, crystal-drive circuitry, <a href="https://www.allaboutcircuits.com/technical-articles/what-exactly-is-a-phase-locked-loop-anyways/">phase-locked loop</a></li>
+<li>Timing: general-purpose timer, real-time clock, external-event counter, <a href="https://www.allaboutcircuits.com/technical-articles/turn-your-pwm-into-a-dac/">pulse-with modulation</a></li>
+<li>Analog signal processing: <a href="https://www.allaboutcircuits.com/textbook/semiconductors/chpt-8/introduction-operational-amplifiers/">operational amplifier</a>, analog comparator</li>
+<li>Input/output: general-purpose digital input and output circuitry, parallel memory interface</li>
+<li>Serial communication: <a href="https://www.allaboutcircuits.com/technical-articles/back-to-basics-the-universal-asynchronous-receiver-transmitter-uart/">UART</a>, <a href="https://www.allaboutcircuits.com/technical-articles/spi-serial-peripheral-interface/">SPI</a>, <a href="https://www.allaboutcircuits.com/technical-articles/introduction-to-the-i2c-bus/">I2C</a>, <a href="https://www.allaboutcircuits.com/projects/communicating-with-an-efm8-microcontroller-via-usb/">USB</a></li>
+</ul>
+<h3 id="what-are-they-used-for-where-can-you-find-them-what-are-scientific-applications"><strong>What are they used for? Where can you find them? What are scientific applications?</strong></h3>
+<p>Microcontrollers are used in multiple industries and applications, including in the home and enterprise, building automation, manufacturing, robotics, automotive, lighting, smart energy, industrial automation, communications and internet of things (<a href="https://internetofthingsagenda.techtarget.com/definition/Internet-of-Things-IoT">IoT</a>) deployments.</p>
+<p>The simplest microcontrollers facilitate the operation of electromechanical systems found in everyday convenience items, such as ovens, refrigerators, toasters, mobile devices, <a href="https://www.techtarget.com/searchsecurity/definition/key-fob">key fobs</a>, video game systems, televisions and lawn-watering systems. They are also common in office machines such as photocopiers, scanners, fax machines and printers, as well as Smart metres, ATMs and security systems.</p>
+<p>More sophisticated microcontrollers perform critical functions in aircraft, spacecraft, ocean-going vessels, vehicles, medical and life-support systems as well as in robots. In medical scenarios, microcontrollers can regulate the operations of an artificial heart, kidney or other organs. They can also be instrumental in the functioning of prosthetic devices.</p>
+<p><span style="text-decoration:underline;">In scientific instruments</span>, a microcontroller  can be responsible for actuating all the peripheral objects such as a Peltier element (to heat up samples), a fan, an LED strip and so on. In <span style="text-decoration:underline;">BeeHive</span>, as you will see, the microcontroller is used for sending commands to other boards which in turn accomplish a specific goal like actuation or reading sensor.</p>
+<h2 id="part-two-by-ohms-law"><strong>Part two - By Ohm’s Law</strong></h2>
+<h3 id="what-is-circuitry-and-what-is-ohms-law"><strong>What is circuitry and what is Ohm’s Law</strong></h3>
+<p><a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/">Ohm’s Law - How Voltage, Current, and Resistance Relate | Ohm's Law | Electronics Textbook (allaboutcircuits.com)</a></p>
+<p>Ohm’s principal discovery was that the amount of electric current through a metal conductor in a circuit is directly proportional to the voltage impressed across it, for any given temperature. Ohm expressed his discovery in the form of a simple equation, describing how voltage, current, and resistance interrelate:</p>
+<p>$$ V = I R $$</p>
+<p>In this algebraic expression, voltage (V) is equal to current (I) multiplied by resistance (R). Using algebra techniques, we can manipulate this equation into two variations, solving for I and R, respectively:</p>
+<p>$$ I = {V \over R} $$<br />
+and 
+$$ R = {V \over I} $$</p>
+<p><img alt="Ohm's Law" src="../../assets/images/course/2_ohm_law.jpg" /></p>
+<p>This might be an easier way of remembering Ohm's law.</p>
+<h3 id="analyzing-simple-circuits-with-ohms-law">Analyzing Simple Circuits with Ohm’s Law</h3>
+<p>Let’s see how these equations might work to help us analyze simple circuits:</p>
+<p><img alt="Ohm's Law" src="../../assets/images/course/3_Ohm_1.png" /></p>
+<p>In the above circuit, there is only one source of voltage (the battery, on the left) and only one source of resistance to current (the lamp, on the right). This makes it very easy to apply Ohm’s Law. If we know the values of any two of the three quantities (voltage, current, and resistance) in this circuit, we can use Ohm’s Law to determine the third.</p>
+<p>In this first example, we will calculate the amount of current (I) in a circuit, given values of voltage (E) and resistance (R):</p>
+<p><img alt="Ohm's Law" src="../../assets/images/course/4_Ohm_2.png" /></p>
+<p>What is the amount of current (I) in this circuit?</p>
+<p>$$ I = {V \over R} = {12 V \over 3 \Omega} = 4 A $$</p>
+<p>In this second example, we will calculate the amount of resistance (R) in a circuit, given values of voltage (E) and current (I):</p>
+<p><img alt="Ohm's Law" src="../../assets/images/course/5_Ohm_3.png" /></p>
+<p>What is the amount of resistance (R) offered by the lamp?</p>
+<p>$$ R = {V \over I} = {36 V \over 4 A} = 9 \Omega $$</p>
+<p>In the last example, we will calculate the amount of voltage supplied by a battery, given values of current (I) and resistance (R):</p>
+<p><img alt="Ohm's Law" src="../../assets/images/course/6_Ohm_4.png" /></p>
+<p>What is the amount of voltage provided by the battery?</p>
+<p>$$ V = I R = (2 A )(7 \Omega) = 15 V $$</p>
+<p>What is information? What does it consist of?</p>
+<p><a href="https://learn.sparkfun.com/tutorials/logic-levels">Logic Levels - learn.sparkfun.com</a></p>
+<p>What happens is that voltage and current are not just values that are used to represent electric parameters, they can also be a source of information. For example, if we were to have a lamp and turn  it on/off constantly, it would be nothing but a signal that transmits a very simple message. This signal might be just an indicator that something works or not (lights ON - it works, lights OFF - it is turned off) or it might be something more complicated as the Morse code. To think of it, the Morse code is a structured sequence of ON/OFF signals with different time frames which, in fact, is closely correlated with the next topic of Logic levels.</p>
+<h3 id="what-is-a-logic-level"><strong>What is a Logic Level?</strong></h3>
+<p>Deriving from the lamp example above, computers and microcontrollers use a communication system with only 2 states to perform all sorts of operations. In real life, this is represented as different voltage levels. We often refer to the two states in a digital circuit to be ON or OFF. Represented in binary, an ON translates to a binary 1, and an OFF translates to a binary 0. In microcontrollers, we call these signals HIGH or LOW, respectively. Using these two, digital electronic systems are able to store, process, and transmit data or information. The strength of a signal is typically described by its voltage level. How is a logic 0 (LOW) or a logic 1 (HIGH) defined? Manufacturers of chips generally define these in their spec sheets. The most common standard is TTL or Transistor-Transistor Logic, and within TTL systems, the majority of them implements LOW as 0V and HIGH as either 3.3V or 5V. </p>
+<h3 id="active-low-and-active-high"><strong>Active-Low and Active-High</strong></h3>
+<p>When working with ICs and microcontrollers, you'll likely encounter pins that are active-low and pins that are active-high. Simply put, this just describes how the pin is activated. If it's an active-low pin, you must "pull" that pin LOW by connecting it to ground. For an active high pin, you connect it to your HIGH voltage (usually 3.3V/5V - more details on different HIGH levels below).</p>
+<h3 id="ttl-logic-levels">TTL Logic Levels</h3>
+<p>A majority of systems we use rely on either 3.3V or 5 V TTL Levels. TTL is an acronym for Transistor-Transistor Logic. It relies on circuits built from bipolar transistors to achieve switching and maintain logic states. Transistors are basically fancy-speak for electrically controlled switches. For any logic family, there are a number of threshold voltage levels to know. Below is an example for standard 5V TTL levels:</p>
+<p>VOH -- Minimum OUTPUT Voltage level a TTL device will provide for a HIGH signal.</p>
+<p>VIH -- Minimum INPUT Voltage level to be considered a HIGH.</p>
+<p>VOL -- Maximum OUTPUT Voltage level a device will provide for a LOW signal.</p>
+<p>VIL -- Maximum INPUT Voltage level to still be considered a LOW.</p>
+<p><img alt="TTL" src="../../assets/images/course/7_TTL.png" /></p>
+<p>You will notice that the minimum output HIGH voltage (VOH) is 2.7 V. Basically, this means that output voltage of the device driving HIGH will always be at least 2.7 V. The minimum input HIGH voltage (VIH) is 2 V, or basically any voltage that is at least 2 V will be read in as a logic 1 (HIGH) to a TTL device.</p>
+<p>You will also notice that there is a cushion of 0.7 V between the output of one device and the input of another. This is sometimes referred to as <a href="http://en.wikipedia.org/wiki/Noise_margin">noise margin</a>.</p>
+<p>Likewise, the maximum output LOW voltage (VOL) is 0.4 V. This means that a device trying to send out a logic 0 will always be below 0.4 V. The maximum input LOW voltage (VIL) is 0.8 V. So, any input signal that is below 0.8 V will still be considered a logic 0 (LOW) when read into the device.</p>
+<p>What happens if you have a voltage that is between 0.8 V and 2 V? Well, your guess is as good as mine. Honestly, this range of voltages is undefined and results in an invalid state, often referred to as floating. If an output pin on your device is “floating” in this range, there is no certainty with what the signal will result in. It may bounce arbitrarily between HIGH and LOW.</p>
+<h3 id="bits-bytes-words">Bits, bytes, words</h3>
+<p>As mentioned before, using a binary system, computers and microcontrollers can communicate, store information and perform many other tasks. In this section we will explore a little on how this communication happens and how the “binary language” is organised:</p>
+<p><a href="https://www.gadgetronicx.com/basics-of-8051-microcontroller-programming/">Basics of 8051 Microcontroller Programming - Gadgetronicx</a></p>
+<p><img alt="TTL" src="../../assets/images/course/8_bitbyte.png" /></p>
+<p>Bits are the fundamental part of information or data based on which the Microcontroller operates. The bit can take value either as 1 or 0. Bytes are defined as the collection of 8 bits. Words consist of 2 bytes or 16-bits.</p>
+<p>Registers are small memory elements in a Microcontroller where a specific value can be loaded to perform a specific task. It can vary in size such as 8-bit or 16-bit registers.By convention, the LSB marks the initial or Least significant bit and MSB marks the last or Most significant bit.</p>
+<p><img alt="Bits" src="../../assets/images/course/9_binnum.png" /></p>
+<h3 id="communication-protocols"><strong>Communication protocols</strong></h3>
+<p>Using the binary system, many different communication protocols have been created over the years, with their own advantages and disadvantages. Given the particularities of microcontrollers (limited number of IO ports, memory and processing speed), certain types of communication protocols are preferred. Below we show a couple of general characteristics present in different protocols:</p>
+<p><a href="https://www.teachmemicro.com/microcontroller-serial-communication/">Serial Communication with Microcontrollers | Microcontroller Tutorials (teachmemicro.com)</a></p>
+<p><strong>Serial communication</strong> is the process of transmitting data one bit at a time. In contrast, parallel communication is where data bits are sent as a whole. Parallel data transmission is faster than serial transmission but with a number of disadvantages:</p>
+<ul>
+<li>It needs more wires and therefore can be more expensive to implement</li>
+<li>The greater number of wires limit it to shorter transmission distances</li>
+<li>It is susceptible to clock skew, which limits the speed of transmission to the slowest of the links</li>
+<li>Crosstalk is also an issue due to the proximity of the wires</li>
+</ul>
+<p>Serial data transmission answers all the above problems, most especially the first one, as cost and limited pins are common issues in microcontroller system design.</p>
+<p>There are generally two types of serial transmission: <strong>asynchronous</strong> and <strong>synchronous </strong>which literally means “not synced” and “synced” respectively. In asynchronous data transfer, there is no clock signal for transmission and reception. The common UART (also known as RS-232 or SCI) is a device found in microcontrollers for asynchronous communication (using the serial protocol, see below - this device is also found on cars and mobile phones). There are also devices for synchronous communication, where  an extra line is added for the clock (synchronising) signal. </p>
+<p>The clock signal ensures that reception of correct data bits. </p>
+<p>For the rest of the course, serial will now refer to asynchronous data transmission used by UART devices found in Arduino and PIC microcontrollers. For the current course we won’t go into details about synchronous data transmission protocols and we refer these articles with more information about them: <a href="https://www.teachmemicro.com/spi-primer/">SPI</a>, <a href="https://www.teachmemicro.com/i2c-primer/">I2C</a>.</p>
+<h3 id="the-serial-protocol">The Serial Protocol</h3>
+<p>Serial communication follows a simple protocol (rules to follow) to ensure correct transmission. A serial data consists of</p>
+<ul>
+<li>Data Bits</li>
+<li>Synchronization Bits</li>
+<li>Parity Bits</li>
+</ul>
+<p>The added overhead that was referred to are the synchronization (or sync) and parity bits. The sync bits are start and stop bits to indicate the start and end of transmission. When the serial bus (or data line) is idle, the voltage level goes high. The sending device sends a logic 0 (the start bit) to kickstart the transmission.</p>
+<p>Data bits ranging from 5 to 9 bits then follow. The order of data bits is from the least significant bit (LSB) to the most significant bit (MSB).</p>
+<p>The transmission of the parity bit, used for error checking, follows. Parity can either be even or odd. For even parity, the parity bit makes the number of 1’s even. For odd parity, the parity bit makes the number of 1’s odd.</p>
+<p><em>Example: The data bits 1010001 have three 1’s. For even parity, the parity bit should be 1 to make the total number of 1’s equal to 4 (an even number). For odd parity, the parity bit is 0 since there is already an odd number of 1’s.</em></p>
+<p>Stop bits, which are one or two logic 1’s, tail the serial data, marking the end of transmission.</p>
+<p>The baud rate, or speed of transmission, is also part of the protocol. It is important that the sender and the receiver should have the same baud rate (bits per second). The standard rates are as follows:</p>
+<ul>
+<li>1200</li>
+<li>2400</li>
+<li>4800</li>
+<li>9600</li>
+<li>19200</li>
+<li>38400</li>
+<li>57600</li>
+<li>115200</li>
+</ul>
+<p>9600 is the most common and is the default baud rate for most serial terminals and simulators.</p>
+<p>If you connect a serial output pin which sends a “A” (ascii 41 or 01000001 in binary) character to the oscilloscope, this is what you would see on the screen:</p>
+<p><img alt="UART" src="../../assets/images/course/10_uart.png" /></p>
+<h2 id="part-three-python-and-micropython"><strong>Part three - Python and MicroPython</strong></h2>
+<h3 id="history-of-python-programming">History of Python programming</h3>
+<p><a href="https://www.tutorialspoint.com/history-of-python-programming">History of Python Programming (tutorialspoint.com)</a></p>
+<p>Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.</p>
+<ul>
+<li>Python is Interpreted − Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.</li>
+<li>Python is Interactive − You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.</li>
+<li>Python is Object-Oriented − Python supports Object-Oriented style or technique of programming that encapsulates code within objects.</li>
+<li>Python is great for  programming beginners due to its easy sintax, and its many libraries and users. It supports the  development of a wide range of applications from simple text processing to WWW browsers to games.</li>
+</ul>
+<p>Python was developed by Guido van Rossum in the late eighties and early nineties at the National Research Institute for Mathematics and Computer Science in the Netherlands.</p>
+<p>Python is derived from many other languages, including ABC, Modula-3, C, C++, Algol-68, SmallTalk, and Unix shell and other scripting languages.</p>
+<p>Python is copyrighted. Like Perl, Python source code is now available under the GNU General Public License (GPL).</p>
+<p>Python is now maintained by a core development team at the institute, although Guido van Rossum still holds a vital role in directing its progress.</p>
+<p>Python is now one of the most used languages in the world, with many libraries that extend its functionality into many different spaces and applications. For example, there are dedicated libraries for data analysis and visualisation (Pandas, Matplotlib, seaborn), creation of graphical interfaces (tkinter), neural networks (TensorFlow), web development (Django, flask). There are too many examples to list them all here, but given that most of these libraries use the same syntax, data types object orientation from Python and are straightforward to install, it becomes clear why using Python is convenient and powerful. </p>
+<p><a href="https://www.oreilly.com/library/view/programming-with-micropython/9781491972724/ch01.html">1. What Is MicroPython? - Programming with MicroPython [Book] (oreilly.com)</a></p>
+<p>MicroPython is a full reimplementation of Python 3. Apart from some differences described in the coming paragraphs, what you know about Python also applies to MicroPython. The most obvious difference between regular Python and Micro­Python is that MicroPython is designed to work under extraordinarily constrained conditions (such as just 16 kilobytes of RAM on some of the microcontrollers (eg the micro:bit).</p>
+<p>MicroPython runs “bare-metal” directly on the hardware: there is no underlying operating system like Windows, macOS, or Linux. All the operations and services usually provided by an operating system are handled directly by MicroPython. MicroPython has complete and direct control of the hardware, so, in effect, Micro­Python is the operating system. Apart from a few exceptions, all of the language features of Python are also in MicroPython. </p>
+<p>Due to the limited resources in the devices, MicroPython does not come with the full standard library by default. Rather, depending on the device, it will come with a subset of the standard library, often reimplemented in an efficient embedded-friendly manner.<a href="https://www.oreilly.com/library/view/programming-with-micropython/9781491972724/ch01.html#idm140172025394240">5</a> Usually, most of the features of a module will be available, but aspects that are considered edge-cases or redundant in an embedded context will not be implemented. All versions of MicroPython come with modules for interacting with the hardware, GPIO (general-purpose input/output) pins, peripherals, and components connected via such pins.</p>
+<p>Since MicroPython is Python 3, you get:</p>
+<ul>
+<li>Python’s style of object orientation </li>
+<li>Data types (like unicode strings, integers, and floating-point numbers) and data structures (like lists, sets, and dictionaries)</li>
+<li>The highly dynamic nature of Python objects</li>
+<li>Functions as first-class objects</li>
+<li>Exception handling (<em>try</em>, <em>except</em>, <em>finally</em>, and the standard built-in exception classes)</li>
+<li>Fun features like generator functions (using the <em>yield</em> keyword), generator expressions, and list comprehensions</li>
+<li>The new <em>async</em> and <em>await</em> keywords in the very latest versions of MicroPython</li>
+<li>A comprehensive number of Python’s built-in functions</li>
+</ul>
+<p>Because MicroPython runs on devices with different capabilities, the availability of features and modules will sometimes be different. Of course, devices with special capabilities, like WiFi, will include modules to support these features.</p>
+<p>For example, the micro:bit comes with a cut-down version of the standard library’s random module, but the default build for the ESP8266 board has the ultra minimalist <em>urandom</em> module <a href="https://www.oreilly.com/library/view/programming-with-micropython/9781491972724/ch01.html#idm140172025284000">6</a> instead. Because of the onboard WiFi capability, the ESP8266 port comes with both the <em>json</em> and <em>urequests</em> modules, whereas the micro:bit port does not because the micro:bit has no WiFi. MicroPython on both boards comes with the universally useful math module.</p>
+<p>MicroPython’s comprehensive and flexible re-implementation of Python 3 raises three interesting opportunities:</p>
+<ol>
+<li>The wider Python community has the opportunity to try embedded development using their favourite language.</li>
+<li>Embedded developers who use C and other traditional embedded languages have the opportunity to take advantage of Python’s ease of use and rich libraries.</li>
+<li>Beginner programmers have the opportunity to start with more than just “Hello, World!” They’re empowered to create engaging first projects using light, sound, sensors, and networking.</li>
+</ol>
+<p>In the next section we will start showing some examples on how certain structures in programming works and how we can take advantage of them to perform complex tasks  </p>
+<h3 id="if-else-statement-and-its-python-implementation">If-else statement and its Python implementation</h3>
+<p><a href="https://www.programiz.com/python-programming/if-elif-else">Python if, if...else, if...elif...else and Nested if Statement (programiz.com)</a></p>
+<p>Decision making is required when we want to execute a code only if a certain condition is satisfied. The if…elif…else statement is used in Python for decision making.</p>
+<pre><code>if test expression:
+    statement(s)
+</code></pre>
+<p>Here, the program evaluates the <code>test expression</code> and will execute statement(s) only if the test expression is <code>True</code>.</p>
+<p>If the test expression is <code>False</code>, the statement(s) is not executed.</p>
+<p>In Python, the body of the <code>if</code> statement is indicated by the indentation. The body starts with an indentation and the first unindented line marks the end.</p>
+<p>Python interprets non-zero values as <code>True</code>. <code>None</code> and <code>0</code> are interpreted as <code>False</code>.</p>
+<p><img alt="If-else" src="../../assets/images/course/11_if-statement.jpg" /></p>
+<p>Fig: Flowchart of if Statement</p>
+<p>Example: Python if Statement</p>
+<pre><code># If the number is positive, we print an appropriate message
+
+num = 3
+if num &gt; 0:
+    print(num, &quot;is a positive number.&quot;)
+print(&quot;This is always printed.&quot;)
+
+num = -1
+if num &gt; 0:
+    print(num, &quot;is a positive number.&quot;)
+print(&quot;This is also always printed.&quot;)
+</code></pre>
+<p>When you run the program, the output will be:</p>
+<pre><code>3 is a positive number
+This is always printed
+This is also always printed.
+</code></pre>
+<p>In the above example, <code>num &gt; 0</code> is the test expression.</p>
+<p>The body of <code>if</code> is executed only if this evaluates to <code>True</code>.</p>
+<p>When the variable <code>num</code> is equal to 3, test expression is true and statements inside the body of <code>if</code> are executed.</p>
+<p>If the variable <code>num</code> is equal to -1, test expression is false and statements inside the body of <code>if</code> are skipped.</p>
+<p>The <code>print()</code> statement falls outside of the <code>if</code> block (unindented). Hence, it is executed regardless of the test expression.</p>
+<h3 id="loop-implementation">Loop implementation</h3>
+<p><a href="https://www.programiz.com/python-programming/for-loop">Python for Loop (programiz.com)</a></p>
+<h3 id="the-for-loop-in-python-is-used-to-iterate-over-a-sequence-list-tuple-string-or-other-iterable-objects-iterating-over-a-sequence-is-called-traversal">The for loop in Python is used to iterate over a sequence (list, tuple, string) or other iterable objects. Iterating over a sequence is called traversal.</h3>
+<pre><code>for val in sequence:
+    loop body
+</code></pre>
+<p>Here, <code>val</code> is the variable that takes the value of the item inside the sequence on each iteration.</p>
+<p>Loop continues until we reach the last item in the sequence. The body of for loop is separated from the rest of the code using indentation.</p>
+<p><img alt="For-loop" src="../../assets/images/course/12_for_loop.jpg" /></p>
+<p>Fig: Flowchart of for Loop</p>
+<p>Example: Python if Statement</p>
+<pre><code># Program to find the sum of all numbers stored in a list
+
+# List of numbers
+numbers = [6, 5, 3, 8, 4, 2, 5, 4, 11]
+
+# variable to store the sum
+sum = 0
+
+# iterate over the list
+for val in numbers:
+    sum = sum+val
+
+print(&quot;The sum is&quot;, sum)
+</code></pre>
+<p>When you run the program, the output will be:</p>
+<pre><code>The sum is 48
+</code></pre>
+<h3 id="analog-to-digital-converters">Analog-to-digital converters</h3>
+<p><a href="https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html">Analogue to Digital Converter (ADC) Basics (electronics-tutorials.ws)</a></p>
+<p><a href="https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters">Analog-to-Digital Converters: How Does an ADC Work? | Arrow.com | Arrow.com</a></p>
+<p>Analog-to-digital converters (ADCs) are an important component when it comes to dealing with digital systems communicating with real-time signals. With IoT developing quickly to be applied in everyday life, real-world/time signals have to be read by these digital systems to accurately provide vital information. We’ll take a dive into how ADCs work and the theory behind them.</p>
+<h3 id="how-adcs-work">How ADCs Work</h3>
+<p>In the real world, analog signals are signals that have a continuous sequence with continuous values (there are some cases where it can be finite). These types of signals can come from sound, light, temperature and motion. Digital signals are represented by a sequence of discrete values where the signal is broken down into sequences that depend on the time series or sampling rate (more on this later). The easiest way to explain this is through a visual! The Figure below shows a great example of what analog and digital signals look like.</p>
+<p><img alt="ADC" src="../../assets/images/course/13_adc.png" /></p>
+<hr />
+<p>Figure: A continuous signal (analog) turning into a digital signal. (Source: Waqas Akram – Quantization in ADCs)</p>
+<p><a href="https://www.arrow.com/en/categories/microcontrollers-and-processors/microcontrollers">Microcontrollers</a> can’t read values unless it’s digital data. This is because microcontrollers can only see “levels” of the voltage, which depends on the resolution of the ADC and the system voltage.</p>
+<p>ADCs follow a sequence when converting analog signals to digital. They first sample the signal, then quantify it to determine the resolution of the signal, and finally set binary values and send it to the system to read the digital signal. Two important aspects of the ADC are its sampling rate and resolution.</p>
+<h3 id="sampling-ratefrequency"><strong>Sampling Rate/Frequency</strong></h3>
+<p>The ADC’s sampling rate, also known as sampling frequency, can be tied to the ADC’s speed. The sampling rate is measured by using “samples per second”, where the units are in SPS or S/s (or if you’re using sampling frequency, it would be in Hz). This simply means how many samples or data points it takes within a second. The more samples the ADC takes, the higher frequencies it can handle.</p>
+<p>One important equation on the sample rate is:</p>
+<p>$$ fs = {1 \over T} $$</p>
+<p>Where,</p>
+<p>$$ fs = {Sample Rate \over Frequency} $$</p>
+<p>T = Period of the sample or the time it takes before sampling again</p>
+<p>For example, in Figure 1, it seems fs is 20 S/s (or 20 Hz), while T is 50 ms. The sample rate is very slow, but the signal still came out similar to the original analog signal. This is because the frequency of the original signal is a slow 1 Hz, meaning the frequency rate was still good enough to reconstruct a similar signal.</p>
+<p>“What happens when the sampling rate is considerably slower?” you might ask. It is important to know the sampling rate of the ADC because you will need to know if it will cause aliasing. Aliasing means that when a digital image/signal is reconstructed, it differs greatly from the original image/signal caused from sampling.</p>
+<p>If the sampling rate is slow and the frequency of the signal is high, the ADC will not be able to reconstruct the original analog signal which will cause the system to read incorrect data. A good example is shown in Figure 2.</p>
+<p><img alt="Alias" src="../../assets/images/course/14_alias.png" /></p>
+<hr />
+<p>Figure: An example of how aliasing happens. (Source: Tony R. Kuphaldt - Lessons in Electric Circuits)</p>
+<p>In this example, you can see where the sampling occurs in the analog input signal. The output of the digital signal is not at all close to the original signal as the sampling rate is not high enough to keep up with the analog signal. This causes aliasing and now the digital system will be missing the full picture of the analog signal.</p>
+<p>One rule of thumb when figuring out if aliasing will happen is using Nyquist Theorem. According to the theorem, the sampling rate/frequency needs to be at least twice as much as the highest frequency in the signal to recreate the original analog signal. The following equation is used to find the Nyquist frequency:</p>
+<p>$$ fNyquist = 2fMax $$</p>
+<p>Where,</p>
+<p>$$ fNyquist = Nyquist frequency $$</p>
+<p>fMax = The max frequency that appears in the signal</p>
+<p>For example, if the signal that you input into the digital system has a max frequency of 100 kHz, then the sampling rate on your ADC needs to be equal or greater than 200 kS/s. This will allow for a successful reconstruction of the original signal.</p>
+<p>It is also good to note that there are cases where outside noise can introduce unexpected high frequency into the analog signal, which can disrupt the signal because the sample rate couldn’t handle the added noise frequency. It is always a good idea to add an anti-aliasing filter (<a href="https://www.arrow.com/en/categories/amplifiers/active-filters">low-pass filter</a>) before the ADC and sampling begins, as it can prevent unexpected high frequencies to make it to the system.</p>
+<h3 id="resolution-of-adc"><strong>Resolution of ADC</strong></h3>
+<p>The ADC’s resolution can be tied to the precision of the ADC. The resolution of the ADC can be determined by its bit length. A quick example on how it helps the digital signal output a more accurate signal is shown in Figure 3. Here you can see that the 1-bit only has two “levels”. As you increase the bit length, the levels increase making the signal more closely represent the original analog signal.</p>
+<p><img alt="Resolution" src="../../assets/images/course/15_res.png" /></p>
+<p>Figure: Example on how resolution affects the digital signal. (Source: Apple Inc – Soundtrack Pro 3: Audio Fundamentals)</p>
+<p>If you need accurate voltage level for your system to read, then the bit resolution is important to know. The resolution depends on both the bit length and the reference voltage. These equations help you figure out the total resolution of the signal that you are trying to input in voltage terms:</p>
+<p>Step Size = V_Ref/N</p>
+<p>Where,</p>
+<p>Step Size = The resolution of each level in terms of voltage</p>
+<p>V_Ref = The voltage reference (range of voltages)</p>
+<p>N = Total level size of ADC</p>
+<p>To find N size, use this equation:</p>
+<p>N = 2<sup>n</sup></p>
+<p>Where,</p>
+<p>n = Bit Size</p>
+<p>For example, let’s say that a sine wave with a voltage range of 5 needs to be read. The ADC has a bit size of 12-bit. Plug in 12 to n on equation 4 and N will be 4096. With that known and the voltage reference set to 5V, you’ll have: Step Size = 5V/4096. You will find that the step size will be around 0.00122V (or 1.22mV). This is accurate as the digital system will be able to tell when the voltage changes on an accuracy of 1.22mV.</p>
+<p>If the ADC was a very small bit length, let’s say only 2 bits, then the accuracy would reduce to only 1.25V, which is very poor as it will only be able to tell the system of four voltage levels (0V, 1.25V, 2.5V, 3.75V and 5V).</p>
+<p>Figure 4 shows common bit length and their number of levels. It also shows what the step size would be for a 5V reference. You can see how accurate it gets as the bit length increases.</p>
+<p><img alt="Bit size" src="../../assets/images/course/16_bit-size_table.png" /></p>
+<p>Figure : Bit Length and their number of levels and step size for a 5V reference range.</p>
+<p>With understanding both the resolution and the sample rates of the ADC, you can see how important it is to know these values and what to expect from your ADC.</p>
+<p>More information on hardware aspect of ADC can be found here: <a href="https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html">Analogue to Digital Converter (ADC) Basics (electronics-tutorials.ws)</a></p>
+<p>Analog to digital and digital to analog:</p>
+<p><a href="https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html">https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html</a></p>
+<p><a href="https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters">https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters</a></p>
+<h2 id="part-four-tuesday"><strong>Part Four - Tuesday</strong></h2>
+<h3 id="what-is-timer-and-what-is-counter">What is timer and what is counter?</h3>
+<p><a href="https://www.cs.ou.edu/~fagg/classes/es_general/timers.pdf">timers.dvi (ou.edu)</a></p>
+<p>Counters, as the name suggests, are hardware mechanisms for counting some form of event. At the heart of the counter is a special purpose register that stores the current value of the counter. Any time that a certain event occurs, the value of this counter is incremented (+1 is added to the value). The type of event that causes this increment is typically configurable through other special purpose registers. Because the counter value is stored in a special purpose register, this implies that the value can also be read from or written to by the executing code. Also, different counters will store values of different sizes. The typical sizes for 8-bit microcontrollers, such as the Atmel MegaX line, are 8 and 16 bits (1 and 2 bytes). Because of this finite size, the counter can only count to a maximum value (255 for an 8-bit counter, and 65535 for a 16-bit counter). Once the counter reaches this maximum value, and a new event occurs, the counter resets back to zero. From here, the counter continues to increment with each event</p>
+<p>In addition to counting external events, it is possible to also count events that are internal to the processor. In particular, by using the system clock (or a derivative thereof), the counter can be incremented at regular intervals. In this form, the counter becomes a form of timer. Often, the system clock is running at some “high” frequency (e.g., in our microcontrollers, we might see clocks of 16 MHz or 20 MHz). However, it is often the case that we may want our timer to count at much slower rates. This is handled in microcontrollers through the use of hardware prescalers that divide the system clock down to some reasonable frequency. Figure 3 shows the relationship between the system clock, the prescaler and the counter value. Prescalers are implemented as counters in and of themselves. Recall that if some counter is being incremented at a regular frequency, f, then bit 0 of the counter is exhibiting a regular signal at a frequency of f/2. Furthermore, bit 1 has a frequency of f/4. By “tapping into” the prescaler counter at different bits, we can divide the system clock by a range of different divisors (where the divisor takes a form of 2<sup>i</sup> for some i).</p>
+<p>We would now like to answer questions involving the rate at which our counter is counting or the amount of time that a certain number of counts will take. In order to talk about these ideas, we first must be able to distinguish between cycles/second of the main system clock and of the prescaled signal. Here, we have artificially defined the unit of a “tick” as a single cycle of the system clock and “tock” as a single cycle of the prescaled signal. Hence, we can express prescaler values in terms of ticks per tock, i.e, how many system clock cycles compose a single prescaled cycle. Example: assume a system clock of 16, 000, 000 ticks/sec and a prescaler of 64 ticks/tock. What is the period of a single increment of the Timer 0 counter?</p>
+<p>The answer:</p>
+<p>$$ {64ticks/tock \over 16,000,000ticks/sec} * {1tock} = 4 \mu s $$</p>
+<p>Example: What is the period of 250 increments of the Timer 0 counter? Answer:</p>
+<p>$$ {64ticks/tock \over 16,000,000ticks/sec} * {250tocks} = 4 ms $$</p>
+<p>What timers are in ESP32? (optional)</p>
+<h2 id="wednesday">Wednesday</h2>
+<h3 id="data-logging">Data logging</h3>
+<p>One important thing we want to accomplish with our microcontrollers is to save the data they are collecting while performing a certain task, and given the constraints imposed by the nature of microcontrollers (memory space, communication speeds, time critical events, etc), it is a good idea to give this careful thought when designing experiments/systems.</p>
+<p>Let’s use a practical example so that we have a better understanding of the critical points to be observed: </p>
+<p>The ESP32 we are using has 320kb of RAM, which can accomplish a lot, but won’t be enough for recording hours of data stream. In fact, if your system is recording data from a temperature sensor, using 12 bit resolution, you would need 2 bytes (each byte “carries” 8 bits of information) for each data point. If you would like to add information about time to each data collected, plus identify from which system the data has been collected, you would need another ~5 bytes. So every data point would be 7 bytes of information. Considering most applications will have several streams of data (temperature, humidity, triggering time of events, other sensors), and that we still have to factor in the code we write and upload to the board, this can consume all the space available in no time. Therefore, we need to find ways to “unload” data from the microcontroller’s main memory. This normally means transmitting the data to an external storage space, either an SD card, or a computer.</p>
+<p>Data transmission can be done using serial communication. We have seen a typical communication speed of 115200 bits per second [which is equivalent to 14400 bytes/sec - 14.4kb/s], so if we want to transmit data from thetemperature sensor, above together with identifiying info, we need seven bytes per data point, plus the overhead of the communication protocol being used. Therefore in one second we can theoretically transmit ~2000 data points for temperature readings (in reality this is less as the device needs to spend time opening the communication port, sending the data, sending other check bits, etc). Another thing to observe is that the microcontroller will be busy sending out data, pretty much unable to do anything else, so we also need to be careful in observing which are appropriate moments to send/receive data.</p>
+<p>Once the data is prepared to be transmitted out of the microcontroller, we need code on the receiving side to know what kind of data to expect, where to store it, how often, etc.  </p>
+<h3 id="wednesday-second-part">Wednesday second part</h3>
+<p>Now we take a small break from doing and working with code, to answer possible questions you might have that have not been covered during the course.</p>
+<h2 id="thursday">Thursday</h2>
+<p>BeeHive</p>
+<p>This project started out of an interest to streamline the way we set up research systems. We needed something Open Source, modular, affordable and easy to reproduce. To avoid reinventing the wheel, we based the connectivity of BeeHive on the Grove ecosystem. Developed by Seeed Studio, Grove is an open source system with dozens of sensors and actuators. With this compatibility in place we can focus on developing modules that are not present in Grove, and add to their ecosystem at the same time. Beehive follows the principle of one function per board, and is built with Through-hole components, so that boards can be hand soldered. All documentation is already <a href="https://github.com/beehive-org">publicly available</a><span style="text-decoration:underline;">.</span></p>
+<p>For this part of the course we will demo an example on how beehive boards can be put together to control different systems. </p>
+<p>Demo: Turn on a fan with boards.</p>
+<p>Putting boards together to do your own tasks</p>
+<p>Show that BeeHive can be combined with Grove system through connectors and Grove modules can be used to achieve objectives that otherwise can not be completed with the current version of BeeHive. Also, point out that Beehive is an open source project so if anybody wishes, they can propose, develop and add their own stuff on top of what is already there.</p>
+<h2 id="friday">Friday</h2>
+<p>Time to sketch your own protocols! Our suggestion is to start with a mockup of your project/need, in other words, think about in general terms of steps needed to be taken for your software/project to be up and running. Example for the reaction time task we created:</p>
+<ol>
+<li>Inter trial interval (random?)</li>
+<li>LED comes on</li>
+<li>Start counting time until button is pressed</li>
+<li>Detect button press</li>
+<li>Turn led off</li>
+<li>Record time elapsed</li>
+<li>Start next trial</li>
+<li>Take the next XX minutes to think about and write down the steps for your task.</li>
+<li>Now, show your sketch to the person next to you! While they are reading yours, take a moment to read theirs and make comments! Can you see if something is missing? Is there something that is not clear to you?</li>
+</ol>
+<p>Time to implement your task using the training board! </p>
+<ul>
+<li>Using the training board, start writing actual code to implement your task. Preferably, it needs to be connected to your subject area and achieve a goal that you have set. One of the most time-effective ways to do that is to write small parts of the code and test often to see if the board and code are reacting the way you would expect them to react. But first, create a sketch-diagram showing how your code is supposed to work</li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<p><strong>Microcontroller</strong> - a small computer made on an integrated circuit</p>
+<p><strong>Integrated circuit</strong> - a tiny chip that contains a lot of components (resistors, transistors, capacitors) that are all electrically connected together and work together to reach a certain goal (compare or amplify signals, rectification, etc.)</p>
+<p><strong>Central processing unit</strong> - An electronic circuit on chip which executes instructions</p>
+<p><strong>Nonvolatile memory</strong> - a type of computer memory that can retain stored information even after power is removed</p>
+<p><strong>Volatile memory</strong> - a type of computer memory that loses information after power is removed</p>
+<p><strong>Internet of Things (IoT)</strong> - Sensors, electronic devices and actuators that are comprised in one system which sends, receives and process information from the said elements with a help of network</p>
+<p><strong>Shift register</strong> - IC that allows to control multiple elements via saving the output in the register</p>
+<p><strong>Logic level</strong> - voltage value that is high enough to be recognised by a microcontroller as 1, or logic HIGH, usually 3.3 V or 5V.</p>
+<p><strong>Pulse-Width Modulation (PWM)</strong> - a signal that consist of logic HIGH and logic LOW pulses at a certain frequency. Duration of logic HIGH pulse determines PWM duty cycle which consequently is the percentage of power that the signal carries.</p>
+<p><strong>Bit</strong> - it can either be 0 or 1, a single cell that contains binary data. The fundamental piece of information storage.</p>
+<p><strong>Byte</strong> - 8 bits</p>
+<p><strong>Word</strong> - 2 bytes</p>
+<p><strong>Object oriented programming</strong> - a programming paradigm based on use of objects and classes.</p>
+<p><strong>To compile code</strong> - a compiler is a software that translates high-level programming language to machine code which can be executed</p>
+<p><strong>Analog-to-digital converter </strong>- a circuitry that recreates arbitrary analog signal with digital code, accuracy of which depends on converter’s resolution</p>
+<p><strong>Baud rate </strong>- the rate of information transmission</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tables.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
