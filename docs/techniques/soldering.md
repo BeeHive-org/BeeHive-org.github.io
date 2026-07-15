@@ -15,7 +15,7 @@ is an excellent primer.
 
 Links below are for reference — any equivalent brand works.
 
-- [Soldering iron](https://www.pine64.org/pinecil/) (a temperature-controlled
+- [Soldering iron](https://pine64.org/devices/pinecil/) (a temperature-controlled
   iron or station is ideal)
 - Solder
 - Flush cutters

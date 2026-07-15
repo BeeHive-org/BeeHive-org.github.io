@@ -27,7 +27,7 @@ Other components:
 
 ## How it works
 
-The [KineMouse](https://github.com/G-Node/kinemouse) wheel is a lightweight open-source running wheel. This recipe couples it to a **NEMA 17 stepper** through a **clutch**:
+The [KineMouse](https://hackaday.io/project/160744-kinemouse-wheel) wheel is a lightweight open-source running wheel. This recipe couples it to a **NEMA 17 stepper** through a **clutch**:
 
 - The **motor** sets a **minimum running speed** and controls **when** the wheel turns, so the experimenter — not the animal — decides the timing.
 - The **clutch** decouples motor and wheel one way: the mouse can always run *faster* than the motor, and can keep the wheel spinning **when the motor is off**.
@@ -84,4 +84,4 @@ while True:
 Adding a motor and clutch to the KineMouse wheel hands timing and minimum-speed control to the experimenter while never restraining the animal's ability to run faster or coast. The shorter, fewer sessions it enables support the 3Rs.
 
 !!! note "Source"
-    See the [BeeHive repository](https://github.com/BeeHive-org/BeeHive), the [KineMouse wheel](https://github.com/G-Node/kinemouse), and the [Adafruit DRV8833](https://www.adafruit.com/product/3297).
+    See the [BeeHive repository](https://github.com/BeeHive-org/BeeHive), the [KineMouse wheel](https://hackaday.io/project/160744-kinemouse-wheel), and the [Adafruit DRV8833](https://www.adafruit.com/product/3297).

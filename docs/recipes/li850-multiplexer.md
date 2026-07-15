@@ -77,7 +77,7 @@ sole1.off()
 **Polling the LI-850** and logging to CSV is specific to this rig and isn't
 published upstream. The sketch below shows the shape — confirm the serial
 grammar against the
-[LI-850 manual](https://www.licor.com/products/gas-analysis/LI-850):
+[LI-850 manual](https://www.licor.com/products/gas-analysis/LI-830-LI-850):
 
 ```python
 # ILLUSTRATIVE — not upstream code; the serial grammar is a placeholder.
@@ -100,4 +100,4 @@ def read_li850():
 The multiplexer turns one gas analyser into a six-chamber respirometry system, removing most of the per-chamber stabilisation dead-time and the manual animal-swapping that dominate single-chamber runs. Validation showed multiplexed stabilisation matching the single-chamber baseline, so throughput rises without loss of measurement quality.
 
 !!! note "Source"
-    See the [BeeHive repository](https://github.com/BeeHive-org/BeeHive) and the [Licor LI-850](https://www.licor.com/products/gas-analysis/LI-850) documentation for the serial command grammar.
+    See the [BeeHive repository](https://github.com/BeeHive-org/BeeHive) and the [Licor LI-850](https://www.licor.com/products/gas-analysis/LI-830-LI-850) documentation for the serial command grammar.
