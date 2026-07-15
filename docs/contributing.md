@@ -23,8 +23,8 @@ one institution — anyone can add a board, share a recipe, or improve the docs.
 The [Ingredients catalogue](ingredients/index.md) is generated from YAML — you
 don't edit the page directly:
 
-1. Add an entry to `data/ingredients/boards.yaml` (or drop in a new
-   `data/ingredients/<board>.yaml`).
+1. Add an entry to `docs/data/ingredients/boards.yaml` (or drop in a new
+   `docs/data/ingredients/<board>.yaml`).
 2. Run `uv run poe gen` to regenerate the catalogue.
 3. Preview with `uv run poe serve`.
 

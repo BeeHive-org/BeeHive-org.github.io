@@ -5,8 +5,6 @@ on:
     branches: [main]
     paths:
       - "docs/**"
-      - "data/**"
-      - "scripts/**"
       - "zensical.toml"
       - "pyproject.toml"
       - "uv.lock"

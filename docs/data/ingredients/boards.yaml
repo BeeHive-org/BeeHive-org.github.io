@@ -1,8 +1,8 @@
 # BeeHive Ingredients — single source of truth for the board catalogue.
 #
-# scripts/build_ingredients.py reads every data/ingredients/*.yaml file (each may
-# hold a single board mapping or a `boards:` list) and generates
-# docs/ingredients/index.md. To add a board, add an entry here (or drop in a new
+# docs/scripts/build_ingredients.py reads every docs/data/ingredients/*.yaml file
+# (each may hold a single board mapping or a `boards:` list) and generates the
+# docs/ingredients/ pages. To add a board, add an entry here (or drop in a new
 # YAML file) and run `uv run poe gen`.
 #
 # Fields:

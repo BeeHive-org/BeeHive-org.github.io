@@ -18,8 +18,8 @@ docs = [
 ]
 
 [tool.poe.tasks]
-sync = { cmd = "python scripts/sync_kitspace.py", help = "Vendor board BOMs from the BeeHive repo's kitspace.yaml into data/kitspace/" }
-gen = { cmd = "python scripts/build_ingredients.py", help = "Regenerate the Ingredients catalogue from data/ingredients/*.yaml" }
+sync = { cmd = "python docs/scripts/sync_kitspace.py", help = "Vendor board BOMs from the BeeHive repo's kitspace.yaml into docs/data/kitspace/" }
+gen = { cmd = "python docs/scripts/build_ingredients.py", help = "Regenerate the Ingredients catalogue from docs/data/ingredients/*.yaml" }
 serve = { cmd = "zensical serve", deps = ["gen"], help = "Serve the docs locally with live reload" }
 build = { cmd = "zensical build", deps = ["gen"], help = "Build the static site into ./site" }
 

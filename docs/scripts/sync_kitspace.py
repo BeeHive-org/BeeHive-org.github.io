@@ -6,8 +6,8 @@ manifest listing each board project and the path to its `1-click-bom.csv`. This
 script fetches that manifest and every referenced BOM CSV and vendors them into
 data/kitspace/, so the docs build stays offline and reproducible:
 
-    data/kitspace/manifest.yaml        # a copy of the repo's kitspace.yaml
-    data/kitspace/bom/<project>.csv    # one BOM per project
+    docs/data/kitspace/manifest.yaml        # a copy of the repo's kitspace.yaml
+    docs/data/kitspace/bom/<project>.csv    # one BOM per project
 
 Run it occasionally (or when the hardware changes) with `uv run poe sync`, then
 commit the result. build_ingredients.py reads this vendored cache to render the
