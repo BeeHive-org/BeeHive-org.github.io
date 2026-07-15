@@ -49,6 +49,12 @@ Position and status are shown live on an **HD44780 LCD over I2C**, so the whole 
 
 ## Code
 
+!!! warning "Illustrative — not published upstream"
+    This standalone controller belongs to the separate open 2-photon microscope
+    project, not the BeeHive org repositories, so no matching code was found. The
+    skeleton below is an **illustrative starting point** — the delta-stage
+    coordinate maths and the stepper stepping routine are left as `TODO`s.
+
 Controlled via MicroPython. A minimal encoder-to-motor skeleton (coordinate conversion omitted):
 
 ```python

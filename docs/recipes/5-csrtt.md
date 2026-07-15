@@ -46,44 +46,57 @@ Because the whole paradigm lives in **Python**, behavioural variants — cue dur
 
 ## Code
 
-Controlled via MicroPython. A minimal single-trial skeleton:
+This box has its own repository —
+[BeeHive-org/5-choice-serial-reaction-time](https://github.com/BeeHive-org/5-choice-serial-reaction-time)
+— with the full paradigm under
+[`software/5-csrtt/`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/tree/main/software/5-csrtt),
+driven from a host PC using the [Belay](https://github.com/BrianPugh/belay)
+library. The building blocks are small MicroPython test scripts, reproduced
+below with the box's actual pin assignments.
+
+Read the five nose-poke IR sensors — a broken beam (`value() == 0`) is a poke
+([`IR_test.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/documentation/testcode/IR_test.py)):
 
 ```python
-# TODO: pins are placeholders — set to your wiring.
-from machine import Pin, PWM
-import time, urandom
+from machine import Pin
+from time import sleep
 
-cues   = [Pin(p, Pin.OUT) for p in (4, 5, 12, 13, 14)]   # yellow LEDs
-pokes  = [Pin(p, Pin.IN)  for p in (15, 16, 17, 18, 19)]  # IR beam-break
-feeder = PWM(Pin(21), freq=50)                            # pellet servo
-
-CUE_MS, RESPONSE_MS = 1000, 5000
-
-def dispense():
-    feeder.duty(120); time.sleep_ms(300)      # rotate to drop pellet
-    feeder.duty(80)                            # return
-
-def trial():
-    target = urandom.getrandbits(3) % 5
-    cues[target].on()
-    time.sleep_ms(CUE_MS)
-    cues[target].off()
-    t0 = time.ticks_ms()
-    while time.ticks_diff(time.ticks_ms(), t0) < RESPONSE_MS:
-        for i, p in enumerate(pokes):
-            if p.value() == 0:                 # beam broken = poke
-                if i == target:
-                    dispense()                 # correct
-                return                         # incorrect / premature scored elsewhere
+pokes = [Pin(p, Pin.IN) for p in (15, 2, 16, 17, 19)]  # nose-poke IR receivers
 
 while True:
-    trial()
-    time.sleep_ms(2000)                        # inter-trial interval
+    print([p.value() for p in pokes])
+    sleep(1)
 ```
+
+Light the yellow cue LEDs
+([`Led_test.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/documentation/testcode/Led_test.py))
+and drive the pellet-dispenser servo
+([`Servo_test.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/documentation/testcode/Servo_test.py)):
+
+```python
+from machine import Pin, PWM
+import time
+
+cues = [Pin(p, Pin.OUT) for p in (14, 27, 25, 26, 32)]  # one per nose-poke
+dispenser = PWM(Pin(18), freq=50)                        # pellet-dispenser servo
+
+def dispense():
+    dispenser.duty(23)               # 0.5 ms pulse -> one end of travel
+    time.sleep(1)
+    dispenser.duty(123)              # 2.4 ms pulse -> the other end
+    time.sleep(1)
+```
+
+The complete trial logic — cueing, response scoring, the food magazine, and the
+staged training protocol — lives in
+[`outside2.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/software/5-csrtt/outside2.py)
+and
+[`serial_beehive.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/software/5-csrtt/serial_beehive.py).
 
 ## Results / notes
 
 Replicating the 5-CSRTT on open hardware slashes both cost and training time: self-directed training reaches stable performance in **7–10 days** rather than **3–5 months**, and behavioural paradigms are altered entirely in Python. The servo pellet dispenser is shared with the [mouse maze](mouse-maze.md).
 
 !!! note "Source"
-    See the [BeeHive repository](https://github.com/BeeHive-org/BeeHive) and the BeeHive paper for the 5-CSRTT replication.
+    Full hardware, code and build docs:
+    [BeeHive-org/5-choice-serial-reaction-time](https://github.com/BeeHive-org/5-choice-serial-reaction-time).

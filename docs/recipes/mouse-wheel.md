@@ -48,6 +48,12 @@ By letting the experimenter enforce running periods and a floor speed, sessions 
 
 ## Code
 
+!!! warning "Illustrative — not published upstream"
+    The motorised-wheel controller isn't in the BeeHive repositories, so the
+    loop below is an **illustrative starting point**, not the lab's code. For the
+    real potentiometer read, see the analog-input example
+    [`test_analog.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/software/5-csrtt/test_analog.py).
+
 Controlled via MicroPython. A minimal potentiometer-to-stepper loop:
 
 ```python

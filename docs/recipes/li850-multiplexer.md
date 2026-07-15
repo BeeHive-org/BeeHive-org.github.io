@@ -52,61 +52,47 @@ Because chambers are pre-loaded and cycled automatically, the per-experiment **s
 
 ## Code
 
-Controlled via MicroPython. This sketch drives the six chambers, pings the LI-850 and logs to CSV. Pin numbers and the exact serial grammar are placeholders — set them to your wiring and the LI-850 manual.
+Two parts: switching each chamber's valves (standard BeeHive code) and polling
+the LI-850 over serial (specific to this setup).
+
+**Valve control** uses the solenoid daughter-board pattern from the BeeHive
+[solenoid driver example](https://github.com/BeeHive-org/BeeHive/blob/master/software/code_examples/solenoid_driver/example1.py)
+— one output per valve, driven high to open:
 
 ```python
-# TODO: set pins to your wiring; confirm the LI-850 command/response grammar
-#       against the analyser's manual.
-from machine import Pin, UART
+from machine import Pin
 import time
 
-# One solenoid control board per chamber; each exposes an inflow + outflow line.
-CHAMBERS = [
-    {"inflow": Pin(4,  Pin.OUT), "outflow": Pin(5,  Pin.OUT)},
-    {"inflow": Pin(12, Pin.OUT), "outflow": Pin(13, Pin.OUT)},
-    {"inflow": Pin(14, Pin.OUT), "outflow": Pin(15, Pin.OUT)},
-    {"inflow": Pin(16, Pin.OUT), "outflow": Pin(17, Pin.OUT)},
-    {"inflow": Pin(18, Pin.OUT), "outflow": Pin(19, Pin.OUT)},
-    {"inflow": Pin(21, Pin.OUT), "outflow": Pin(22, Pin.OUT)},
-]
+# BeeHive solenoid-driver outputs; one Pin per inflow / outflow valve.
+sole1 = Pin(2,  Pin.OUT, drive=Pin.DRIVE_3)
+sole2 = Pin(15, Pin.OUT, drive=Pin.DRIVE_3)
+sole3 = Pin(16, Pin.OUT, drive=Pin.DRIVE_3)
+sole4 = Pin(17, Pin.OUT, drive=Pin.DRIVE_3)
 
-STABILISE_S = 60            # dead-time to let flow + gas settle
+sole1.on()              # open a chamber's valve
+time.sleep_ms(1000)
+sole1.off()
+```
+
+**Polling the LI-850** and logging to CSV is specific to this rig and isn't
+published upstream. The sketch below shows the shape — confirm the serial
+grammar against the
+[LI-850 manual](https://www.licor.com/products/gas-analysis/LI-850):
+
+```python
+# ILLUSTRATIVE — not upstream code; the serial grammar is a placeholder.
+from machine import UART
+import time
+
 uart = UART(2, baudrate=9600, tx=25, rx=26)   # link to the LI-850
 
-
-def select_chamber(i):
-    """Open the air path through chamber i, close all others."""
-    for j, ch in enumerate(CHAMBERS):
-        on = (j == i)
-        ch["inflow"].value(on)
-        ch["outflow"].value(on)
-
-
 def read_li850():
-    """Ping the LI-850 and parse CO2 / H2O from its reply."""
     uart.write(b"<li850><rs>?</rs></li850>\r\n")   # placeholder query
     time.sleep_ms(500)
     line = uart.readline()
-    if not line:
-        return None, None
-    # placeholder parse: expect "CO2=<ppm>,H2O=<ppt>"
-    fields = dict(kv.split("=") for kv in line.decode().strip().split(","))
-    return float(fields.get("CO2", "nan")), float(fields.get("H2O", "nan"))
+    return line.decode().strip() if line else None
 
-
-def run(cycles=10):
-    with open("li850_log.csv", "a") as f:
-        f.write("timestamp_ms,chamber,co2_ppm,h2o_ppt\n")
-        for _ in range(cycles):
-            for i in range(len(CHAMBERS)):
-                select_chamber(i)
-                time.sleep(STABILISE_S)          # wait for stabilisation
-                co2, h2o = read_li850()
-                f.write("{},{},{},{}\n".format(time.ticks_ms(), i, co2, h2o))
-                f.flush()
-
-
-run()
+# For each chamber in turn: open its valves, wait to stabilise, read + log.
 ```
 
 ## Results / notes

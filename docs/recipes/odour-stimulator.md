@@ -46,27 +46,26 @@ Typical uses include **single-sensillum recordings**, **insect wind-tunnel** fli
 
 ## Code
 
-Controlled via MicroPython. A minimal balanced-switch pulse:
+Each Spike & Hold board switches its Teflon valve exactly like any solenoid
+daughter board — a GPIO driven high then low. The BeeHive
+[solenoid driver example](https://github.com/BeeHive-org/BeeHive/blob/master/software/code_examples/solenoid_driver/example1.py)
+shows the pattern (one output per valve):
 
 ```python
-# TODO: pin numbers are placeholders — set to your wiring.
 from machine import Pin
 import time
 
-odour_a = Pin(12, Pin.OUT)   # odour valve, channel A (Spike & Hold)
-air_a   = Pin(13, Pin.OUT)   # balancing clean-air valve, channel A
+valve = Pin(2, Pin.OUT, drive=Pin.DRIVE_3)   # a Spike & Hold / solenoid output
 
-def pulse_odour(ms):
-    # switch odour in and clean air out together to hold flow constant
-    air_a.off()
-    odour_a.on()
-    time.sleep_ms(ms)
-    odour_a.off()
-    air_a.on()
-
-air_a.on()                   # clean air on by default
-pulse_odour(50)              # 50 ms odour pulse
+valve.on()
+time.sleep_ms(50)     # 50 ms pulse
+valve.off()
 ```
+
+A *balanced* odour pulse switches an odour valve **in** while switching its
+paired clean-air valve **out** at the same instant, so total flow to the animal
+stays constant. Sequencing the two odour channels and their balancers is
+application-specific; the per-valve control is the example above.
 
 ## Results / notes
 

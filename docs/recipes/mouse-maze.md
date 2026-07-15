@@ -53,6 +53,14 @@ The pellet dispenser was redesigned to use a **servo instead of a stepper**, whi
 
 ## Code
 
+!!! warning "Illustrative — not published upstream"
+    The maze firmware isn't in the BeeHive repositories, so the sketch below is
+    an **illustrative starting point**, not the lab's code. The real building
+    blocks it would use *are* published: serial commands from PC to mainboard
+    (see [`serial_beehive.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/software/5-csrtt/serial_beehive.py))
+    and servo pellet-dispenser control
+    (see [`Servo_test.py`](https://github.com/BeeHive-org/5-choice-serial-reaction-time/blob/main/documentation/testcode/Servo_test.py)).
+
 !!! note "Written in C++"
     Unlike most BeeHive recipes, the maze firmware is written in **C++ (Arduino)** rather than MicroPython. This let it reuse the **Adafruit PWM Servo Driver** library for the PCA9685 and an existing **serial-command parsing** library. It is a good example of BeeHive's language flexibility — the same mainboard runs either toolchain.
 

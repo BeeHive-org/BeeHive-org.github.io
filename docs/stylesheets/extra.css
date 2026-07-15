@@ -119,15 +119,23 @@
   margin-top: 0.08rem;
 }
 
-/* --- Tighter left-sidebar rhythm ------------------------------------------- */
-.md-nav--primary .md-nav__list .md-nav__link,
-.md-nav--primary .md-nav__item--nested > .md-nav__link {
-  margin-top: 0.1rem;
+/* --- Uniform left-sidebar rhythm ------------------------------------------
+ * Give every row the same gap regardless of type — a leaf link, a collapsible
+ * section (a <label>), or a section with an index page (a .md-nav__container
+ * that wraps an <a> + a <label>). Row spacing comes from the list item, not the
+ * link, so collapsible rows don't pick up extra height; and a container row's
+ * two inner links must not add their own padding on top of the container's. */
+.md-nav--primary .md-nav__item {
+  margin-top: 0.2rem;
+}
+.md-nav--primary .md-nav__link {
+  margin-top: 0;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
 }
-.md-nav--primary .md-nav__item .md-nav {
-  margin-top: 0.1rem;
+.md-nav--primary .md-nav__container > .md-nav__link {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* --- pixi.sh-style prev/next footer "cards" -------------------------------- */

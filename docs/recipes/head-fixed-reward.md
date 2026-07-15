@@ -55,48 +55,28 @@ Throughout, BeeHive emits an **analogue voltage signal** to an NI DAQ. The volta
 
 ## Code
 
-Controlled via MicroPython. The sketch below is a minimal single-spout trial loop.
+Delivering a reward comes down to opening the solenoid control board's valve for
+a fixed time — exactly the BeeHive
+[solenoid driver example](https://github.com/BeeHive-org/BeeHive/blob/master/software/code_examples/solenoid_driver/example1.py)
+(the pins are the board's default outputs):
 
 ```python
-# TODO: pin numbers are placeholders — set to your wiring.
-from machine import Pin, PWM, ADC
+from machine import Pin
 import time
 
-servo   = PWM(Pin(12), freq=50)   # Geekservo
-valve   = Pin(13, Pin.OUT)        # via solenoid control board
-lick    = ADC(Pin(34))            # piezo lick sensor
-event   = PWM(Pin(25), freq=50)   # analogue event signal to NI DAQ
+sole1 = Pin(2, Pin.OUT, drive=Pin.DRIVE_3)   # solenoid control board output
 
-RETRACTED, PRESENTED = 40, 90      # servo duty (deg) placeholders
-
-def set_servo(deg):
-    servo.duty(int(26 + deg / 180 * 102))
-
-def emit_event(level, ms):
-    event.duty(level)              # voltage level = event type
-    time.sleep_ms(ms)              # duration = event length
-    event.duty(0)
-
-def trial():
-    # 10 s visual stimulus handled elsewhere; here we time the reward.
-    time.sleep_ms(9500)            # up to 0.5 s before stimulus end
-    set_servo(PRESENTED)           # swing spout in
-    emit_event(200, 250)           # spout-move event
-    time.sleep_ms(250)             # reward at -0.25 s
-    valve.on()                     # open pinch valve
-    emit_event(500, 150)
-    time.sleep_ms(150)
-    valve.off()                    # 150 ms open time
-    # 1 s lick window
-    t0 = time.ticks_ms()
-    while time.ticks_diff(time.ticks_ms(), t0) < 1000:
-        if lick.read() > 2000:     # placeholder threshold
-            emit_event(800, 10)    # lick event
-    set_servo(RETRACTED)           # retract spout
-
-while True:
-    trial()
+sole1.on()
+time.sleep_ms(150)     # 150 ms reward pulse
+sole1.off()
 ```
+
+The full task wraps this valve pulse in the timing described above: a servo
+swings the spout in ~0.5 s before stimulus offset, the reward pulse follows
+0.25 s later, then a 1 s lick window is read from the piezo sensor, with an
+analogue event signal sent to the DAQ (level = event type, duration = event
+length). That orchestration is specific to each rig; the reward pulse itself is
+the repo example above.
 
 ## Results / notes
 
