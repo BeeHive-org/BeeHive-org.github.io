@@ -521,11 +521,11 @@ The ADC’s sampling rate, also known as sampling frequency, can be tied to the 
 
 One important equation on the sample rate is:
 
-$$ fs = {1 \over T} $$
+$$ f_s = {1 \over T} $$
 
 Where,
 
-$$ fs = {Sample Rate \over Frequency} $$
+$$ f_s = {\text{Sample Rate} \over \text{Frequency}} $$
 
 T = Period of the sample or the time it takes before sampling again
 
@@ -548,11 +548,11 @@ In this example, you can see where the sampling occurs in the analog input signa
 
 One rule of thumb when figuring out if aliasing will happen is using Nyquist Theorem. According to the theorem, the sampling rate/frequency needs to be at least twice as much as the highest frequency in the signal to recreate the original analog signal. The following equation is used to find the Nyquist frequency:
 
-$$ fNyquist = 2fMax $$
+$$ f_\text{Nyquist} = 2 f_\text{max} $$
 
 Where,
 
-$$ fNyquist = Nyquist frequency $$
+$$ f_\text{Nyquist} = \text{Nyquist frequency} $$
 
 fMax = The max frequency that appears in the signal
 
@@ -633,14 +633,14 @@ The answer:
 
 
 
-$$ {64ticks/tock \over 16,000,000ticks/sec} * {1tock} = 4 \mu s $$
+$$ {64\ \text{ticks/tock} \over 16{,}000{,}000\ \text{ticks/sec}} \times 1\ \text{tock} = 4\ \mu\text{s} $$
 
 
 Example: What is the period of 250 increments of the Timer 0 counter? Answer:
 
 
 
-$$ {64ticks/tock \over 16,000,000ticks/sec} * {250tocks} = 4 ms $$
+$$ {64\ \text{ticks/tock} \over 16{,}000{,}000\ \text{ticks/sec}} \times 250\ \text{tocks} = 4\ \text{ms} $$
 
 
 What timers are in ESP32? (optional)
