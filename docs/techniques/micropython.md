@@ -48,7 +48,7 @@ while True:
 ## Learn the basics
 
 New to programming or microcontrollers? Work through the
-**[Intro to electronics course](../courses/intro-to-electronics.md)** — it
+**[Intro to Electronics course](../courses/intro-to-electronics/index.md)** — it
 covers the fundamentals and comes with the code from BeeHive's
 [2022 workshop exercises](https://github.com/BeeHive-org/BeeHive/tree/master/workshops/2022_autum/code).
 

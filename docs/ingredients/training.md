@@ -7,7 +7,7 @@ title: Training
 
 # Training
 
-The Training board is for learning, not for a build — a testbed that gathers common components so you can master electronics and MicroPython one concept at a time. See the [Intro to electronics course](../courses/intro-to-electronics.md).
+The Training board is for learning, not for a build — a testbed that gathers common components so you can master electronics and MicroPython one concept at a time. See the [Intro to Electronics course](../courses/intro-to-electronics/index.md).
 
 ## Training board { #training-board }
 

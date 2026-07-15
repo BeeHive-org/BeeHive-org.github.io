@@ -53,7 +53,15 @@ nav = [
     { "Beyond neuroscience" = "recipes/beyond-neuroscience.md" },
   ] },
   { "Courses" = [
-    { "Intro to electronics" = "courses/intro-to-electronics.md" },
+    { "Intro to Electronics" = [
+      { "Overview" = "courses/intro-to-electronics/index.md" },
+      { "Monday" = "courses/intro-to-electronics/monday.md" },
+      { "Tuesday" = "courses/intro-to-electronics/tuesday.md" },
+      { "Wednesday" = "courses/intro-to-electronics/wednesday.md" },
+      { "Thursday" = "courses/intro-to-electronics/thursday.md" },
+      { "Friday" = "courses/intro-to-electronics/friday.md" },
+      { "Glossary" = "courses/intro-to-electronics/glossary.md" },
+    ] },
   ] },
   { "Contributing" = "contributing.md" },
 ]

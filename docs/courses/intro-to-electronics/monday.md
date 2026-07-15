@@ -1,14 +1,11 @@
 ---
-title: Intro to electronics
-description: A project-based introduction to microcontrollers, circuits, and MicroPython.
+title: Monday
+description: Microcontrollers, Ohm’s Law, and first steps in Python and MicroPython.
 ---
 
-# Intro to electronics
+# Monday
 
-This course introduces microcontrollers, basic electronics, and MicroPython
-from the ground up. It comes with code from BeeHive's [2022 workshop](https://github.com/BeeHive-org/BeeHive/tree/master/workshops/2022_autum/code).
-
-## **Part one - Multum in parvo - Monday**
+## Part one — Multum in parvo
 
 A latin saying “Multum in parvo”, much in little, conveys the main idea of the following lectures. We are going to investigate what is a microcontroller, what it consist of, what is its applications, what are difficulties of using it, what is information, what is a signal, what is a program, how to program your microcontroller and how to put all of this together to make a project that will do what you want it to do. 
 
@@ -30,7 +27,7 @@ A microcontroller consists of a central processing unit (CPU), nonvolatile memor
 
 memory (information gets lost if the system is off), peripherals, and support circuitry.
 
-![MCU](../assets/images/course/1_MCU.png)
+![MCU](../../assets/images/course/1_MCU.png)
 
 #### The Central Processing Unit
 
@@ -68,7 +65,7 @@ More sophisticated microcontrollers perform critical functions in aircraft, spac
 
 <span style="text-decoration:underline;">In scientific instruments</span>, a microcontroller  can be responsible for actuating all the peripheral objects such as a Peltier element (to heat up samples), a fan, an LED strip and so on. In <span style="text-decoration:underline;">BeeHive</span>, as you will see, the microcontroller is used for sending commands to other boards which in turn accomplish a specific goal like actuation or reading sensor.
 
-## **Part two - By Ohm’s Law**
+## Part two — Ohm’s Law
 
 
 ### **What is circuitry and what is Ohm’s Law**
@@ -97,7 +94,7 @@ and
 $$ R = {V \over I} $$
 
 
-![Ohm's Law](../assets/images/course/2_ohm_law.jpg)
+![Ohm's Law](../../assets/images/course/2_ohm_law.jpg)
 
 
 This might be an easier way of remembering Ohm's law.
@@ -111,7 +108,7 @@ Let’s see how these equations might work to help us analyze simple circuits:
 
 
 
-![Ohm's Law](../assets/images/course/3_Ohm_1.png)
+![Ohm's Law](../../assets/images/course/3_Ohm_1.png)
 
 
  
@@ -124,7 +121,7 @@ In this first example, we will calculate the amount of current (I) in a circuit,
 
 
 
-![Ohm's Law](../assets/images/course/4_Ohm_2.png)
+![Ohm's Law](../../assets/images/course/4_Ohm_2.png)
 
 
  
@@ -145,7 +142,7 @@ In this second example, we will calculate the amount of resistance (R) in a circ
  
 
 
-![Ohm's Law](../assets/images/course/5_Ohm_3.png)
+![Ohm's Law](../../assets/images/course/5_Ohm_3.png)
 
 
 
@@ -168,7 +165,7 @@ In the last example, we will calculate the amount of voltage supplied by a batte
 
 
 
-![Ohm's Law](../assets/images/course/6_Ohm_4.png)
+![Ohm's Law](../../assets/images/course/6_Ohm_4.png)
 
 
  
@@ -209,7 +206,7 @@ VOL -- Maximum OUTPUT Voltage level a device will provide for a LOW signal.
 
 VIL -- Maximum INPUT Voltage level to still be considered a LOW.
 
-![TTL](../assets/images/course/7_TTL.png)
+![TTL](../../assets/images/course/7_TTL.png)
 
 You will notice that the minimum output HIGH voltage (VOH) is 2.7 V. Basically, this means that output voltage of the device driving HIGH will always be at least 2.7 V. The minimum input HIGH voltage (VIH) is 2 V, or basically any voltage that is at least 2 V will be read in as a logic 1 (HIGH) to a TTL device.
 
@@ -228,7 +225,7 @@ As mentioned before, using a binary system, computers and microcontrollers can c
 
 
 
-![TTL](../assets/images/course/8_bitbyte.png)
+![TTL](../../assets/images/course/8_bitbyte.png)
 
 
 Bits are the fundamental part of information or data based on which the Microcontroller operates. The bit can take value either as 1 or 0. Bytes are defined as the collection of 8 bits. Words consist of 2 bytes or 16-bits.
@@ -237,7 +234,7 @@ Registers are small memory elements in a Microcontroller where a specific value 
 
 
 
-![Bits](../assets/images/course/9_binnum.png)
+![Bits](../../assets/images/course/9_binnum.png)
 
 
 
@@ -304,11 +301,11 @@ If you connect a serial output pin which sends a “A” (ascii 41 or 01000001 i
 
 
 
-![UART](../assets/images/course/10_uart.png)
+![UART](../../assets/images/course/10_uart.png)
 
 
 
-## **Part three - Python and MicroPython**
+## Part three — Python and MicroPython
 
 
 ### History of Python programming
@@ -393,7 +390,7 @@ Python interprets non-zero values as `True`. `None` and `0` are interpreted as `
 
 
 
-![If-else](../assets/images/course/11_if-statement.jpg)
+![If-else](../../assets/images/course/11_if-statement.jpg)
 
 
 Fig: Flowchart of if Statement
@@ -457,7 +454,7 @@ Loop continues until we reach the last item in the sequence. The body of for loo
 
 
 
-![For-loop](../assets/images/course/12_for_loop.jpg)
+![For-loop](../../assets/images/course/12_for_loop.jpg)
 
 
 Fig: Flowchart of for Loop
@@ -505,7 +502,7 @@ In the real world, analog signals are signals that have a continuous sequence wi
 
 
 
-![ADC](../assets/images/course/13_adc.png)
+![ADC](../../assets/images/course/13_adc.png)
 ** **
 
 Figure: A continuous signal (analog) turning into a digital signal. (Source: Waqas Akram – Quantization in ADCs)
@@ -537,7 +534,7 @@ If the sampling rate is slow and the frequency of the signal is high, the ADC wi
 
 
 
-![Alias](../assets/images/course/14_alias.png)
+![Alias](../../assets/images/course/14_alias.png)
 
 
 ** **
@@ -567,7 +564,7 @@ The ADC’s resolution can be tied to the precision of the ADC. The resolution o
 
 
 
-![Resolution](../assets/images/course/15_res.png)
+![Resolution](../../assets/images/course/15_res.png)
 
 
 Figure: Example on how resolution affects the digital signal. (Source: Apple Inc – Soundtrack Pro 3: Audio Fundamentals)
@@ -600,7 +597,7 @@ Figure 4 shows common bit length and their number of levels. It also shows what 
 
 
 
-![Bit size](../assets/images/course/16_bit-size_table.png)
+![Bit size](../../assets/images/course/16_bit-size_table.png)
 
 
 Figure : Bit Length and their number of levels and step size for a 5V reference range.
@@ -614,128 +611,3 @@ Analog to digital and digital to analog:
 [https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html](https://www.electronics-tutorials.ws/combination/analogue-to-digital-converter.html)
 
 [https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters](https://www.arrow.com/en/research-and-events/articles/engineering-resource-basics-of-analog-to-digital-converters)
-
-
-## **Part Four - Tuesday**
-
-
-### What is timer and what is counter?
-
-[timers.dvi (ou.edu)](https://www.cs.ou.edu/~fagg/classes/es_general/timers.pdf)
-
-Counters, as the name suggests, are hardware mechanisms for counting some form of event. At the heart of the counter is a special purpose register that stores the current value of the counter. Any time that a certain event occurs, the value of this counter is incremented (+1 is added to the value). The type of event that causes this increment is typically configurable through other special purpose registers. Because the counter value is stored in a special purpose register, this implies that the value can also be read from or written to by the executing code. Also, different counters will store values of different sizes. The typical sizes for 8-bit microcontrollers, such as the Atmel MegaX line, are 8 and 16 bits (1 and 2 bytes). Because of this finite size, the counter can only count to a maximum value (255 for an 8-bit counter, and 65535 for a 16-bit counter). Once the counter reaches this maximum value, and a new event occurs, the counter resets back to zero. From here, the counter continues to increment with each event
-
-In addition to counting external events, it is possible to also count events that are internal to the processor. In particular, by using the system clock (or a derivative thereof), the counter can be incremented at regular intervals. In this form, the counter becomes a form of timer. Often, the system clock is running at some “high” frequency (e.g., in our microcontrollers, we might see clocks of 16 MHz or 20 MHz). However, it is often the case that we may want our timer to count at much slower rates. This is handled in microcontrollers through the use of hardware prescalers that divide the system clock down to some reasonable frequency. Figure 3 shows the relationship between the system clock, the prescaler and the counter value. Prescalers are implemented as counters in and of themselves. Recall that if some counter is being incremented at a regular frequency, f, then bit 0 of the counter is exhibiting a regular signal at a frequency of f/2. Furthermore, bit 1 has a frequency of f/4. By “tapping into” the prescaler counter at different bits, we can divide the system clock by a range of different divisors (where the divisor takes a form of 2<sup>i</sup> for some i).
-
-We would now like to answer questions involving the rate at which our counter is counting or the amount of time that a certain number of counts will take. In order to talk about these ideas, we first must be able to distinguish between cycles/second of the main system clock and of the prescaled signal. Here, we have artificially defined the unit of a “tick” as a single cycle of the system clock and “tock” as a single cycle of the prescaled signal. Hence, we can express prescaler values in terms of ticks per tock, i.e, how many system clock cycles compose a single prescaled cycle. Example: assume a system clock of 16, 000, 000 ticks/sec and a prescaler of 64 ticks/tock. What is the period of a single increment of the Timer 0 counter?
-
-The answer:
-
-
-
-$$ {64\ \text{ticks/tock} \over 16{,}000{,}000\ \text{ticks/sec}} \times 1\ \text{tock} = 4\ \mu\text{s} $$
-
-
-Example: What is the period of 250 increments of the Timer 0 counter? Answer:
-
-
-
-$$ {64\ \text{ticks/tock} \over 16{,}000{,}000\ \text{ticks/sec}} \times 250\ \text{tocks} = 4\ \text{ms} $$
-
-
-What timers are in ESP32? (optional)
-
-
-## Wednesday
-
-
-### Data logging
-
-One important thing we want to accomplish with our microcontrollers is to save the data they are collecting while performing a certain task, and given the constraints imposed by the nature of microcontrollers (memory space, communication speeds, time critical events, etc), it is a good idea to give this careful thought when designing experiments/systems.
-
-Let’s use a practical example so that we have a better understanding of the critical points to be observed: 
-
-The ESP32 we are using has 320kb of RAM, which can accomplish a lot, but won’t be enough for recording hours of data stream. In fact, if your system is recording data from a temperature sensor, using 12 bit resolution, you would need 2 bytes (each byte “carries” 8 bits of information) for each data point. If you would like to add information about time to each data collected, plus identify from which system the data has been collected, you would need another ~5 bytes. So every data point would be 7 bytes of information. Considering most applications will have several streams of data (temperature, humidity, triggering time of events, other sensors), and that we still have to factor in the code we write and upload to the board, this can consume all the space available in no time. Therefore, we need to find ways to “unload” data from the microcontroller’s main memory. This normally means transmitting the data to an external storage space, either an SD card, or a computer.
-
-Data transmission can be done using serial communication. We have seen a typical communication speed of 115200 bits per second [which is equivalent to 14400 bytes/sec - 14.4kb/s], so if we want to transmit data from thetemperature sensor, above together with identifiying info, we need seven bytes per data point, plus the overhead of the communication protocol being used. Therefore in one second we can theoretically transmit ~2000 data points for temperature readings (in reality this is less as the device needs to spend time opening the communication port, sending the data, sending other check bits, etc). Another thing to observe is that the microcontroller will be busy sending out data, pretty much unable to do anything else, so we also need to be careful in observing which are appropriate moments to send/receive data.
-
-Once the data is prepared to be transmitted out of the microcontroller, we need code on the receiving side to know what kind of data to expect, where to store it, how often, etc. 	
-
-	
-
-
-### Wednesday second part
-
-Now we take a small break from doing and working with code, to answer possible questions you might have that have not been covered during the course.
-
-
-## Thursday
-
-BeeHive
-
-This project started out of an interest to streamline the way we set up research systems. We needed something Open Source, modular, affordable and easy to reproduce. To avoid reinventing the wheel, we based the connectivity of BeeHive on the Grove ecosystem. Developed by Seeed Studio, Grove is an open source system with dozens of sensors and actuators. With this compatibility in place we can focus on developing modules that are not present in Grove, and add to their ecosystem at the same time. Beehive follows the principle of one function per board, and is built with Through-hole components, so that boards can be hand soldered. All documentation is already [publicly available](https://github.com/beehive-org)<span style="text-decoration:underline;">.</span>
-
-For this part of the course we will demo an example on how beehive boards can be put together to control different systems. 
-
-Demo: Turn on a fan with boards.
-
-Putting boards together to do your own tasks
-
-Show that BeeHive can be combined with Grove system through connectors and Grove modules can be used to achieve objectives that otherwise can not be completed with the current version of BeeHive. Also, point out that Beehive is an open source project so if anybody wishes, they can propose, develop and add their own stuff on top of what is already there.
-
-
-## Friday
-
-Time to sketch your own protocols! Our suggestion is to start with a mockup of your project/need, in other words, think about in general terms of steps needed to be taken for your software/project to be up and running. Example for the reaction time task we created:
-
-
-
-1. Inter trial interval (random?)
-2. LED comes on
-3. Start counting time until button is pressed
-4. Detect button press
-5. Turn led off
-6. Record time elapsed
-7. Start next trial
-* Take the next XX minutes to think about and write down the steps for your task.
-* Now, show your sketch to the person next to you! While they are reading yours, take a moment to read theirs and make comments! Can you see if something is missing? Is there something that is not clear to you?
-
-Time to implement your task using the training board! 
-
-
-
-* Using the training board, start writing actual code to implement your task. Preferably, it needs to be connected to your subject area and achieve a goal that you have set. One of the most time-effective ways to do that is to write small parts of the code and test often to see if the board and code are reacting the way you would expect them to react. But first, create a sketch-diagram showing how your code is supposed to work
-
-## Glossary
-
-**Microcontroller** - a small computer made on an integrated circuit
-
-**Integrated circuit** - a tiny chip that contains a lot of components (resistors, transistors, capacitors) that are all electrically connected together and work together to reach a certain goal (compare or amplify signals, rectification, etc.)
-
-**Central processing unit** - An electronic circuit on chip which executes instructions
-
-**Nonvolatile memory** - a type of computer memory that can retain stored information even after power is removed
-
-**Volatile memory** - a type of computer memory that loses information after power is removed
-
-**Internet of Things (IoT)** - Sensors, electronic devices and actuators that are comprised in one system which sends, receives and process information from the said elements with a help of network
-
-**Shift register** - IC that allows to control multiple elements via saving the output in the register
-
-**Logic level** - voltage value that is high enough to be recognised by a microcontroller as 1, or logic HIGH, usually 3.3 V or 5V.
-
-**Pulse-Width Modulation (PWM)** - a signal that consist of logic HIGH and logic LOW pulses at a certain frequency. Duration of logic HIGH pulse determines PWM duty cycle which consequently is the percentage of power that the signal carries.
-
-**Bit** - it can either be 0 or 1, a single cell that contains binary data. The fundamental piece of information storage.
-
-**Byte** - 8 bits
-
-**Word** - 2 bytes
-
-**Object oriented programming** - a programming paradigm based on use of objects and classes.
-
-**To compile code** - a compiler is a software that translates high-level programming language to machine code which can be executed
-
-**Analog-to-digital converter **- a circuitry that recreates arbitrary analog signal with digital code, accuracy of which depends on converter’s resolution
-
-**Baud rate **- the rate of information transmission

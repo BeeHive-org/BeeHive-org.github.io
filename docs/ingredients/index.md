@@ -16,7 +16,7 @@ Every BeeHive build is made from **ingredients**: a *mainboard* that carries the
 - **[Actuators](actuators.md)** — Actuator boards make things happen in the world — drive motors, solenoids, Peltier elements, and LEDs. *(5 boards)*
 - **[Sensors](sensors.md)** — Sensor boards read the world — gas, humidity, temperature, and infrared. *(3 boards)*
 - **[Utilities](utilities.md)** — Utility boards condition or translate signals rather than driving an actuator or reading a sensor — the glue between other boards. *(1 board)*
-- **[Training](training.md)** — The Training board is for learning, not for a build — a testbed that gathers common components so you can master electronics and MicroPython one concept at a time. See the [Intro to electronics course](../courses/intro-to-electronics.md). *(1 board)*
+- **[Training](training.md)** — The Training board is for learning, not for a build — a testbed that gathers common components so you can master electronics and MicroPython one concept at a time. See the [Intro to Electronics course](../courses/intro-to-electronics/index.md). *(1 board)*
 
 ## At a glance
 

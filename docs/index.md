@@ -32,7 +32,7 @@ BeeHive is organised around a simple metaphor:
   [gas-analyser multiplexer](recipes/li850-multiplexer.md), and more.
 - 🔧 **[Techniques](techniques/soldering.md)** — the kitchen skills: soldering a
   board, flashing MicroPython, and designing your own daughter board.
-- 🎓 **[Courses](courses/intro-to-electronics.md)** — a project-based
+- 🎓 **[Courses](courses/intro-to-electronics/index.md)** — a project-based
   introduction to electronics and MicroPython for total beginners.
 
 ## Why BeeHive

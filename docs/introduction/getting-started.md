@@ -24,7 +24,7 @@ Then you'll need to **[solder your boards](../techniques/soldering.md)** and
 
 ## 🎓 I'm new to electronics or coding
 
-Start with the **[Intro to electronics course](../courses/intro-to-electronics.md)**
+Start with the **[Intro to Electronics course](../courses/intro-to-electronics/index.md)**
 — a project-based introduction to microcontrollers, circuits, and MicroPython,
 built around BeeHive's Training board. It lets you learn coding and electronics
 one at a time before wiring up a real experiment.
