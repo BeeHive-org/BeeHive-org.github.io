@@ -22,6 +22,30 @@ A full-bridge driver (2 n-channel + 2 p-channel MOSFETs driven by a TC4420) with
 | **Size** | Big |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/H-bridge-driver) |
 
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hbridge_driver/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hbridge_driver/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hbridge_driver/hbridge_driver.kicad_pcb)
+
+??? note "Bill of materials — 17 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | U1, U2 | 2 | TC4420 footprint PDIP-8 |
+    | Q1, Q2 | 4 | IRF9Z34NPBF or IRF4905PbF footprint TO-220AB |
+    | Q3, Q4 | 4 | IRFZ24NPBF or IRFZ44NPbF footprint TO-220AB |
+    | R3, R4, R5, R7 | 4 | Resistor 47 ohm 250mW through-hole |
+    | R1, R2, R8, R9 | 4 | Resistor 1k ohm 250mW through-hole |
+    | R10 | 1 | Resistor 220 ohm 250mW through-hole |
+    | R11 | 1 | Resistor 560 ohm 250mW through-hole |
+    | C1, C2, C6, C7 | 4 | 100nF Capacitor Disc |
+    | C3, C4, C5 | 3 | 22uF CP_Radial_D5.0mm_P2.00mm |
+    | L1, L2 | 2 | INDUCTOR 33µH Neosid MA-Bs75 |
+    | J1, J2 | 2 | CONN HEADER XH TOP 2POS 2.5MM |
+    | J3 | 1 | CONN HEADER XH TOP 4POS 2.5MM |
+    | J6 | 1 | Terminal block 5mm |
+    | D1, D2 | 2 | 3mm LED any colour |
+    | cables | 16 | JUMPER SXH-001T-P0.6 X2 10"" |
+    | connectors 2pin | 4 | CONN HOUSING 2.5MM 2POS |
+    | connectors 4pin | 6 | CONN HOUSING 2.5MM 4POS |
+
 ## Switch array { #switch-array }
 
 ![Switch array](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/8_switch_array/8_switch_array_3D.png?raw=true){ width=280 }
@@ -34,6 +58,22 @@ Uses a 74HC595 shift register to control many components from few pins. Switched
 | **Power** | 5–12 V switched |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Switch-array) |
 
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/8_switch_array/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/8_switch_array/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/8_switch_array/8_switch_array.kicad_pcb)
+
+??? note "Bill of materials — 9 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | U1 | 1 | SN74HC595 – PDIP-16 |
+    | Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8 | 8 | 1A NPN |
+    | R1, R2, R3, R4, R5, R6, R7, R8 | 8 | Resistor 270 ohm 250mW through-hole |
+    | C1 | 1 | 100nF Capacitor Disc |
+    | J1, J2 | 2 | CONN HEADER XH TOP 4POS 2.5MM |
+    | J3, J4, J5, J6, J7, J8, J9, J10, J11 | 9 | CONN HEADER XH TOP 2POS 2.5MM |
+    | cables | 26 | JUMPER SXH-001T-P0.6 X2 10"" |
+    | connectors 2pin | 18 | CONN HOUSING 2.5MM 2POS |
+    | connectors 4pin | 4 | CONN HOUSING 2.5MM 4POS |
+
 ## High-power switch array { #high-power-switch-array }
 
 ![High-power switch array](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/hp_led_switch/hp_led_switch_3D.png?raw=true){ width=280 }
@@ -45,6 +85,23 @@ Based on a TC4427 driver and n-channel MOSFETs for switching power-hungry compon
 | **Key parts** | TC4427 driver, n-channel MOSFETs |
 | **Power** | 12 V / 5 A |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/High-power-switch-array) |
+
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hp_led_switch/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hp_led_switch/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hp_led_switch/hp_led_switch.kicad_pcb)
+
+??? note "Bill of materials — 10 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | J1, J2 | 2 | CONN HEADER XH TOP 4POS 2.5MM |
+    | J3, J4, J5, J6 | 4 | CONN HEADER XH TOP 2POS 2.5MM |
+    | C1, C2 | 2 | 100nF Capacitor Disc |
+    | Q1, Q2, Q3, Q4 | 4 | IRFZ24NPBF or IRFZ44NPbF footprint TO-220AB |
+    | U1, U2 | 2 | TC4427 footprint PDIP-8 |
+    | R1, R2, R3, R4 | 4 | Resistor 47 ohm 250mW through-hole |
+    | R5, R6, R7, R8 | 4 | Resistor 1k ohm 250mW through-hole |
+    | cables | 6 | JUMPER SXH-001T-P0.6 X2 10"" |
+    | connectors 2pin | 8 | CONN HOUSING 2.5MM 2POS |
+    | connectors 4pin | 4 | CONN HOUSING 2.5MM 4POS |
 
 ## Solenoid control board { #solenoid-control-board }
 

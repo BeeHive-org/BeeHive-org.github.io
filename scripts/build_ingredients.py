@@ -21,6 +21,7 @@ Run via ``uv run poe gen`` (also runs automatically before ``serve``/``build``).
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
 
@@ -29,6 +30,17 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data" / "ingredients"
 OUT_DIR = ROOT / "docs" / "ingredients"
+
+# Vendored Kitspace cache (populated by scripts/sync_kitspace.py). Optional: if
+# absent, boards simply render without a Bill of materials.
+KITSPACE_DIR = ROOT / "data" / "kitspace"
+KITSPACE_MANIFEST = KITSPACE_DIR / "manifest.yaml"
+KITSPACE_BOM_DIR = KITSPACE_DIR / "bom"
+REPO_BLOB = "https://github.com/BeeHive-org/BeeHive/blob/master"
+REPO_TREE = "https://github.com/BeeHive-org/BeeHive/tree/master"
+
+# project key -> manifest entry; filled by load_kitspace() in main().
+KITSPACE: dict[str, dict] = {}
 
 # Category key -> (display label, page filename stem). Order sets display order.
 CATEGORIES: list[tuple[str, str, str]] = [
@@ -109,6 +121,73 @@ def clean(text: str) -> str:
     return " ".join(str(text).split())
 
 
+def load_kitspace() -> dict[str, dict]:
+    """Load the vendored Kitspace manifest, or {} if it hasn't been synced."""
+    if not KITSPACE_MANIFEST.exists():
+        return {}
+    manifest = yaml.safe_load(KITSPACE_MANIFEST.read_text(encoding="utf-8")) or {}
+    return manifest.get("multi", {})
+
+
+def read_bom(key: str) -> list[tuple[str, str, str]]:
+    """Return (references, qty, description) rows from a vendored BOM CSV.
+
+    The first three columns of every BeeHive `1-click-bom.csv` are References,
+    Qty, Description; later manufacturer/MPN columns are inconsistent, so we link
+    to the full CSV rather than trying to render them.
+    """
+    path = KITSPACE_BOM_DIR / f"{key}.csv"
+    if not path.exists():
+        return []
+    text = path.read_text(encoding="utf-8", errors="replace")
+    rows: list[tuple[str, str, str]] = []
+    reader = csv.reader(text.splitlines())
+    next(reader, None)  # header
+    for row in reader:
+        if len(row) < 3 or not row[0].strip():
+            continue
+        refs = ", ".join(r.strip() for r in row[0].split(";") if r.strip())
+        # Some upstream CSVs already contain U+FFFD where a "µ" was lost (e.g.
+        # the "33µH" inductor); restore it so the BOM reads correctly.
+        desc = row[2].strip().replace("�", "µ")
+        rows.append((refs, row[1].strip(), desc))
+    return rows
+
+
+def render_hardware(board: dict) -> str:
+    """Fabrication-file links + a collapsible Bill of materials for a board.
+
+    Returns "" when the board has no Kitspace project or the cache is absent.
+    """
+    key = board.get("kitspace")
+    if not key or key not in KITSPACE:
+        return ""
+    proj = KITSPACE[key]
+
+    links: list[str] = []
+    if proj.get("bom"):
+        links.append(f"[Full BOM (MPNs & distributors)]({REPO_BLOB}/{proj['bom']})")
+    if proj.get("gerbers"):
+        links.append(f"[Gerbers]({REPO_TREE}/{proj['gerbers']})")
+    pcb = (proj.get("eda") or {}).get("pcb")
+    if pcb:
+        links.append(f"[KiCad PCB]({REPO_BLOB}/{pcb})")
+
+    out: list[str] = []
+    if links:
+        out.append("**Hardware files:** " + " · ".join(links) + "\n")
+
+    bom = read_bom(key)
+    if bom:
+        out.append(f'??? note "Bill of materials — {len(bom)} lines"\n')
+        out.append("    | Ref | Qty | Description |")
+        out.append("    | --- | --- | ----------- |")
+        for refs, qty, desc in bom:
+            out.append(f"    | {refs} | {qty} | {desc} |")
+        out.append("")
+    return "\n".join(out)
+
+
 def page_for(board: dict) -> str:
     """The category page filename a board's detail lives on."""
     return f"{STEMS[board['category']]}.md"
@@ -169,6 +248,9 @@ def render_category(key: str, label: str, group: list[dict]) -> str:
             for name, value in rows:
                 out.append(f"| **{name}** | {value} |")
             out.append("")
+        hardware = render_hardware(b)
+        if hardware:
+            out.append(hardware)
     return "\n".join(out) + "\n"
 
 
@@ -179,6 +261,8 @@ def main() -> None:
     if not boards:
         sys.exit(f"error: no boards found in {DATA_DIR}")
     validate(boards)
+
+    KITSPACE.update(load_kitspace())
 
     by_category: dict[str, list[dict]] = {key: [] for key, _, _ in CATEGORIES}
     for b in boards:

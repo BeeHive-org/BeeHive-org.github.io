@@ -28,7 +28,10 @@ don't edit the page directly:
 2. Run `uv run poe gen` to regenerate the catalogue.
 3. Preview with `uv run poe serve`.
 
-See the comments at the top of `boards.yaml` for the field reference.
+See the comments at the top of `boards.yaml` for the field reference. If the
+board has a project in the [BeeHive repo's](https://github.com/BeeHive-org/BeeHive)
+`kitspace.yaml`, add its `kitspace:` key too — `uv run poe sync` then vendors the
+board's bill of materials and fabrication-file links into the catalogue.
 
 ## Editing the docs
 

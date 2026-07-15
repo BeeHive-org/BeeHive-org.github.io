@@ -16,10 +16,14 @@
 #   power       input/output notes
 #   repo        link to the board's wiki / repo page
 #   image       URL or docs-relative path to a board render/photo
+#   kitspace    project key in the BeeHive repo's kitspace.yaml; pulls in the
+#               Bill of materials + fabrication-file links. Run `uv run poe sync`
+#               to refresh the vendored BOMs under data/kitspace/.
 
 boards:
   # --- Mainboards ----------------------------------------------------------
   - slug: esp32-mainboard
+    kitspace: central-hub
     name: ESP32 BeeHive mainboard
     category: mainboard
     function: Carries the ESP32 microcontroller and breaks out every pin.
@@ -51,6 +55,7 @@ boards:
 
   # --- Power management ----------------------------------------------------
   - slug: 12v5a-breakout
+    kitspace: 12V5A_breakout
     name: 12V5A breakout
     category: power
     function: Distributes 12 V / 5 A to other boards.
@@ -77,6 +82,7 @@ boards:
     image: https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/power_supply/power_supply_3D.png?raw=true
 
   - slug: 12v-24v-boost
+    kitspace: 12_24_boost_converter
     name: 12V/24V boost converter
     category: power
     function: Boosts 12 V / 5 A up to 24 V / 1 A.
@@ -92,6 +98,7 @@ boards:
 
   # --- Actuators -----------------------------------------------------------
   - slug: h-bridge-driver
+    kitspace: hbridge_driver
     name: H-bridge driver
     category: actuator
     function: Drives DC motors and Peltier elements.
@@ -106,6 +113,7 @@ boards:
     image: https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/hbridge_driver/hbridge_driver_3D.png?raw=true
 
   - slug: switch-array
+    kitspace: 8-switch-array
     name: Switch array
     category: actuator
     function: Switches many low-power loads (e.g. LEDs) over few pins.
@@ -119,6 +127,7 @@ boards:
     image: https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/8_switch_array/8_switch_array_3D.png?raw=true
 
   - slug: high-power-switch-array
+    kitspace: hp-led-switch
     name: High-power switch array
     category: actuator
     function: Switches power-demanding loads (e.g. high-power LEDs).
@@ -160,6 +169,7 @@ boards:
 
   # --- Sensors -------------------------------------------------------------
   - slug: gas-sensor
+    kitspace: gas_sensor
     name: Gas sensor
     category: sensor
     function: Detects gas-related environmental variables.
@@ -172,6 +182,7 @@ boards:
     image: https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/gas_sensor/gas_sensor_3d.png?raw=true
 
   - slug: humidity-temperature-sensor
+    kitspace: hum_temp_sensor
     name: Humidity & temperature sensor
     category: sensor
     function: Monitors humidity and temperature.
@@ -195,6 +206,7 @@ boards:
 
   # --- Training ------------------------------------------------------------
   - slug: training-board
+    kitspace: testing_board
     name: Training board
     category: training
     function: A teaching board covering the core electronic building blocks.

@@ -21,6 +21,17 @@ A barrel-jack input, a power LED indicator and nine connectors that fan 12 V / 5
 | **Power** | 12 V / 5 A in and out |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/12V5A-breakout) |
 
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12V5A_breakout/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/12V5A_breakout/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12V5A_breakout/12V5A_breakout.kicad_pcb)
+
+??? note "Bill of materials — 4 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | J1 | 1 | 2.1mm socket |
+    | J2, J3, J4, J5, J6, J7, J8, J9, J10 | 9 | CONN HEADER XH TOP 2POS 2.5MM |
+    | R1 | 1 | Resistor 560 ohm 250mW through-hole |
+    | D1 | D2; | 2 |
+
 ## 5V3A breakout { #5v3a-breakout }
 
 ![5V3A breakout](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/power_supply/power_supply_3D.png?raw=true){ width=280 }
@@ -44,4 +55,24 @@ A 555-based step-up converter that provides up to 24 V / 1 A — used to power s
 | **Key parts** | 555 timer IC |
 | **Power** | 12 V / 5 A in; 24 V / 1 A out |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Boost-converter-12V-to-24V) |
+
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12_24_boost_converter/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/12_24_boost_converter/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12_24_boost_converter/12_24_boost_converter.kicad_pcb)
+
+??? note "Bill of materials — 13 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | Q1 | 1 | IRFZ24NPBF or IRFZ44NPbF footprint TO-220AB |
+    | R1, R2, R3 | 3 | Resistor 47 ohm 250mW through-hole |
+    | R4 | 1 | Resistor 1k ohm 250mW through-hole |
+    | R5 | 1 | Resistor 560 ohm 250mW through-hole |
+    | C1, C2 | 2 | 100nF Capacitor Disc |
+    | C3 | 1 | 22uF CP_Radial_D5.0mm_P2.00mm |
+    | L1 | 1 | INDUCTOR 33µH Neosid MA-Bs75 |
+    | J1, J2, J3, J4 | 4 | CONN HEADER XH TOP 2POS 2.5MM |
+    | D1 | 1 | Diode Schottky 5A DO-201AD |
+    | D2 | 1 | 3mm LED any colour |
+    | cables | 16 | JUMPER SXH-001T-P0.6 X2 10"" |
+    | connectors 2pin | 4 | CONN HOUSING 2.5MM 2POS |
+    | connectors 4pin | 6 | CONN HOUSING 2.5MM 4POS |
 

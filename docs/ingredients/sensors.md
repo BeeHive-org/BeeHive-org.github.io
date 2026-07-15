@@ -20,6 +20,21 @@ Built around an MQ-6 gas sensor; swapping in another MQ-series sensor lets it de
 | **Key parts** | MQ-6 (MQ-series) sensor |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Gas-sensor) |
 
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/gas_sensor/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/gas_sensor/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/gas_sensor/gas_sensor.kicad_pcb)
+
+??? note "Bill of materials — 8 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | A1 | 1 | MQ-135 or any other MQ sensor |
+    | U1 | 1 | LM393 |
+    | RV1 | 1 | 3362P-1-103 10k Ohm |
+    | R1 | 1 | Resistor 4.7k ohm 250mW through-hole |
+    | R2, R3 | 2 | Resistor 220 ohm 250mW through-hole |
+    | C1 | 1 | 100nF Capacitor Disc |
+    | J1 | 1 | CONN HEADER XH TOP 4POS 2.5MM |
+    | D1 | D2; | 2 |
+
 ## Humidity & temperature sensor { #humidity-temperature-sensor }
 
 ![Humidity & temperature sensor](https://github.com/BeeHive-org/BeeHive/raw/master/hardware/PCBs/hum_temp_sensor/hum_temp_sensor_3d.png?raw=true){ width=280 }
@@ -30,6 +45,20 @@ Compatible with both DHT11 and DHT22 sensors.
 | --- | --- |
 | **Key parts** | DHT11, DHT22 |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Humidity-and-temperature-sensor) |
+
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hum_temp_sensor/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hum_temp_sensor/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hum_temp_sensor/hum_temp_sensor.kicad_pcb)
+
+??? note "Bill of materials — 7 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | A1 | 1 | DHT11 or DHT22 |
+    | RV1 | 1 | 3362P-1-103 10k Ohm |
+    | R1 | 1 | Resistor 5.1k ohm 250mW through-hole |
+    | R2 | 1 | Resistor 220 ohm 250mW through-hole |
+    | C1 | 1 | 100nF Capacitor Disc |
+    | J1 | 1 | CONN HEADER XH TOP 4POS 2.5MM |
+    | D1 | 1 | 3mm LED any colour |
 
 ## IR sensor array { #ir-sensor-array }
 

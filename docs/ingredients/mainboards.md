@@ -21,6 +21,22 @@ The heart of the BeeHive system. Built around the ESP32 (8 digital lines, 3 anal
 | **Power** | 12 V DC in; supplies 12 V and 5 V to daughter boards |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Main-hub) |
 
+**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/central_hub/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/central_hub/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/central_hub/beehive.kicad_pcb)
+
+??? note "Bill of materials — 9 lines"
+
+    | Ref | Qty | Description |
+    | --- | --- | ----------- |
+    | U1 | 1 | LM2596 5v |
+    | U3 | 1 | ESP32-DevKitC-VIB |
+    | P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14 | 14 | CONN HEADER XH TOP 4POS 2.5MM |
+    | P15, P16 | 2 | CONN HEADER XH TOP 2POS 2.5MM |
+    | L1 | 1 | INDUCTOR 33µH Neosid MA-Bs75 |
+    | D1 | 1 | Diode Schottky 5A DO-201AD |
+    | CON1 | 1 | 2.1mm socket |
+    | C1 | 1 | 680µF Capacitor |
+    | C2 | 1 | CAP ALUM 220UF 20% 25V RADIAL |
+
 ## MikroBUS-compatible BeeHive mainboard { #mikrobus-mainboard }
 
 Same ESP32 core as the original mainboard, plus connectors for the MikroBUS open standard — opening up MikroElektronika's ecosystem of 500+ Click Boards while keeping MicroPython control. Serves as an integration example with an established third-party platform.
