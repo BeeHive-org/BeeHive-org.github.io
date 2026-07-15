@@ -11,14 +11,14 @@ An open-hardware replication of the **5-choice serial reaction time task (5-CSRT
 
 | Board | Qty | Role |
 | ----- | --- | ---- |
-| [ESP32 BeeHive mainboard](../ingredients/index.md#esp32-mainboard) | 1× | Runs the paradigm, cues the ports, times nose-pokes and triggers reward. |
-| [IR sensor array](../ingredients/index.md#ir-sensor-array) | 1× | Five IR LED + sensor pairs for beam-break nose-poke detection. |
+| [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Runs the paradigm, cues the ports, times nose-pokes and triggers reward. |
+| [IR sensor array](../ingredients/sensors.md#ir-sensor-array) | 1× | Five IR LED + sensor pairs for beam-break nose-poke detection. |
 
 Plus (non-BeeHive parts): five nose-poke ports, each with an IR LED + IR sensor pair and a rear **yellow LED** cue; and a servo-driven 3D-printed pellet dispenser for food reward.
 
 ## How it works
 
-The animal faces **five nose-poke ports**. On each trial, one port's **yellow LED** at the back lights briefly; the mouse must poke that port to earn a food pellet. Each port carries an **IR LED + IR sensor** pair from the [IR sensor array](../ingredients/index.md#ir-sensor-array): a poke breaks the beam, detected with **microsecond precision**, which is what makes accurate reaction-time and premature-response scoring possible.
+The animal faces **five nose-poke ports**. On each trial, one port's **yellow LED** at the back lights briefly; the mouse must poke that port to earn a food pellet. Each port carries an **IR LED + IR sensor** pair from the [IR sensor array](../ingredients/sensors.md#ir-sensor-array): a poke breaks the beam, detected with **microsecond precision**, which is what makes accurate reaction-time and premature-response scoring possible.
 
 Correct pokes trigger the **pellet dispenser** — a redesigned open-source dispenser that uses a **servo instead of a stepper** and is laid flat for easy 3D-printing. The same dispenser is shared with the [mouse maze](mouse-maze.md).
 
@@ -26,9 +26,9 @@ Because the whole paradigm lives in **Python**, behavioural variants — cue dur
 
 ## Wiring
 
-- The five IR LED + sensor pairs → the [IR sensor array](../ingredients/index.md#ir-sensor-array), which takes a mainboard data line.
-- The five yellow cue LEDs → mainboard outputs (or a switch array if pins are tight).
-- Pellet dispenser servo → a mainboard data line + 5 V power.
+- The five IR LED + sensor pairs to the [IR sensor array](../ingredients/sensors.md#ir-sensor-array), which takes a mainboard data line.
+- The five yellow cue LEDs to mainboard outputs (or a switch array if pins are tight).
+- Pellet dispenser servo to a mainboard data line + 5 V power.
 
 <!-- TODO: add port + wiring schematic and dispenser model reference from the BeeHive repo -->
 

@@ -7,7 +7,7 @@ description: How to design a new BeeHive daughter board that follows the platfor
 
 Every BeeHive board is either a **mainboard** (carries a microcontroller) or a **daughter board** (does one job). If the function you need isn't in the [ingredients catalogue](../ingredients/index.md), you design a new daughter board. This guide summarises the design rules and how to submit it.
 
-The workflow is simple: **pick a function → design to the rules → submit via the repo**.
+The workflow is simple: pick a function, design to the rules, then submit via the repo.
 
 ## 1. Pick a function
 

@@ -11,12 +11,10 @@ An add-on that gives the experimenter control over a running wheel's timing and 
 
 | Board | Qty | Role |
 | ----- | --- | ---- |
-| [ESP32 BeeHive mainboard](../ingredients/index.md#esp32-mainboard) | 1× | Reads the speed potentiometer and drives the stepper motor. |
-| Stepper motor driver (Adafruit DRV8833) | 1× | Drives the NEMA 17 stepper that sets the wheel's minimum speed. |
+| [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Reads the speed potentiometer and drives the stepper motor. |
+| [Adafruit DRV8833](https://www.adafruit.com/product/3297) | 1× | Off-the-shelf stepper driver for the NEMA 17 that sets the wheel's minimum speed. |
 
-<!-- TODO: add stepper driver DB to ingredients -->
-
-Plus (non-BeeHive parts): an [Adafruit DRV8833](https://www.adafruit.com/product/3297) stepper driver, a NEMA 17 stepper motor, a clutch, an analog potentiometer, and a KineMouse running wheel.
+Plus (non-BeeHive parts): a NEMA 17 stepper motor, a clutch, an analog potentiometer, and a KineMouse running wheel.
 
 ## How it works
 
@@ -30,9 +28,9 @@ By letting the experimenter enforce running periods and a floor speed, sessions 
 
 ## Wiring
 
-- Potentiometer wiper → a mainboard analogue input; ends to 3.3 V and ground.
-- [Adafruit DRV8833](https://www.adafruit.com/product/3297) control inputs → mainboard data lines; motor power and ground from the appropriate rail.
-- NEMA 17 stepper → the DRV8833 outputs; stepper shaft → clutch → wheel.
+- Potentiometer wiper to a mainboard analogue input; ends to 3.3 V and ground.
+- [Adafruit DRV8833](https://www.adafruit.com/product/3297) control inputs to mainboard data lines; motor power and ground from the appropriate rail.
+- NEMA 17 stepper to the DRV8833 outputs; the stepper shaft drives the wheel through the clutch.
 
 <!-- TODO: add wiring schematic and clutch assembly reference from the BeeHive repo -->
 

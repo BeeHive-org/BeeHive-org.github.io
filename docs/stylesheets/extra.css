@@ -94,7 +94,7 @@
   width: 140px;
   height: 140px;
   margin: 0.25rem auto 1.25rem;
-  background: url("../assets/logo.svg") center / contain no-repeat;
+  background: url("../assets/logo.png") center / contain no-repeat;
 }
 
 /* Right-hand TOC: a serif "Table of contents" heading (relabelled from "On this

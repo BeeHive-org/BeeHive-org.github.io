@@ -8,7 +8,7 @@
 # Fields:
 #   slug        stable id, used for the page anchor and cross-links (required)
 #   name        display name (required)
-#   category    one of: mainboard | power | actuator | sensor | control (required)
+#   category    one of: mainboard | power | actuator | sensor | utility (required)
 #   function    short one-line function (required)
 #   description longer prose for the board's section
 #   size        "Big" (71 x 45.5 mm) | "Small" (48.5 x 45.5 mm) | "" (n/a)
@@ -193,10 +193,28 @@ boards:
     components: ["6 × IR LED + phototransistor pairs"]
     repo: https://github.com/BeeHive-org/BeeHive/wiki/IR-sensor-array
 
-  # --- Control -------------------------------------------------------------
+  # --- Training ------------------------------------------------------------
+  - slug: training-board
+    name: Training board
+    category: training
+    function: A teaching board covering the core electronic building blocks.
+    description: >
+      A board bringing together the modules a beginner needs to learn
+      electronics and MicroPython: LEDs, push buttons, potentiometers, shift
+      registers, rotary encoders, relays, and a temperature sensor. Together
+      they cover digital input and output, analog input, and SPI communication.
+      Paired with the guided exercises, it lets learners master coding and wiring
+      one at a time, and doubles as a testbed for validating experiment logic
+      before committing it to a real setup.
+    size: ""
+    components: [8-bit shift register + LED matrix, Push buttons, Potentiometers, Rotary encoders, Relay module, Digital temperature sensor]
+    repo: https://github.com/BeeHive-org/BeeHive
+    image: ""
+
+  # --- Utilities -----------------------------------------------------------
   - slug: level-shifter
     name: Level shifter
-    category: control
+    category: utility
     function: Bi-directional 5 V ↔ 3.3 V logic level translation.
     description: >
       A bi-directional level shifter (based on the BSS138 MOSFET, inspired by

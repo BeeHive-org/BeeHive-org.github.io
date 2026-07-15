@@ -11,8 +11,8 @@ A modular maze built from swappable acrylic panels, with closed-loop tracking: a
 
 | Board | Qty | Role |
 | ----- | --- | ---- |
-| [ESP32 BeeHive mainboard](../ingredients/index.md#esp32-mainboard) | 1× | Receives serial commands from the tracking PC and drives the reward hardware. |
-| [IR sensor array](../ingredients/index.md#ir-sensor-array) | 1× | Local IR sensing at reward ports / beam-breaks. |
+| [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Receives serial commands from the tracking PC and drives the reward hardware. |
+| [IR sensor array](../ingredients/sensors.md#ir-sensor-array) | 1× | Local IR sensing at reward ports / beam-breaks. |
 
 Plus (non-BeeHive parts): 50 × 50 mm acrylic maze panels (opaque in visible light, transparent in IR), Makerbeam XL posts, a 16-channel 12-bit PWM/servo driver (Adafruit PCA9685, I2C), a servo-driven 3D-printed pellet dispenser, an IR camera, and a PC running OpenCV.
 
@@ -25,14 +25,14 @@ Control is **closed-loop**:
 1. The IR camera feeds video to a PC.
 2. **OpenCV** tracks the animal, and a **Python state machine** decides when reward is due.
 3. The PC sends a **serial command** to the BeeHive mainboard.
-4. The mainboard triggers the **pellet dispenser** (and any port hardware on the [IR sensor array](../ingredients/index.md#ir-sensor-array)).
+4. The mainboard triggers the **pellet dispenser** (and any port hardware on the [IR sensor array](../ingredients/sensors.md#ir-sensor-array)).
 
 The pellet dispenser was redesigned to use a **servo instead of a stepper**, which makes it far easier to 3D-print and share. Servos are driven through the **PCA9685** PWM driver over I2C; a single PCA9685 chain can address a large number of servos — up to **992 servos over just two data lines** when daisy-chained — so many reward ports scale without extra mainboard pins.
 
 ## Wiring
 
-- PCA9685 → mainboard I2C (SDA/SCL data lines) + power and ground; the dispenser servo(s) connect to the PCA9685 outputs.
-- [IR sensor array](../ingredients/index.md#ir-sensor-array) → a mainboard data line for port sensing.
+- PCA9685 to mainboard I2C (SDA/SCL data lines) + power and ground; the dispenser servo(s) connect to the PCA9685 outputs.
+- [IR sensor array](../ingredients/sensors.md#ir-sensor-array) to a mainboard data line for port sensing.
 - The tracking PC connects to the mainboard over USB serial.
 
 <!-- TODO: add maze + wiring schematic figure from the BeeHive repo -->

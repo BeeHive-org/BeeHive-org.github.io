@@ -11,8 +11,8 @@ A multiplexer that lets a single **Licor LI-850** CO₂/H₂O gas analyser serve
 
 | Board | Qty | Role |
 | ----- | --- | ---- |
-| [ESP32 BeeHive mainboard](../ingredients/index.md#esp32-mainboard) | 1× | Sequences the chambers, talks to the LI-850 over serial, and logs to CSV. |
-| [Solenoid control board](../ingredients/index.md#solenoid-control-board) | 6× | One board per chamber, each switching that chamber's inflow and outflow valves. |
+| [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Sequences the chambers, talks to the LI-850 over serial, and logs to CSV. |
+| [Solenoid control board](../ingredients/actuators.md#solenoid-control-board) | 6× | One board per chamber, each switching that chamber's inflow and outflow valves. |
 
 Plus (non-BeeHive parts): up to 6 gas-tight chambers, 12 inflow/outflow solenoid valves (one pair per chamber), a Licor LI-850 CO₂/H₂O gas analyser with serial output, and tubing/manifolds.
 
@@ -20,7 +20,7 @@ Plus (non-BeeHive parts): up to 6 gas-tight chambers, 12 inflow/outflow solenoid
 
 Measuring metabolic rate one chamber at a time wastes most of the session waiting for readings to stabilise and swapping animals. Here, **six chambers stay loaded** and BeeHive cycles through them.
 
-Each chamber has an **inflow** and an **outflow** solenoid valve, controlled independently by its own [solenoid control board](../ingredients/index.md#solenoid-control-board). To measure a chamber, the mainboard:
+Each chamber has an **inflow** and an **outflow** solenoid valve, controlled independently by its own [solenoid control board](../ingredients/actuators.md#solenoid-control-board). To measure a chamber, the mainboard:
 
 1. Closes every other chamber's valves and **opens the air path** through the selected chamber (its inflow and outflow valves).
 2. Waits for the flow and gas concentration to **stabilise**.
@@ -32,9 +32,9 @@ Because chambers are pre-loaded and cycled automatically, the per-experiment **s
 
 ## Wiring
 
-- Each of the 6 [solenoid control boards](../ingredients/index.md#solenoid-control-board) → a mainboard data line, plus 12 V power and ground. Each board switches its chamber's inflow and outflow valves.
-- LI-850 serial (UART) → the mainboard UART lines (respect the analyser's logic levels; add a [level shifter](../ingredients/index.md#level-shifter) if needed).
-- Chambers plumb inflow → chamber → outflow → analyser through a shared manifold.
+- Each of the 6 [solenoid control boards](../ingredients/actuators.md#solenoid-control-board) to a mainboard data line, plus 12 V power and ground. Each board switches its chamber's inflow and outflow valves.
+- LI-850 serial (UART) to the mainboard UART lines (respect the analyser's logic levels; add a [level shifter](../ingredients/utilities.md#level-shifter) if needed).
+- Air is plumbed from each chamber's inflow, through the chamber and its outflow, to the analyser via a shared manifold.
 
 <!-- TODO: add manifold + valve schematic and plumbing diagram from the BeeHive repo -->
 

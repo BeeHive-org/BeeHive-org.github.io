@@ -11,7 +11,7 @@ A standalone controller for an **OpenFlexure Delta Stage** — part of an open t
 
 | Board | Qty | Role |
 | ----- | --- | ---- |
-| [ESP32 BeeHive mainboard](../ingredients/index.md#esp32-mainboard) | 1× | Reads the encoders, converts input to delta-stage coordinates and drives the motors. |
+| [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Reads the encoders, converts input to delta-stage coordinates and drives the motors. |
 | Rotary encoder DB | 3× | One encoder per stage axis / actuator. |
 | 28BYJ-48 stepper driver | 3× | Drives the three 28BYJ-48 stepper motors. |
 | LCD panel (HD44780, I2C) | 1× | Live position/status feedback. |
@@ -28,9 +28,9 @@ Position and status are shown live on an **HD44780 LCD over I2C**, so the whole 
 
 ## Wiring
 
-- Each rotary encoder DB → a mainboard data line (A/B channels), plus power and ground.
-- Each 28BYJ-48 driver → mainboard data lines for its motor; motor power from the appropriate rail.
-- HD44780 LCD (I2C backpack) → the mainboard I2C data lines (SDA/SCL), plus power and ground.
+- Each rotary encoder DB to a mainboard data line (A/B channels), plus power and ground.
+- Each 28BYJ-48 driver to mainboard data lines for its motor; motor power from the appropriate rail.
+- HD44780 LCD (I2C backpack) to the mainboard I2C data lines (SDA/SCL), plus power and ground.
 - Optional USB serial to a host PC.
 
 <!-- TODO: add wiring schematic and delta-stage mounting reference from the BeeHive repo -->
@@ -57,7 +57,7 @@ lcd_i2c = I2C(0, scl=Pin(22), sda=Pin(21))   # HD44780 via I2C backpack
 pos = [0, 0, 0]
 
 def read_delta(i):
-    # TODO: quadrature decode -> +1 / -1 / 0
+    # TODO: quadrature decode to +1 / -1 / 0
     return 0
 
 def to_stage_coords(pos):

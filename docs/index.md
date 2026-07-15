@@ -1,5 +1,5 @@
 ---
-title: BeeHive
+title: Open electronics for research
 description: A flexible open electronics platform for building research equipment and teaching electronics.
 ---
 

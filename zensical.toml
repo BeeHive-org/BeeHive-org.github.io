@@ -19,7 +19,15 @@ nav = [
     { "Getting started" = "introduction/getting-started.md" },
     { "Design rules" = "introduction/design-rules.md" },
   ] },
-  { "Ingredients" = "ingredients/index.md" },
+  { "Ingredients" = [
+    { "Overview" = "ingredients/index.md" },
+    { "Mainboards" = "ingredients/mainboards.md" },
+    { "Power management" = "ingredients/power.md" },
+    { "Actuators" = "ingredients/actuators.md" },
+    { "Sensors" = "ingredients/sensors.md" },
+    { "Utilities" = "ingredients/utilities.md" },
+    { "Training" = "ingredients/training.md" },
+  ] },
   { "Techniques" = [
     { "Soldering" = "techniques/soldering.md" },
     { "Flashing MicroPython" = "techniques/micropython.md" },
@@ -27,6 +35,7 @@ nav = [
   ] },
   { "Recipes" = [
     { "Overview" = "recipes/index.md" },
+    { "Write your own recipe" = "recipes/write-your-own.md" },
     { "Head-fixed reward delivery" = "recipes/head-fixed-reward.md" },
     { "Mouse maze" = "recipes/mouse-maze.md" },
     { "Odour stimulator" = "recipes/odour-stimulator.md" },
@@ -44,7 +53,7 @@ nav = [
 
 [project.theme]
 language = "en"
-logo = "assets/logo.svg"
+logo = "assets/logo.png"
 favicon = "assets/favicon.png"
 
 # A pixi.sh-style left sidebar: collapsible sections (no `navigation.sections`,

@@ -11,8 +11,8 @@ A reward-delivery and lick-sensing module for head-fixed mice under a two-photon
 
 | Board | Qty | Role |
 | ----- | --- | ---- |
-| [ESP32 BeeHive mainboard](../ingredients/index.md#esp32-mainboard) | 1× | Runs the task, drives the servo, reads the lick sensor, and outputs the analogue event signal. |
-| [Solenoid control board](../ingredients/index.md#solenoid-control-board) | 1× | Opens the normally-closed pinch valve to deliver a metered reward. |
+| [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Runs the task, drives the servo, reads the lick sensor, and outputs the analogue event signal. |
+| [Solenoid control board](../ingredients/actuators.md#solenoid-control-board) | 1× | Opens the normally-closed pinch valve to deliver a metered reward. |
 
 Plus (non-BeeHive parts): a Geekservo motor, a metal lick spout, a piezo lick sensor, a 3D-printed frame holding the spout and sensor, a normally-closed solenoid pinch valve (WZ-12021-23, Spexé VapLock), and an NI DAQ for signal capture.
 
@@ -21,21 +21,21 @@ Plus (non-BeeHive parts): a Geekservo motor, a metal lick spout, a piezo lick se
 The animal is head-fixed under a two-photon microscope and presented with a 10 s visual stimulus. Timing runs as follows:
 
 - **−0.5 s** (0.5 s before the stimulus ends): the Geekservo begins swinging the metal lick spout towards the animal.
-- **−0.25 s**: the mainboard triggers the [solenoid control board](../ingredients/index.md#solenoid-control-board), opening the normally-closed pinch valve for **150 ms** to deliver a metered drop of liquid.
+- **−0.25 s**: the mainboard triggers the [solenoid control board](../ingredients/actuators.md#solenoid-control-board), opening the normally-closed pinch valve for **150 ms** to deliver a metered drop of liquid.
 - The mouse is given **1 s** to lick. The piezo lick sensor on the spout registers each contact.
 - The spout then retracts out of reach until the next trial.
 
 Throughout, BeeHive emits an **analogue voltage signal** to an NI DAQ. The voltage *level* encodes the event type and its *duration* encodes how long the event lasted, so every reward, spout movement and lick can be aligned post-hoc with the two-photon imaging stream on a common timebase.
 
 !!! tip "Two-choice tasks"
-    The design extends to **left/right choice tasks** by adding a second spout and a second solenoid — pair a second [solenoid control board](../ingredients/index.md#solenoid-control-board) (or a second channel) and a second servo, and mirror the timing logic per side.
+    The design extends to **left/right choice tasks** by adding a second spout and a second solenoid — pair a second [solenoid control board](../ingredients/actuators.md#solenoid-control-board) (or a second channel) and a second servo, and mirror the timing logic per side.
 
 ## Wiring
 
-- Servo signal line → a mainboard data line; servo power from the 5 V rail.
-- Piezo lick sensor → a mainboard analogue input.
-- Pinch valve → the [solenoid control board](../ingredients/index.md#solenoid-control-board) output; the board takes a data line from the mainboard.
-- Analogue event output → NI DAQ analogue input channel, sharing ground with the DAQ.
+- Servo signal line to a mainboard data line; servo power from the 5 V rail.
+- Piezo lick sensor to a mainboard analogue input.
+- Pinch valve to the [solenoid control board](../ingredients/actuators.md#solenoid-control-board) output; the board takes a data line from the mainboard.
+- Analogue event output to NI DAQ analogue input channel, sharing ground with the DAQ.
 
 <!-- TODO: add schematic figure once exported from the BeeHive repo -->
 

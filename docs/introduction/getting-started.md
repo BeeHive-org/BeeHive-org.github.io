@@ -8,7 +8,7 @@ description: Pick your path through BeeHive — build a recipe, learn the basics
 There's no single way into BeeHive. Pick the path that matches what you're here
 to do.
 
-## :material-food-variant: I want to build something
+## 🍯 I want to build something
 
 Head to the **[Recipes](../recipes/index.md)** — complete, documented builds you
 can reproduce. Each lists the [ingredients](../ingredients/index.md) it uses,
@@ -22,14 +22,14 @@ the wiring, and the code. Good first recipes:
 Then you'll need to **[solder your boards](../techniques/soldering.md)** and
 **[flash MicroPython](../techniques/micropython.md)** onto the mainboard.
 
-## :material-school: I'm new to electronics or coding
+## 🎓 I'm new to electronics or coding
 
 Start with the **[Intro to electronics course](../courses/intro-to-electronics.md)**
 — a project-based introduction to microcontrollers, circuits, and MicroPython,
 built around BeeHive's Training board. It lets you learn coding and electronics
 one at a time before wiring up a real experiment.
 
-## :material-puzzle: I want to design a new board
+## 🧩 I want to design a new board
 
 Read **[What is BeeHive?](what-is-beehive.md)** and the
 **[Design rules](design-rules.md)**, then follow

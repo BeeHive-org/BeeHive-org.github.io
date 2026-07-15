@@ -21,7 +21,7 @@ You'll need two things:
 ## Flash the firmware
 
 1. Connect the ESP32 to your computer via USB.
-2. In Thonny, go to **Tools → Options → Interpreter**.
+2. In Thonny, go to **Tools > Options > Interpreter**.
 3. Set the interpreter to **MicroPython (ESP32)**.
 4. For the port, choose the one labelled **Silicon Labs** (the USB-serial chip).
 5. Click **Install or update the firmware**.

@@ -39,5 +39,5 @@ schematics as you go.
 | [Beyond neuroscience](beyond-neuroscience.md) | Incubators, heaters, and other fields | various |
 
 !!! tip "Built something with BeeHive?"
-    Recipes are community-contributed. See [Contributing](../contributing.md) to
-    add yours.
+    Recipes are community-contributed. See
+    [Write your own recipe](write-your-own.md) to add yours.

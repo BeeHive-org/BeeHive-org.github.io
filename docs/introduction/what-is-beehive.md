@@ -29,7 +29,7 @@ self-contained and single-purpose, the same board works across wildly different
 experiments: a solenoid controller might meter a water reward for a mouse in one
 lab and drive greenhouse irrigation in another.
 
-→ Browse the full catalogue in **[Ingredients](../ingredients/index.md)**.
+Browse the full catalogue in **[Ingredients](../ingredients/index.md)**.
 
 ## Ingredients and recipes
 
