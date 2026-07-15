@@ -35,11 +35,6 @@ nav = [
     { "Utilities" = "ingredients/utilities.md" },
     { "Training" = "ingredients/training.md" },
   ] },
-  { "Techniques" = [
-    { "Soldering" = "techniques/soldering.md" },
-    { "Flashing MicroPython" = "techniques/micropython.md" },
-    { "Build your own board" = "techniques/build-your-own-board.md" },
-  ] },
   { "Recipes" = [
     { "Overview" = "recipes/index.md" },
     { "Write your own recipe" = "recipes/write-your-own.md" },
@@ -51,6 +46,11 @@ nav = [
     { "Mouse-wheel speed controller" = "recipes/mouse-wheel.md" },
     { "OpenFlexure stage controller" = "recipes/openflexure-controller.md" },
     { "Beyond neuroscience" = "recipes/beyond-neuroscience.md" },
+  ] },
+  { "Techniques" = [
+    { "Soldering" = "techniques/soldering.md" },
+    { "Flashing MicroPython" = "techniques/micropython.md" },
+    { "Build your own board" = "techniques/build-your-own-board.md" },
   ] },
   { "Courses" = [
     { "Intro to Electronics" = [
