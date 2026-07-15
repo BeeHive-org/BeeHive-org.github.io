@@ -12,6 +12,13 @@ copyright = "Copyright &copy; The BeeHive contributors — open-source licensed"
 # primary with a near-black accent, mirroring the pixi.sh / Croppy layout.
 extra_css = ["stylesheets/extra.css"]
 
+# MathJax, for the LaTeX formulas in the electronics course. Mathjax.js holds the
+# arithmatex (generic-mode) config; the CDN script does the rendering.
+extra_javascript = [
+  "javascripts/Mathjax.js",
+  "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+]
+
 nav = [
   { "Home" = "index.md" },
   { "Introduction" = [
@@ -101,6 +108,9 @@ toggle.name = "Switch to light mode"
 [project.markdown_extensions.md_in_html]
 [project.markdown_extensions.tables]
 [project.markdown_extensions.footnotes]
+
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
 
 [project.markdown_extensions.pymdownx.details]
 
