@@ -1,0 +1,111 @@
+[project]
+site_name = "BeeHive"
+site_description = "A flexible open electronics platform for building research equipment and teaching electronics."
+site_author = "The BeeHive contributors"
+site_url = "https://beehive-org.github.io/"
+repo_url = "https://github.com/BeeHive-org/BeeHive"
+repo_name = "BeeHive-org/BeeHive"
+copyright = "Copyright &copy; The BeeHive contributors — open-source licensed"
+
+# Structural + typographic touches (fonts, boxed content, sidebar, footer cards)
+# live in the stylesheet. The colour palette is BeeHive's "bumblebee": amber
+# primary with a near-black accent, mirroring the pixi.sh / Croppy layout.
+extra_css = ["stylesheets/extra.css"]
+
+nav = [
+  { "Home" = "index.md" },
+  { "Introduction" = [
+    { "What is BeeHive?" = "introduction/what-is-beehive.md" },
+    { "Getting started" = "introduction/getting-started.md" },
+    { "Design rules" = "introduction/design-rules.md" },
+  ] },
+  { "Ingredients" = "ingredients/index.md" },
+  { "Techniques" = [
+    { "Soldering" = "techniques/soldering.md" },
+    { "Flashing MicroPython" = "techniques/micropython.md" },
+    { "Build your own board" = "techniques/build-your-own-board.md" },
+  ] },
+  { "Recipes" = [
+    { "Overview" = "recipes/index.md" },
+    { "Head-fixed reward delivery" = "recipes/head-fixed-reward.md" },
+    { "Mouse maze" = "recipes/mouse-maze.md" },
+    { "Odour stimulator" = "recipes/odour-stimulator.md" },
+    { "LI-850 multiplexer" = "recipes/li850-multiplexer.md" },
+    { "5-choice serial reaction time" = "recipes/5-csrtt.md" },
+    { "Mouse-wheel speed controller" = "recipes/mouse-wheel.md" },
+    { "OpenFlexure stage controller" = "recipes/openflexure-controller.md" },
+    { "Beyond neuroscience" = "recipes/beyond-neuroscience.md" },
+  ] },
+  { "Courses" = [
+    { "Intro to electronics" = "courses/intro-to-electronics.md" },
+  ] },
+  { "Contributing" = "contributing.md" },
+]
+
+[project.theme]
+language = "en"
+logo = "assets/logo.svg"
+favicon = "assets/favicon.png"
+
+# A pixi.sh-style left sidebar: collapsible sections (no `navigation.sections`,
+# which would flatten them into always-open groups; no `navigation.tabs`, which
+# would move them into the header). `navigation.indexes` folds a section's
+# overview page into its header where one exists.
+features = [
+  "content.code.copy",
+  "content.code.annotate",
+  "navigation.instant",
+  "navigation.instant.progress",
+  "navigation.indexes",
+  "navigation.top",
+  "navigation.tracking",
+  "navigation.footer",
+  "toc.follow",
+  "search.highlight",
+  "search.suggest",
+]
+
+# Body in Inter, code in JetBrains Mono (like pixi.sh); the warm display serif
+# for headings/titles is set in stylesheets/extra.css.
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "amber"
+accent = "amber"
+toggle.icon = "material/weather-night"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "amber"
+accent = "amber"
+toggle.icon = "material/weather-sunny"
+toggle.name = "Switch to light mode"
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.tables]
+[project.markdown_extensions.footnotes]
+
+[project.markdown_extensions.pymdownx.details]
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+
+[project.markdown_extensions.pymdownx.superfences]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+
+[project.markdown_extensions.pymdownx.emoji]
