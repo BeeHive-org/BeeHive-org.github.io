@@ -89,9 +89,7 @@ In this algebraic expression, voltage (V) is equal to current (I) multiplied by 
 
 
 
-$$ I = {V \over R} $$  
-and 
-$$ R = {V \over I} $$
+$$ I = {V \over R} \quad\text{and}\quad R = {V \over I} $$
 
 
 ![Ohm's Law](../../assets/images/course/2_ohm_law.jpg)
