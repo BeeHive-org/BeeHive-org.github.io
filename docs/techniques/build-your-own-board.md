@@ -9,6 +9,21 @@ Every BeeHive board is either a **mainboard** (carries a microcontroller) or a *
 
 The workflow is simple: pick a function, design to the rules, then submit via the repo.
 
+## What to design it in
+
+Use **[KiCad](https://www.kicad.org/)** — a free, open-source, cross-platform
+EDA suite for schematic capture and PCB layout. It's the standard FOSS tool for
+this, and it's what BeeHive's own boards are drawn in, so you can open any
+existing board's `.kicad_pcb` from the [ingredients catalogue](../ingredients/index.md)
+(each board links its KiCad files) as a starting point or reference. KiCad also
+exports the gerbers and bill of materials the fab houses and
+[Kitspace](https://kitspace.org/) need.
+
+!!! tip "Mechanical parts"
+    If your board needs a 3D-printed frame, mount or enclosure, design those in
+    **[FreeCAD](https://www.freecad.org/)** (open-source parametric CAD). KiCad
+    can hand off the board outline and 3D model to it.
+
 ## 1. Pick a function
 
 A daughter board does **one thing** — drive an actuator or read a sensor. If you find yourself putting two unrelated functions on one board, that's two boards. Keeping boards single-function is what lets them mix and match across recipes.

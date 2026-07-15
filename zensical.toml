@@ -63,7 +63,10 @@ nav = [
       { "Glossary" = "courses/intro-to-electronics/glossary.md" },
     ] },
   ] },
-  { "Contributing" = "contributing.md" },
+  { "Contributing" = [
+    { "Overview" = "contributing.md" },
+    { "AI use policy" = "ai-use-policy.md" },
+  ] },
 ]
 
 [project.theme]

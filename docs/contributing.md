@@ -8,6 +8,10 @@ description: How to contribute boards, recipes, and fixes to BeeHive.
 BeeHive is open source and community-driven. Contributions aren't confined to
 one institution — anyone can add a board, share a recipe, or improve the docs.
 
+!!! note "Using AI tools?"
+    That's fine — but you're accountable for what you submit. Please read the
+    [AI use policy](ai-use-policy.md) first.
+
 ## Ways to contribute
 
 - 🧩 **A new board (ingredient).** Design a daughter board that follows the
