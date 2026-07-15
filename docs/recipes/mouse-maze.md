@@ -9,12 +9,23 @@ A modular maze built from swappable acrylic panels, with closed-loop tracking: a
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Receives serial commands from the tracking PC and drives the reward hardware. |
 | [IR sensor array](../ingredients/sensors.md#ir-sensor-array) | 1× | Local IR sensing at reward ports / beam-breaks. |
 
-Plus (non-BeeHive parts): 50 × 50 mm acrylic maze panels (opaque in visible light, transparent in IR), Makerbeam XL posts, a 16-channel 12-bit PWM/servo driver (Adafruit PCA9685, I2C), a servo-driven 3D-printed pellet dispenser, an IR camera, and a PC running OpenCV.
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| Acrylic maze panels, 50 × 50 mm | many | Opaque in visible light, transparent in IR; reconfigurable walls. |
+| Makerbeam XL posts | many | The frame the panels slot between. |
+| Adafruit PCA9685 (16-ch 12-bit PWM/servo driver, I2C) | 1× | Drives the reward servos; daisy-chainable to 992 motors over two data lines. |
+| Servo-driven 3D-printed pellet dispenser | 1×+ | Food reward; one per reward port. |
+| IR camera | 1× | Tracks the animal through the IR-transparent walls. |
+| PC running OpenCV | 1× | Runs the tracking state machine; sends serial commands to the mainboard. |
 
 ## How it works
 

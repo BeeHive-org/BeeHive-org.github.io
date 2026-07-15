@@ -20,21 +20,21 @@ Every BeeHive build is made from **ingredients**: a *mainboard* that carries the
 
 ## At a glance
 
-| Board | Category | Function | Size |
-| ----- | -------- | -------- | ---- |
-| [ESP32 BeeHive mainboard](mainboards.md#esp32-mainboard) | Mainboards | Carries the ESP32 microcontroller and breaks out every pin. | — |
-| [MikroBUS-compatible BeeHive mainboard](mainboards.md#mikrobus-mainboard) | Mainboards | ESP32 mainboard with added MikroBUS / Click Board compatibility. | — |
-| [12V5A breakout](power.md#12v5a-breakout) | Power management | Distributes 12 V / 5 A to other boards. | — |
-| [5V3A breakout](power.md#5v3a-breakout) | Power management | Steps 12 V / 5 A down to 5 V / 3 A. | — |
-| [12V/24V boost converter](power.md#12v-24v-boost) | Power management | Boosts 12 V / 5 A up to 24 V / 1 A. | — |
-| [H-bridge driver](actuators.md#h-bridge-driver) | Actuators | Drives DC motors and Peltier elements. | Big |
-| [Switch array](actuators.md#switch-array) | Actuators | Switches many low-power loads (e.g. LEDs) over few pins. | — |
-| [High-power switch array](actuators.md#high-power-switch-array) | Actuators | Switches power-demanding loads (e.g. high-power LEDs). | — |
-| [Solenoid control board](actuators.md#solenoid-control-board) | Actuators | Controls solenoid valves (standard speed). | — |
-| [Spike & Hold board](actuators.md#spike-and-hold-board) | Actuators | Drives solenoids in "Spike & Hold" mode for fast opening. | — |
-| [Gas sensor](sensors.md#gas-sensor) | Sensors | Detects gas-related environmental variables. | — |
-| [Humidity & temperature sensor](sensors.md#humidity-temperature-sensor) | Sensors | Monitors humidity and temperature. | — |
-| [IR sensor array](sensors.md#ir-sensor-array) | Sensors | Hosts paired IR LEDs and phototransistors (e.g. nose-poke ports). | — |
-| [Level shifter](utilities.md#level-shifter) | Utilities | Bi-directional 5 V ↔ 3.3 V logic level translation. | — |
-| [Training board](training.md#training-board) | Training | A teaching board covering the core electronic building blocks. | — |
+| Board | Category | Function |
+| ----- | -------- | -------- |
+| [ESP32 BeeHive mainboard](mainboards.md#esp32-mainboard) | Mainboards | Carries the ESP32 microcontroller and breaks out every pin. |
+| [MikroBUS-compatible BeeHive mainboard](mainboards.md#mikrobus-mainboard) | Mainboards | ESP32 mainboard with added MikroBUS / Click Board compatibility. |
+| [12V5A breakout](power.md#12v5a-breakout) | Power management | Distributes 12 V / 5 A to other boards. |
+| [5V3A breakout](power.md#5v3a-breakout) | Power management | Steps 12 V / 5 A down to 5 V / 3 A. |
+| [12V/24V boost converter](power.md#12v-24v-boost) | Power management | Boosts 12 V / 5 A up to 24 V / 1 A. |
+| [H-bridge driver](actuators.md#h-bridge-driver) | Actuators | Drives DC motors and Peltier elements. |
+| [Switch array](actuators.md#switch-array) | Actuators | Switches many low-power loads (e.g. LEDs) over few pins. |
+| [High-power switch array](actuators.md#high-power-switch-array) | Actuators | Switches power-demanding loads (e.g. high-power LEDs). |
+| [Solenoid control board](actuators.md#solenoid-control-board) | Actuators | Controls solenoid valves (standard speed). |
+| [Spike & Hold board](actuators.md#spike-and-hold-board) | Actuators | Drives solenoids in "Spike & Hold" mode for fast opening. |
+| [Gas sensor](sensors.md#gas-sensor) | Sensors | Detects gas-related environmental variables. |
+| [Humidity & temperature sensor](sensors.md#humidity-temperature-sensor) | Sensors | Monitors humidity and temperature. |
+| [IR sensor array](sensors.md#ir-sensor-array) | Sensors | Hosts paired IR LEDs and phototransistors (e.g. nose-poke ports). |
+| [Level shifter](utilities.md#level-shifter) | Utilities | Bi-directional 5 V ↔ 3.3 V logic level translation. |
+| [Training board](training.md#training-board) | Training | A teaching board covering the core electronic building blocks. |
 

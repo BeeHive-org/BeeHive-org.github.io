@@ -9,6 +9,8 @@ A standalone controller for an **OpenFlexure Delta Stage** — part of an open t
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Reads the encoders, converts input to delta-stage coordinates and drives the motors. |
@@ -18,7 +20,14 @@ A standalone controller for an **OpenFlexure Delta Stage** — part of an open t
 
 <!-- TODO: add rotary encoder DB, 28BYJ-48 driver and HD44780 LCD to ingredients -->
 
-Plus (non-BeeHive parts): three [rotary encoders](https://en.wikipedia.org/wiki/Rotary_encoder), three [28BYJ-48 stepper motors](https://en.wikipedia.org/wiki/Stepper_motor) with driver boards, an [HD44780 character LCD with I2C backpack](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller), and an [OpenFlexure Delta Stage](https://openflexure.org/projects/deltastage/).
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| [Rotary encoders](https://en.wikipedia.org/wiki/Rotary_encoder) | 3× | Manual input, one per stage axis. |
+| [28BYJ-48 stepper motors](https://en.wikipedia.org/wiki/Stepper_motor) with driver boards | 3× | Move the delta stage. |
+| [HD44780 character LCD](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) (I2C backpack) | 1× | Live coordinate readout. |
+| [OpenFlexure Delta Stage](https://openflexure.org/projects/deltastage/) | 1× | The stage being controlled. |
 
 ## How it works
 

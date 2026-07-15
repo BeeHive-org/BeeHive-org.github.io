@@ -9,12 +9,21 @@ A multiplexer that lets a single **Licor LI-850** CO₂/H₂O gas analyser serve
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Sequences the chambers, talks to the LI-850 over serial, and logs to CSV. |
 | [Solenoid control board](../ingredients/actuators.md#solenoid-control-board) | 6× | One board per chamber, each switching that chamber's inflow and outflow valves. |
 
-Plus (non-BeeHive parts): up to 6 gas-tight chambers, 12 inflow/outflow solenoid valves (one pair per chamber), a Licor LI-850 CO₂/H₂O gas analyser with serial output, and tubing/manifolds.
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| Gas-tight chambers | up to 6× | Hold the animals during measurement. |
+| Inflow/outflow solenoid valves | 12× | One inflow + one outflow valve per chamber. |
+| Licor LI-850 CO₂/H₂O gas analyser | 1× | Measures CO₂ and H₂O; serial output. |
+| Tubing & manifolds | 1× | Plumb the shared air path. |
 
 ## How it works
 

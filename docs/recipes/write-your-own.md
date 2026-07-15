@@ -28,11 +28,17 @@ description: <one line — what it does and for whom>
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [<board>](../ingredients/<category>.md#<slug>) | 1× | <what it does here> |
 
-Plus (non-BeeHive parts): <servos, valves, 3D-printed parts, sensors, …>.
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| <servo / valve / sensor / 3D-printed part> | 1× | <what it's for> |
 
 ## How it works
 

@@ -21,7 +21,7 @@ A barrel-jack input, a power LED indicator and nine connectors that fan 12 V / 5
 | **Power** | 12 V / 5 A in and out |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/12V5A-breakout) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12V5A_breakout/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/12V5A_breakout/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12V5A_breakout/12V5A_breakout.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/12V5A_breakout) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/12V5A_breakout/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12V5A_breakout/12V5A_breakout.kicad_pcb)
 
 ??? note "Bill of materials — 4 lines"
 
@@ -56,7 +56,7 @@ A 555-based step-up converter that provides up to 24 V / 1 A — used to power s
 | **Power** | 12 V / 5 A in; 24 V / 1 A out |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Boost-converter-12V-to-24V) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12_24_boost_converter/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/12_24_boost_converter/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12_24_boost_converter/12_24_boost_converter.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/12_24_boost_converter) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/12_24_boost_converter/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/12_24_boost_converter/12_24_boost_converter.kicad_pcb)
 
 ??? note "Bill of materials — 13 lines"
 

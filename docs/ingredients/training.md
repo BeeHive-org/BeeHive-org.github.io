@@ -18,7 +18,7 @@ A board bringing together the modules a beginner needs to learn electronics and 
 | **Key parts** | 8-bit shift register + LED matrix, Push buttons, Potentiometers, Rotary encoders, Relay module, Digital temperature sensor |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/training_board/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/training_board/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/training_board/training_board.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/testing_board) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/training_board/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/training_board/training_board.kicad_pcb)
 
 ??? note "Bill of materials — 12 lines"
 

@@ -38,6 +38,9 @@ KITSPACE_MANIFEST = KITSPACE_DIR / "manifest.yaml"
 KITSPACE_BOM_DIR = KITSPACE_DIR / "bom"
 REPO_BLOB = "https://github.com/BeeHive-org/BeeHive/blob/master"
 REPO_TREE = "https://github.com/BeeHive-org/BeeHive/tree/master"
+# Kitspace board pages (interactive BOM + one-click ordering); the manifest
+# project key is the URL slug.
+KITSPACE_BOARD = "https://kitspace.org/BeeHive-org/BeeHive"
 
 # project key -> manifest entry; filled by load_kitspace() in main().
 KITSPACE: dict[str, dict] = {}
@@ -164,9 +167,9 @@ def render_hardware(board: dict) -> str:
         return ""
     proj = KITSPACE[key]
 
-    links: list[str] = []
-    if proj.get("bom"):
-        links.append(f"[Full BOM (MPNs & distributors)]({REPO_BLOB}/{proj['bom']})")
+    # Kitspace is the primary "get this board" link: interactive BOM, gerber
+    # preview, and one-click ordering from several fabs.
+    links: list[str] = [f"[Order & BOM on Kitspace]({KITSPACE_BOARD}/{key})"]
     if proj.get("gerbers"):
         links.append(f"[Gerbers]({REPO_TREE}/{proj['gerbers']})")
     pcb = (proj.get("eda") or {}).get("pcb")
@@ -212,14 +215,12 @@ def render_overview(by_category: dict[str, list[dict]]) -> str:
     out.append("")
 
     out.append("## At a glance\n")
-    out.append("| Board | Category | Function | Size |")
-    out.append("| ----- | -------- | -------- | ---- |")
+    out.append("| Board | Category | Function |")
+    out.append("| ----- | -------- | -------- |")
     for key, label, stem in CATEGORIES:
         for b in by_category[key]:
             link = f"[{b['name']}]({stem}.md#{b['slug']})"
-            out.append(
-                f"| {link} | {label} | {clean(b['function'])} | {b.get('size') or '—'} |"
-            )
+            out.append(f"| {link} | {label} | {clean(b['function'])} |")
     out.append("")
     return "\n".join(out) + "\n"
 

@@ -9,12 +9,21 @@ An open reimplementation of a dual-channel olfactory stimulator (Raiser et al. 2
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Sequences and times the valve switching. |
 | [Spike & Hold board](../ingredients/actuators.md#spike-and-hold-board) | 2× | Fast, precise switching of the Teflon solenoid valves. |
 
-Plus (non-BeeHive parts): three-way Teflon solenoid valves (LHDA1233415H, Lee Company), a custom 3D-printed polypropylene mixing block, air supply and flow regulation, and a photoionization detector (PID) for validation.
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| Three-way Teflon solenoid valves (LHDA1233415H, Lee Company) | 4× | Two odour + two clean-air streams. |
+| Custom 3D-printed mixing block (polypropylene) | 1× | Mixes odour and clean-air streams; expandable channels. |
+| Air supply & flow regulation | 1× | Balanced streams for stable flow. |
+| Photoionization detector (PID) | 1× | For validating stimulus timing (optional). |
 
 ## How it works
 

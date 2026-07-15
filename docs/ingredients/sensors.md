@@ -20,7 +20,7 @@ Built around an MQ-6 gas sensor; swapping in another MQ-series sensor lets it de
 | **Key parts** | MQ-6 (MQ-series) sensor |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Gas-sensor) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/gas_sensor/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/gas_sensor/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/gas_sensor/gas_sensor.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/gas_sensor) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/gas_sensor/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/gas_sensor/gas_sensor.kicad_pcb)
 
 ??? note "Bill of materials — 8 lines"
 
@@ -46,7 +46,7 @@ Compatible with both DHT11 and DHT22 sensors.
 | **Key parts** | DHT11, DHT22 |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Humidity-and-temperature-sensor) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hum_temp_sensor/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hum_temp_sensor/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hum_temp_sensor/hum_temp_sensor.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/hum_temp_sensor) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hum_temp_sensor/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hum_temp_sensor/hum_temp_sensor.kicad_pcb)
 
 ??? note "Bill of materials — 7 lines"
 

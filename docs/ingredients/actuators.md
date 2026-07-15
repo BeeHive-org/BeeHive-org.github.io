@@ -22,7 +22,7 @@ A full-bridge driver (2 n-channel + 2 p-channel MOSFETs driven by a TC4420) with
 | **Size** | Big |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/H-bridge-driver) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hbridge_driver/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hbridge_driver/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hbridge_driver/hbridge_driver.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/hbridge_driver) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hbridge_driver/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hbridge_driver/hbridge_driver.kicad_pcb)
 
 ??? note "Bill of materials — 17 lines"
 
@@ -58,7 +58,7 @@ Uses a 74HC595 shift register to control many components from few pins. Switched
 | **Power** | 5–12 V switched |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Switch-array) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/8_switch_array/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/8_switch_array/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/8_switch_array/8_switch_array.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/8-switch-array) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/8_switch_array/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/8_switch_array/8_switch_array.kicad_pcb)
 
 ??? note "Bill of materials — 9 lines"
 
@@ -86,7 +86,7 @@ Based on a TC4427 driver and n-channel MOSFETs for switching power-hungry compon
 | **Power** | 12 V / 5 A |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/High-power-switch-array) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hp_led_switch/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hp_led_switch/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hp_led_switch/hp_led_switch.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/hp-led-switch) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/hp_led_switch/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/hp_led_switch/hp_led_switch.kicad_pcb)
 
 ??? note "Bill of materials — 10 lines"
 

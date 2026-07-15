@@ -9,12 +9,23 @@ A reward-delivery and lick-sensing module for head-fixed mice under a two-photon
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Runs the task, drives the servo, reads the lick sensor, and outputs the analogue event signal. |
 | [Solenoid control board](../ingredients/actuators.md#solenoid-control-board) | 1× | Opens the normally-closed pinch valve to deliver a metered reward. |
 
-Plus (non-BeeHive parts): a Geekservo motor, a metal lick spout, a piezo lick sensor, a 3D-printed frame holding the spout and sensor, a normally-closed solenoid pinch valve (WZ-12021-23, Spexé VapLock), and an NI DAQ for signal capture.
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| Geekservo motor | 1× | Swings the lick spout to the animal during reward. |
+| Metal lick spout | 1× | Delivers the liquid reward. |
+| Piezo lick sensor | 1× | Detects licks. |
+| 3D-printed frame | 1× | Holds the spout and piezo sensor. |
+| Solenoid pinch valve (WZ-12021-23, Spexé VapLock) | 1× | Normally-closed; meters the liquid reward. |
+| NI DAQ | 1× | Captures BeeHive's analogue event signal for imaging alignment. |
 
 ## How it works
 

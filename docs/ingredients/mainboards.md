@@ -21,7 +21,7 @@ The heart of the BeeHive system. Built around the ESP32 (8 digital lines, 3 anal
 | **Power** | 12 V DC in; supplies 12 V and 5 V to daughter boards |
 | **Details** | [Board page & schematics](https://github.com/BeeHive-org/BeeHive/wiki/Main-hub) |
 
-**Hardware files:** [Full BOM (MPNs & distributors)](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/central_hub/1-click-bom.csv) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/central_hub/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/central_hub/beehive.kicad_pcb)
+**Hardware files:** [Order & BOM on Kitspace](https://kitspace.org/BeeHive-org/BeeHive/central-hub) · [Gerbers](https://github.com/BeeHive-org/BeeHive/tree/master/hardware/PCBs/central_hub/gerber) · [KiCad PCB](https://github.com/BeeHive-org/BeeHive/blob/master/hardware/PCBs/central_hub/beehive.kicad_pcb)
 
 ??? note "Bill of materials — 9 lines"
 

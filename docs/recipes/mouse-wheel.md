@@ -9,12 +9,21 @@ An add-on that gives the experimenter control over a running wheel's timing and 
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Reads the speed potentiometer and drives the stepper motor. |
-| [Adafruit DRV8833](https://www.adafruit.com/product/3297) | 1× | Off-the-shelf stepper driver for the NEMA 17 that sets the wheel's minimum speed. |
 
-Plus (non-BeeHive parts): a NEMA 17 stepper motor, a clutch, an analog potentiometer, and a KineMouse running wheel.
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| [Adafruit DRV8833](https://www.adafruit.com/product/3297) | 1× | Off-the-shelf stepper driver for the NEMA 17. |
+| NEMA 17 stepper motor | 1× | Sets the wheel's minimum speed. |
+| Clutch | 1× | Lets the mouse run faster than the motor, and keep running when it's off. |
+| Analog potentiometer | 1× | Sets the target wheel speed. |
+| KineMouse running wheel | 1× | The open-source wheel being enhanced. |
 
 ## How it works
 

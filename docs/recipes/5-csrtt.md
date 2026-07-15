@@ -9,12 +9,21 @@ An open-hardware replication of the **5-choice serial reaction time task (5-CSRT
 
 ## Ingredients
 
+BeeHive boards:
+
 | Board | Qty | Role |
 | ----- | --- | ---- |
 | [ESP32 BeeHive mainboard](../ingredients/mainboards.md#esp32-mainboard) | 1× | Runs the paradigm, cues the ports, times nose-pokes and triggers reward. |
 | [IR sensor array](../ingredients/sensors.md#ir-sensor-array) | 1× | Five IR LED + sensor pairs for beam-break nose-poke detection. |
 
-Plus (non-BeeHive parts): five nose-poke ports, each with an IR LED + IR sensor pair and a rear **yellow LED** cue; and a servo-driven 3D-printed pellet dispenser for food reward.
+Other components:
+
+| Component | Qty | Notes |
+| --------- | --- | ----- |
+| 3D-printed nose-poke ports | 5× | Where the animal pokes. |
+| IR LED + IR sensor pairs | 5× | One per port; beam-break poke detection (wired via the IR sensor array). |
+| Yellow cue LEDs | 5× | At the rear of each port; cue where to poke. |
+| Servo-driven 3D-printed pellet dispenser | 1× | Food reward; shared with the mouse maze. |
 
 ## How it works
 
